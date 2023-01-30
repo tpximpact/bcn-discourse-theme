@@ -1,0 +1,14 @@
+.banner {
+  height: 300px;
+  width: 100%;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.banner__text {
+  font-size: 8em;
+  color: white;
+}
