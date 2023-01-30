@@ -1,0 +1,73 @@
+<p> head_tag.html</p>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      content: [
+        './common/*.{html,js}',
+
+      ],
+      extend: {
+        colors: {
+          black: '#242424',
+          white: '#ffffff',
+          grey: '#707070',
+          lightgrey: '#EFE8ED',
+          transparent: 'transparent',
+          current: 'currentColor',
+          inherit: 'inherit',
+          red: '#B20715',
+          yellow: {
+            DEFAULT: '#FFDB30',
+            300: '#FFE66E',
+            400: '#FFDB30',
+            500: '#F0CD27',
+            600: '#E9C725',
+          },
+          green: '#196525',
+          orange: {
+            DEFAULT: '#FF9900',
+            100: '#FFEBCC',
+            300: '#FFAB2E',
+            400: '#FF9900',
+          },
+          purple: {
+            DEFAULT: '#6E2B5F',
+            100: '#F0EAEF',
+            200: '#A65F97',
+            300: '#77416B',
+            400: '#6E2B5F',
+            500: '#3F1034',
+          },
+          pink: {
+            DEFAULT: '#DF2866',
+            200: '#F2A9C2',
+            400: '#DF2866',
+          },
+          lightpink: {
+            DEFAULT: '#F2A9C2',
+            200: '#FFA1C1',
+            400: '#F2A9C2',
+          },
+
+        }
+      },
+      screens: {
+        xs: '375px',
+        ls: '480px',
+        sm: '640px',
+        md: '768px',
+        lg: '1025px',
+        xl: '1200px',
+        '2xl': '1440px',
+        '3xl': '1600px',
+      },
+      fontFamily: {
+        sans: ['Work Sans', 'open-sans'],
+        erika: ['Erika UC', 'SourceSerif'],
+        mono: ['ui-monospace', 'SFMono-Regular'],
+      },
+
+    }
+  }
+</script>

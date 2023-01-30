@@ -1,3 +1,14 @@
+@import 'fonts';
+// @import 'typography';
+// @import 'test.scss';
+
+@font-face {
+  font-family: 'Erika UC';
+  src: url($ErikaUC-Regular-Woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .banner {
   height: 300px;
   width: 100%;
@@ -9,6 +20,21 @@
 }
 
 .banner__text {
-  font-size: 8em;
-  color: white;
+  // font-size: 8em;
+  color: green;
+}
+
+.apd-footer {
+  // border: 1px solid #ff0000;
+  // background-color: var(--primary);
+}
+
+.apd-footer {
+  border: 13px solid #ff0000;
+}
+
+.cooked {
+  h3 {
+    font-size: 80px;
+  }
 }
