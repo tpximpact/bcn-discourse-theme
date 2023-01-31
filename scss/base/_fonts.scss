@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Erika;
+  src: url($ErikaUC-Regular) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: WorkSans;
+  src: url($WorkSans) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: WorkSans;
+  src: url($WorkSans-Italic) format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: WorkSans;
+  src: url(WorkSansBold) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: WorkSans;
+  src: url(WorkSansBold-Italic) format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}

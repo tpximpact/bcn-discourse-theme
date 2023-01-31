@@ -1,5 +1,13 @@
 {
   "name": "BCN Theme",
   "about_url": "https://some.url.com",
-  "license_url": "https://github.com/GitHubUsername/my-first-remote-theme/blob/master/LICENSE"
+  "license_url": "https://github.com/GitHubUsername/my-first-remote-theme/blob/master/LICENSE",
+  "assets": {
+    "ErikaUC-Regular": "assets/ErikaUC-Regular.woff2",
+    "WorkSans": "assets/WorkSans-Regular.ttf",
+    "WorkSans-Italic": "assets/WorkSans-Italic.ttf",
+    "WorkSansBold": "assets/WorkSans-Bold.ttf",
+    "svg-bottom-curve--destop": "assets/bottom-curve--desktop.svg",
+    "svg-bottom-curve--mobile": "assets/bottom-curve--mobile.svg"
+  }
 }

@@ -1,0 +1,41 @@
+@function calculateRem($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
+
+@mixin rem-size($size) {
+  font-size: calculateRem($size);
+}
+
+// USAGE: @include font-size(font-size in px, line height in px); line-height optional
+@mixin font-size($size, $line-height: false) {
+  font-size: calculateRem($size);
+  @if $line-height != false {
+    line-height: ($line-height / $size);
+  }
+}
+
+@mixin container {
+  margin: 0 auto;
+  max-width: 1320px;
+
+  @media (min-width: $break-tablet) {
+    max-width: 640px;
+  }
+
+  @media (min-width: $break-desktop) {
+    max-width: 768px;
+  }
+
+  @media (min-width: $break-desktop-med) {
+    max-width: 1024px;
+  }
+
+  @media (min-width: $break-desktop-wide) {
+    max-width: 1280px;
+  }
+
+  @media (min-width: $break-desktop-xl) {
+    max-width: 1536px;
+  }
+}

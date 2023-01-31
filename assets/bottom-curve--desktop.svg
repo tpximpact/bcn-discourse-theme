@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio="none" width="1440px" height="558px" viewBox="0 0 1440 558" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Mask group</title>
+    <defs>
+        <path d="M0,536.175 L0,0 L1440,0 L1440,435.745 C1023.13,543.611 519.894,587.451 0,536.175 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mask-group">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Path"></g>
+            <rect id="Rectangle" fill="#D8D8D8" mask="url(#mask-2)" x="-628" y="-191" width="2550" height="969"></rect>
+        </g>
+    </g>
+</svg>

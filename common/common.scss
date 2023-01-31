@@ -1,37 +1,13 @@
-@import 'fonts';
+// @import "/scss/_base/typography"
+@import 'base/mixins';
+@import 'base/variables_discourse_css';
+@import 'base/variables_sass';
+
+@import 'base/fonts';
+@import 'base/typography';
+
+@import 'hero';
 // @import 'typography';
-// @import 'test.scss';
-
-@font-face {
-  font-family: 'Erika UC';
-  src: url($ErikaUC-Regular-Woff2) format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.banner {
-  height: 300px;
-  width: 100%;
-  background: #df2866;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1em;
-}
-
-.banner__text {
-  // font-size: 8em;
-  color: green;
-}
-
-.apd-footer {
-  // border: 1px solid #ff0000;
-  // background-color: var(--primary);
-}
-
-.apd-footer {
-  border: 13px solid #ff0000;
-}
 
 .cooked {
   h3 {
