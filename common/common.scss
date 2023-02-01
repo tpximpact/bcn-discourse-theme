@@ -1,13 +1,14 @@
 // @import "/scss/_base/typography"
 @import 'base/mixins';
-@import 'base/variables_discourse';
 @import 'base/variables_sass';
+@import 'base/variables_discourse';
 
 @import 'base/fonts';
 @import 'base/typography';
 
 @import 'hero';
-// @import 'typography';
+@import 'footer';
+@import 'sidebar-section-link.scss';
 
 .cooked {
   h3 {

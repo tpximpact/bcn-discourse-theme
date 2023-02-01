@@ -26,14 +26,14 @@
     padding: 0;
 
     @media (min-width: $break-desktop) {
-      padding-right: 35%;
+      // padding-right: 35%;
       position: relative;
       z-index: 1;
     }
   }
 
   &__content {
-    // max-width: 774px;s
+    max-width: 774px;
     @media (min-width: $break-desktop) {
       padding: $eighteen 0;
     }
