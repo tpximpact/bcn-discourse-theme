@@ -12,7 +12,5 @@
     "svg-bottom-curve--destop": "assets/bottom-curve--desktop.svg",
     "svg-bottom-curve--mobile": "assets/bottom-curve--mobile.svg"
   },
-  "theme_version": "0.0.1",
-  "minimum_discourse_version": "3.0.0",
-  "maximum_discourse_version": "3.0.0"
+  "theme_version": "0.0.1"
 }
