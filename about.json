@@ -2,6 +2,7 @@
   "name": "BCN Theme",
   "about_url": "https://some.url.com",
   "license_url": "https://github.com/GitHubUsername/my-first-remote-theme/blob/master/LICENSE",
+  "authors": "TPX Impact",
   "assets": {
     "ErikaUC-Regular": "assets/ErikaUC-Regular.woff2",
     "WorkSans": "assets/WorkSans-Regular.ttf",
@@ -10,5 +11,7 @@
     "WorkSansBold-Italic": "assets/WorkSans-BoldItalic.ttf",
     "svg-bottom-curve--destop": "assets/bottom-curve--desktop.svg",
     "svg-bottom-curve--mobile": "assets/bottom-curve--mobile.svg"
-  }
+  },
+  "minimum_discourse_version": "3.0",
+  "maximum_discourse_version": "3.0"
 }
