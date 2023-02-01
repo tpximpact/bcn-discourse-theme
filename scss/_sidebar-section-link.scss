@@ -17,13 +17,13 @@
 
     &:focus,
     &:hover {
-      background: $pink200;
+      background: var(--d-sidebar-highlight-color);
       outline: none;
     }
 
     &.active {
       color: var(--primary);
-      background: $pink200;
+      background: var(--d-sidebar-highlight-color);
 
       .sidebar-section-link-prefix {
         &.icon {
@@ -50,8 +50,7 @@
 
     .sidebar-section-link-content-text {
       @include ellipsis;
-      border: 1px solid #ff0000;
-      @include font-size(32);
+
       .emoji {
         width: 15px;
         height: 15px;
