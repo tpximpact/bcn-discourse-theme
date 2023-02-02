@@ -1,7 +1,18 @@
+// you cannot use sass variables here!!
 :root {
   --heading-font-family: WorkSans, Arial, sans-serif;
   --font-family: WorkSans, Arial, sans-serif;
 }
+
+//you can use sass variables here 🎉
+body {
+  background-color: $pink200;
+
+  &.categories-list {
+    background-color: blue;
+  }
+}
+
 // var(--primary)
 // var(--secondary)
 // var(--tertiary)

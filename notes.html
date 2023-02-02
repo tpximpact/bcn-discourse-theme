@@ -1,0 +1,39 @@
+
+{{!-- TODO:  look carfeully at the <script> "type"  diferent types for different tasks --}}
+
+
+
+
+{{!-- LOGGING DISCOURSE --}}
+{{!-- not sure this really works as expected? --}}
+<script type="text/discourse-plugin" version="0.8">
+    console.log(Discourse)
+</script>
+
+{{!-- MAKE YOUR OWN WIDGETS --}}
+
+<script type="text/discourse-plugin" version="0.8">
+  const h = require("virtual-dom").h;
+
+  api.createWidget("my-first-widget", {
+    tagName: "div.my-widget",
+    html() {
+      return h('h1', "Hello World!");
+    }
+  });
+</script>
+
+<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/bcn-test">
+<h2>my first widget</h2>
+{{mount-widget widget="my-first-widget"}}
+</script>
+
+
+
+
+{{!-- PREMADE WIDGETS --}}
+
+<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/bcn-imp-widget">
+<h2>using premade widgets</h2>
+{{mount-widget widget="home-logo"}}
+</script>
