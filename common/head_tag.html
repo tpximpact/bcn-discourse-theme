@@ -3,6 +3,9 @@
 
 <script type="text/x-handlebars" data-template-name="/connectors/below-site-header/bcn-hero">
 
+
+
+
 <header class="bcn-hero-with-icon" data-theme="@model.theme">
   <div class="bcn-hero-with-icon__inner">
 
@@ -26,7 +29,7 @@
 
 
     <div class="bcn-hero-with-icon__content">
-      <h1 class="bcn-hero-with-icon__content-heading">The most active topics from the Breast Cancer Now Community Forum </h1>
+      <h1 class="bcn-hero-with-icon__content-heading">This is static text from the theme, this needs to be dynamically created</h1>
 
 
     </div>
@@ -34,3 +37,16 @@
 </header>
 
 </script>
+
+
+
+<script type="text/x-handlebars" data-template-name="/connectors/below-footer/fancy-footer">
+  <div class="footer">
+    <div class="wrap">
+      <p>before mounting a widget</p>
+        {{mount-widget widget="home-logo"}}
+        {{mount-widget widget="hamburger-categories"}}
+      <p>after mounting a widget</p>
+    </div>
+  </div>
+  </script>
