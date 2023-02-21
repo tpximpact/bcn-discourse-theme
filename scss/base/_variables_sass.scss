@@ -3,6 +3,18 @@
   @return #{$remSize}rem;
 }
 
+// USAGE: @include font-size(font-size in px, line height in px); line-height optional
+@mixin font-size($size, $line-height: false) {
+  font-size: calculateRem($size);
+
+  @if $line-height != false {
+    line-height: ($line-height / $size);
+  }
+}
+
+// Color variables to match tailwind
+// @apply text-purple-500  is now  .classname { color: $yellow500 }
+
 $black: #242424;
 $white: #ffffff;
 $grey: #707070;
@@ -35,6 +47,18 @@ $break-mobile-nav: 68.125em; // 1090px
 $break-desktop-wide: 75em; // 1200px
 $break-desktop-wider: 83.75em; // 1340px
 $break-desktop-xl: 88em; // 1408px
+
+$break-xs: 375px;
+$break-ls: 480px;
+$break-sm: 640px;
+$break-md: 768px;
+$break-lg: 1025px;
+$break-xl: 1200px;
+$break-2xl: 1440px;
+$break-3xl: 1600px;
+
+// These Rem variables are here to help convert the tailwind classes into scss
+// eg...  in tailwind you would use pb-8 we can use padding-bottom: $eight;
 
 $one: calculateRem(4);
 $one-half: calculateRem(6);
@@ -81,3 +105,55 @@ $eightyfour: calculateRem(350);
 $ninetysix: calculateRem(384);
 $onehundred: calculateRem(416);
 $full: '100%';
+
+// These font-size  variables are here to help convert the tailwind font classes into scss
+// eg...  in tailwind you would use text-6xl we can use  .classname {@inlcude $eight-xl};
+
+@mixin xs() {
+  @include font-size(12, 18);
+}
+@mixin sm() {
+  @include font-size(14, 20);
+}
+@mixin base() {
+  @include font-size(16, 26);
+}
+@mixin md() {
+  @include font-size(18, 28);
+}
+@mixin lg() {
+  @include font-size(19, 29);
+}
+@mixin xl() {
+  @include font-size(22, 32);
+}
+@mixin two-xl() {
+  @include font-size(26, 36);
+}
+@mixin three-xl() {
+  @include font-size(28, 35);
+}
+@mixin four-xl() {
+  @include font-size(30, 36);
+}
+@mixin five-xl() {
+  @include font-size(32, 42);
+}
+@mixin six-xl() {
+  @include font-size(35, 42);
+}
+@mixin seven-xl() {
+  @include font-size(36, 46);
+}
+@mixin eight-xl() {
+  @include font-size(40, 45);
+}
+@mixin nine-xl() {
+  @include font-size(45, 58);
+}
+@mixin ten-xl() {
+  @include font-size(56, 62);
+}
+@mixin eleven-xl() {
+  @include font-size(80, 85);
+}

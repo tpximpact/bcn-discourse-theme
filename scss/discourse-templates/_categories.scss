@@ -1,0 +1,20 @@
+body.categories-list {
+  .category-box {
+    border: none;
+
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $white;
+    box-shadow: 19px 15px 41px rgba(85, 18, 70, 0.15);
+    border-radius: 30px;
+  }
+  .category-box-inner {
+    border: none;
+  }
+  .featured-topics {
+    display: none;
+  }
+}

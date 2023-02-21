@@ -10,7 +10,8 @@
     "WorkSansBold": "assets/WorkSans-Bold.ttf",
     "WorkSansBold-Italic": "assets/WorkSans-BoldItalic.ttf",
     "svg-bottom-curve--destop": "assets/bottom-curve--desktop.svg",
-    "svg-bottom-curve--mobile": "assets/bottom-curve--mobile.svg"
+    "svg-bottom-curve--mobile": "assets/bottom-curve--mobile.svg",
+    "hand-drawn-chevron--pink": "assets/hand-drawn-chevron--pink.svg"
   },
   "theme_version": "0.0.1"
 }

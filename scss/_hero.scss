@@ -5,7 +5,7 @@
   color: $white;
   overflow: hidden;
 
-  @media (min-width: $break-desktop) {
+  @media (min-width: $break-lg) {
     padding-bottom: $eight;
   }
 
@@ -14,7 +14,7 @@
   -webkit-mask-size: 100% 100%;
   -webkit-mask-repeat: no-repeat;
 
-  @media (min-width: $break-desktop-med) {
+  @media (min-width: $break-xl) {
     -webkit-mask-image: url($svg-bottom-curve--destop);
   }
 
@@ -25,8 +25,7 @@
     flex-direction: column;
     padding: 0;
 
-    @media (min-width: $break-desktop) {
-      // padding-right: 35%;
+    @media (min-width: $break-lg) {
       position: relative;
       z-index: 1;
     }
@@ -34,24 +33,22 @@
 
   &__content {
     max-width: 774px;
-    @media (min-width: $break-desktop) {
+    @media (min-width: $break-lg) {
       padding: $eighteen 0;
     }
   }
 
   &__image {
-    // @apply px-4 relative md:flex flex-col justify-center items-center;
-
     padding: 0 $four;
     position: relative;
-    @media (min-width: $break-desktop) {
+    @media (min-width: $break-lg) {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
 
-    @media (min-width: $break-desktop) {
+    @media (min-width: $break-lg) {
       position: absolute;
       bottom: 0;
       right: 0;
@@ -72,11 +69,11 @@
     @apply w-10 md:w-26 lg:w-32;
 
     width: $ten;
-    @media (min-width: $break-desktop) {
+    @media (min-width: $break-lg) {
       width: $twentysix;
     }
 
-    @media (min-width: $break-desktop-med) {
+    @media (min-width: $break-xl) {
       width: $thirtytwo;
     }
   }

@@ -5,10 +5,16 @@
 @import 'base/fonts';
 @import 'base/typography';
 
-@import 'discourse-templates/topic-list';
 @import 'discourse-templates/header';
+@import 'discourse-templates/list_navigation';
+@import 'discourse-templates/categories';
+@import 'discourse-templates/topics';
 
 @import 'hero';
 @import 'footer';
 
 @import 'sidebar-section-link.scss';
+
+.alert-bootstrap-mode {
+  display: none;
+}

@@ -1,10 +1,22 @@
+<script type="text/discourse-plugin" version="0.8">
+
+  let siteSettings = api.container.lookup('site-settings:main');
+  console.log("siteSettings", siteSettings);
+
+  api.onPageChange((url, title) => {
+        console.log(url,title),
+        console.log('👻 page change')
+        });
+  
+  console.log('siteSettings....:',  siteSettings.title);
+  console.log(siteSettings.header_dropdown_category_count)
+</script>
+
+
 
 <!-- Add custom hero just below navigation full width -->
 
 <script type="text/x-handlebars" data-template-name="/connectors/below-site-header/bcn-hero">
-
-
-
 
 <header class="bcn-hero-with-icon" data-theme="@model.theme">
   <div class="bcn-hero-with-icon__inner">
@@ -45,7 +57,8 @@
     <div class="wrap">
       <p>before mounting a widget</p>
         {{mount-widget widget="home-logo"}}
-        {{mount-widget widget="hamburger-categories"}}
+        {{mount-widget widget="hamburger-categories" args=(hash categories=this.site.categories)}}
+        
       <p>after mounting a widget</p>
     </div>
   </div>
