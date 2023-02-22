@@ -5,10 +5,13 @@
 @import 'base/fonts';
 @import 'base/typography';
 
+@import 'discourse-templates/buttons';
 @import 'discourse-templates/header';
 @import 'discourse-templates/list_navigation';
 @import 'discourse-templates/categories';
 @import 'discourse-templates/topics';
+
+@import 'plugins/algolia';
 
 @import 'hero';
 @import 'footer';

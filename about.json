@@ -11,7 +11,8 @@
     "WorkSansBold-Italic": "assets/WorkSans-BoldItalic.ttf",
     "svg-bottom-curve--destop": "assets/bottom-curve--desktop.svg",
     "svg-bottom-curve--mobile": "assets/bottom-curve--mobile.svg",
-    "hand-drawn-chevron--pink": "assets/hand-drawn-chevron--pink.svg"
+    "hand-drawn-chevron--pink": "assets/hand-drawn-chevron--pink.svg",
+    "mag-glass": "assets/mag-glass.svg"
   },
   "theme_version": "0.0.1"
 }

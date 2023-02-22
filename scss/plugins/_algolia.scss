@@ -1,0 +1,21 @@
+.algolia-holder {
+  .aa-Input {
+    font-family: WorkSans, sans-serif !important;
+    font-weight: bold;
+    font-size: 18px !important;
+    line-height: 1;
+    // border: 1px solid $purple !important;
+    border: none !important;
+    color: $purple !important;
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $purple;
+      opacity: 1; /* Firefox */
+    }
+
+    background-image: url($mag-glass) !important;
+    // background-repeat: no-repeat !important;
+    // background-position: center !important;
+    background-size: 20px 20px !important;
+  }
+}

@@ -1,0 +1,26 @@
+#topic-footer-buttons {
+  .btn {
+    height: 44px;
+    min-width: 44px;
+    padding: $three $six;
+    border-radius: 20px;
+    border: 1px solid $purple;
+    color: purple;
+    @include md;
+    cursor: pointer;
+    background-color: $white;
+
+    svg {
+      color: $purple !important;
+    }
+
+    &:hover {
+      background-color: $purple100 !important;
+      color: $purple !important;
+
+      svg {
+        color: $purple !important;
+      }
+    }
+  }
+}
