@@ -1,15 +1,15 @@
 //<table>
 .topic-list {
-  border-collapse: separate;
-  border-spacing: 0 15px;
+  // border-collapse: separate;
+  // border-spacing: 0 15px;
 }
 
 .topic-list .topic-list-data:first-of-type {
-  padding-left: 50px;
+  // padding-left: 50px;
 }
 
 .topic-list .topic-list-data:last-of-type {
-  padding-right: 50px;
+  // padding-right: 50px;
 }
 
 //<thead>
@@ -30,22 +30,18 @@
 
   // <tr>
   .topic-list-item {
+    &:nth-child(even) {
+      background-color: $pink200;
+    }
     td {
-      background-color: $white;
-      // box-shadow: 19px 15px 41px rgba(85, 18, 70, 0.15);
       @include lg;
       color: $purple;
-      font-weight: 700;
     }
 
     .main-link {
-      border-top-left-radius: 30px;
-      border-bottom-left-radius: 30px;
-
       .title {
         @include lg;
         color: $purple !important;
-        font-weight: 700;
 
         margin-bottom: 10px;
       }
@@ -57,7 +53,6 @@
       }
 
       .badge-category-bg {
-        display: none;
         width: 16px;
         margin-right: 10px;
       }
@@ -76,11 +71,15 @@
 
     .posts {
     }
+
     .views {
     }
+
     .age {
-      border-top-right-radius: 30px;
-      border-bottom-right-radius: 30px;
     }
   }
+}
+
+.category-list.with-topics .category-list-item .category-description {
+  display: table-row;
 }

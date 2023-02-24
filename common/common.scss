@@ -12,6 +12,7 @@
 @import 'discourse-templates/topics';
 
 @import 'plugins/algolia';
+@import 'plugins/category_banners';
 
 @import 'hero';
 @import 'footer';
@@ -20,4 +21,36 @@
 
 .alert-bootstrap-mode {
   display: none;
+}
+
+body {
+  color: $purple;
+}
+
+// body.about-page,
+// body.archetype-regular,
+// body.admin-interface {
+//   color: $purple;
+//   background-color: #fff;
+//   .bcn-hero {
+//     display: none;
+//   }
+// }
+
+.footer-message {
+  h3 {
+    text-align: center;
+    @include lg;
+    @media (min-width: $break-lg) {
+      @include xl;
+    }
+  }
+}
+
+.suggested-topics-message {
+  text-align: center;
+  @include lg;
+  @media (min-width: $break-lg) {
+    @include xl;
+  }
 }

@@ -13,8 +13,9 @@ body.categories-list {
   }
   .category-box-inner {
     border: none;
+    color: $purple !important;
   }
   .featured-topics {
-    display: none;
+    // display: none;
   }
 }

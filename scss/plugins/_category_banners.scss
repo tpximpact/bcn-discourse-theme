@@ -1,0 +1,81 @@
+// .discourse-category-banners {
+// }
+
+// .category-title-header {
+//   padding-bottom: $twelve !important;
+//   background-color: $pink !important;
+//   position: relative !important;
+//   color: $white !important;
+//   overflow: hidden !important;
+
+//   @media (min-width: $break-lg) {
+//     padding-bottom: $eight !important;
+//   }
+
+//   -webkit-mask-image: url($svg-bottom-curve--mobile) !important;
+//   -webkit-mask-position: 0 100% !important;
+//   -webkit-mask-size: 100% 100% !important;
+//   -webkit-mask-repeat: no-repeat !important;
+
+//   @media (min-width: $break-xl) {
+//     -webkit-mask-image: url($svg-bottom-curve--desktop) !important;
+//   }
+
+//   &__inner {
+//     max-width: 82.5rem !important;
+//     margin: 0 auto !important;
+//     display: flex !important;
+//     flex-direction: column !important;
+//     padding: 0 !important;
+
+//     @media (min-width: $break-lg) {
+//       position: relative !important;
+//       z-index: 1 !important;
+//     }
+//   }
+
+//   &__content {
+//     max-width: 774px !important;
+//     @media (min-width: $break-lg) {
+//       padding: $eighteen 0 !important;
+//     }
+//   }
+
+//   &__image {
+//     padding: 0 $four !important;
+//     position: relative !important;
+//     @media (min-width: $break-lg) {
+//       display: flex !important;
+//       flex-direction: column !important;
+//       justify-content: center !important;
+//       align-items: center !important;
+//     }
+
+//     @media (min-width: $break-lg) {
+//       position: absolute !important;
+//       bottom: 0 !important;
+//       right: 0 !important;
+//       top: 0 !important;
+//       width: 30% !important;
+//     }
+
+//     .a-responsive-image {
+//       display: flex !important;
+//       height: 100% !important;
+//       width: 100% !important;
+//       position: relative !important;
+//       z-index: 1 !important;
+//     }
+//   }
+
+//   &__image-wrap {
+//     width: $ten !important;
+//     @media (min-width: $break-lg) {
+//       width: $twentysix !important;
+//     }
+
+//     @media (min-width: $break-xl) {
+//       width: $thirtytwo !important;
+//     }
+//   }
+// }
