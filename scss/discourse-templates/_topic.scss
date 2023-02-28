@@ -1,0 +1,38 @@
+@keyframes background-fade-highlight--bcn {
+  0% {
+    background-color: $pink400;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.topic-body {
+}
+
+.topic-body {
+  &.highlighted {
+    animation: background-fade-highlight--bcn 2.5s ease-out;
+  }
+}
+
+#topic-title {
+  #edit-title,
+  .category-chooser,
+  .edit-controls {
+    width: 500px;
+  }
+  h1 {
+    margin-bottom: 15px;
+    a {
+      color: $purple;
+    }
+  }
+
+  .remove-featured-link {
+    float: right;
+    text-transform: lowercase;
+    color: var(--primary-med-or-secondary-med);
+    font-size: 0.857rem;
+  }
+}

@@ -15,25 +15,73 @@
 <!-- Stop category descritpion disappearing when user level is trust level is hiogher than 0 -->
 <script type="text/discourse-plugin" version="0.8">
 api.modifyClass("component:category-drop", {
-    displayCategoryDescription: true,
+    displayCategoryDescription: true
 });
 </script>
 
 
-
 <!-- Add custom hero just below navigation full width -->
+<!-- <script type="text/x-handlebars" data-template-name="/connectors/above-main-container/bcn-hero2">
 
-<script type="text/x-handlebars" data-template-name="/connectors/discovery-list-controls-above/bcn-hero-bg">
-  <div class="bcn-hero-bg">
+    <div class="bcn-hero__title2">
+        <h3>{{mount-widget widget="hero-title" args=(hash categories=this.site.categories)}}</h3>
   </div>
-</script>
+
+  </script> -->
 
 
-<script type="text/x-handlebars" data-template-name="/connectors/discovery-list-controls-above/bcn-hero">
-  <header class="bcn-hero">
-    <h1> {{mount-widget widget="category-header-widget"}}</h1>
-  </header>
+<script type="text/x-handlebars" data-template-name="/connectors/above-site-header/bcn-hero">
+    <header class="bcn-hero">
+      
+        <div class="bcn-hero__title">
+            {{mount-widget widget="hero-title" args=(hash categories=this.site.categories)}}
+          </div>
+    </header>
+    </script>
+
+<script type="text/discourse-plugin" version="0.8">
+
+  const h = require("virtual-dom").h;
+    const container = Discourse.__container__;
+
+    api.createWidget("hero-title", {
+      
+      tagName: "div.my-widget",
+ 
+      html() {
+        const controllerCategory = container.lookup('controller:navigation/category');
+        const controllerTopic = container.lookup('controller:topic');
+
+        const nameCategory = controllerCategory.get("category.name");
+        const nameTopic = controllerTopic.get("category");
+        document.body.classList.add("bcn-hero-on-page");
+
+        console.log('nameTopic:',  nameTopic);
+
+        let heroTitle = ""
+
+        if(nameCategory){
+          heroTitle = nameCategory
+        } else {
+          heroTitle = "BCN Forum"
+        }
+
+        api.onPageChange(() => {
+          this.scheduleRerender();
+      });
+
+        return h(`div.blah-class__${name}`,  { innerHTML :  heroTitle });
+      }
+    });
+ 
   </script>
+
+
+
+
+
+
+
 
 
 

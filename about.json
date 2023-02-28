@@ -12,7 +12,8 @@
     "svg-bottom-curve--desktop": "assets/bottom-curve--desktop.svg",
     "svg-bottom-curve--mobile": "assets/bottom-curve--mobile.svg",
     "hand-drawn-chevron--pink": "assets/hand-drawn-chevron--pink.svg",
-    "mag-glass": "assets/mag-glass.svg"
+    "mag-glass": "assets/mag-glass.svg",
+    "hand-drawn-squarrow": "assets/hand-drawn-squarrow.svg"
   },
   "theme_version": "0.0.1"
 }
