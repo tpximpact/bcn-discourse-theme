@@ -1,4 +1,8 @@
 .algolia-holder {
+  // position: absolute;
+  // top: 100px;
+  // left: 45%;
+
   .aa-Input {
     font-family: WorkSans, sans-serif !important;
     font-weight: bold;
@@ -13,9 +17,23 @@
       opacity: 1; /* Firefox */
     }
 
-    background-image: url($mag-glass) !important;
-    // background-repeat: no-repeat !important;
-    // background-position: center !important;
+    background-image: url($search) !important;
+    background-repeat: no-repeat !important;
+    background-position: left !important;
     background-size: 20px 20px !important;
   }
 }
+
+// .search-menu {
+//   border: 1px solid #ff0000;
+
+//   .panel-body {
+//     border: 1px solid blue;
+//   }
+
+//   .panel-body-contents {
+//     display: flex;
+//     align-items: center;
+
+//   }
+// }

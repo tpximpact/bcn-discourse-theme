@@ -1,66 +1,66 @@
-// #main-outlet-wrapper #main-outlet {
-//   padding-top: 0 !important;
+// // #main-outlet-wrapper #main-outlet {
+// //   padding-top: 0 !important;
+// // }
+
+// .bcn-hero {
+//   position: fixed;
+
+//   top: 100px;
+//   left: 0;
+//   right: 0;
+//   height: 300px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   // width: 600px;
+
+//   z-index: -1;
+
+//   &__title {
+//     width: 600px;
+//     font-size: 48px;
+//     font-weight: bold;
+//     line-height: 1;
+//     color: $white;
+//     // border: 1px solid blue;
+//     position: relative;
+
+//     &:after {
+//       content: '';
+//       position: absolute;
+//       right: -250px;
+//       top: -50px;
+
+//       height: 200px;
+//       width: 200px;
+
+//       background-image: url($hand-drawn-squarrow);
+//       background-position: center;
+//       background-size: contain;
+//     }
+//   }
+
+//   .category-title-description {
+//     display: none;
+//   }
 // }
 
-.bcn-hero {
-  position: fixed;
+// .bcn-hero2 {
+//   position: relative;
+//   width: 50%;
+//   margin-bottom: 40px;
+//   margin-left: 0px;
+//   &:after {
+//     content: '';
+//     position: absolute;
+//     right: -250px;
+//     top: -30px;
 
-  top: 100px;
-  left: 0;
-  right: 0;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // width: 600px;
+//     height: 160px;
+//     width: 160px;
 
-  z-index: -1;
-
-  &__title {
-    width: 600px;
-    font-size: 48px;
-    font-weight: bold;
-    line-height: 1;
-    color: $white;
-    // border: 1px solid blue;
-    position: relative;
-
-    &:after {
-      content: '';
-      position: absolute;
-      right: -250px;
-      top: -50px;
-
-      height: 200px;
-      width: 200px;
-
-      background-image: url($hand-drawn-squarrow);
-      background-position: center;
-      background-size: contain;
-    }
-  }
-
-  .category-title-description {
-    display: none;
-  }
-}
-
-.bcn-hero2 {
-  position: relative;
-  width: 50%;
-  margin-bottom: 40px;
-  margin-left: 0px;
-  &:after {
-    content: '';
-    position: absolute;
-    right: -250px;
-    top: -30px;
-
-    height: 160px;
-    width: 160px;
-
-    background-image: url($hand-drawn-squarrow);
-    background-position: center;
-    background-size: contain;
-  }
-}
+//     background-image: url($hand-drawn-squarrow);
+//     background-position: center;
+//     background-size: contain;
+//   }
+// }

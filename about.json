@@ -9,11 +9,18 @@
     "WorkSans-Italic": "assets/WorkSans-Italic.ttf",
     "WorkSansBold": "assets/WorkSans-Bold.ttf",
     "WorkSansBold-Italic": "assets/WorkSans-BoldItalic.ttf",
-    "svg-bottom-curve--desktop": "assets/bottom-curve--desktop.svg",
-    "svg-bottom-curve--mobile": "assets/bottom-curve--mobile.svg",
+    "bottom-curve--desktop": "assets/bottom-curve--desktop.svg",
+    "bottom-curve--mobile": "assets/bottom-curve--mobile.svg",
     "hand-drawn-chevron--pink": "assets/hand-drawn-chevron--pink.svg",
+    "hand-drawn-chevron-right": "assets/hand-drawn-chevron-right.svg",
     "mag-glass": "assets/mag-glass.svg",
-    "hand-drawn-squarrow": "assets/hand-drawn-squarrow.svg"
+    "hand-drawn-squarrow": "assets/hand-drawn-squarrow.svg",
+    "hand-drawn-button--solid": "assets/hand-drawn-button--solid.svg",
+    "hamburger": "assets/hamburger.svg",
+    "search": "assets/search.png",
+    "cross": "assets/cross.svg",
+    "arrow-button": "assets/arrow-button.svg",
+    "curve": "assets/curve.svg"
   },
   "theme_version": "0.0.1"
 }

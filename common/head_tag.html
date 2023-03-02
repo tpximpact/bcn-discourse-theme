@@ -1,18 +1,4 @@
-<!-- <script type="text/discourse-plugin" version="0.8">
-  let siteSettings = api.container.lookup('site-settings:main');
-  console.log("siteSettings", siteSettings);
-
-  api.onPageChange((url, title) => {
-        console.log(url,title),
-        console.log('👻 page change')
-        });
-  
-  console.log('siteSettings....:',  siteSettings.title);
-  console.log(siteSettings.header_dropdown_category_count);
-</script> -->
-
-
-<!-- Stop category descritpion disappearing when user level is trust level is hiogher than 0 -->
+<!-- Stop category descritpion disap pearing when user level is trust level is hiogher than 0 -->
 <script type="text/discourse-plugin" version="0.8">
 api.modifyClass("component:category-drop", {
     displayCategoryDescription: true
@@ -20,16 +6,19 @@ api.modifyClass("component:category-drop", {
 </script>
 
 
-<!-- Add custom hero just below navigation full width -->
-<!-- <script type="text/x-handlebars" data-template-name="/connectors/above-main-container/bcn-hero2">
 
-    <div class="bcn-hero__title2">
-        <h3>{{mount-widget widget="hero-title" args=(hash categories=this.site.categories)}}</h3>
-  </div>
+<script type="text/discourse-plugin" version="0.8">
 
-  </script> -->
+  console.log('👻 ');
+  const hamb = document.querySelector("#toggle-hamburger-menu");
+  console.log('hamb:', hamb);
+</script>
 
 
+
+
+
+<!-- 
 <script type="text/x-handlebars" data-template-name="/connectors/above-site-header/bcn-hero">
     <header class="bcn-hero">
       
@@ -37,7 +26,9 @@ api.modifyClass("component:category-drop", {
             {{mount-widget widget="hero-title" args=(hash categories=this.site.categories)}}
           </div>
     </header>
-    </script>
+  
+  
+  </script> -->
 
 <script type="text/discourse-plugin" version="0.8">
 
