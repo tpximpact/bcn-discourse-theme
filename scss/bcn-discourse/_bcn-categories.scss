@@ -1,0 +1,36 @@
+.categories-list {
+  .category-boxes-with-topics,
+  .category-boxes {
+    margin: 32px 0 40px;
+  }
+
+  .category-box {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    background: $pink200;
+    box-shadow: 0px 15px 22px rgba(85, 18, 70, 0.35);
+    border-radius: 30px;
+  }
+  .category-box-inner {
+    border: none;
+
+    h3 {
+      color: $purple;
+      font-weight: 700;
+      font-size: 19px;
+      line-height: 29px;
+
+      @media (min-width: $break-lg) {
+        font-size: 22px;
+        line-height: 32px;
+      }
+    }
+  }
+  .featured-topics {
+    display: none;
+  }
+}

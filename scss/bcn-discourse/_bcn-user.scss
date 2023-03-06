@@ -1,0 +1,206 @@
+.user-menu {
+  .panel-body {
+    padding-top: 50px;
+    .panel-body-contents {
+      padding: 10px;
+      width: 90% !important;
+      margin: 0 auto !important;
+      max-width: 500px !important;
+      background-color: #fff;
+    }
+
+    .menu-links-row {
+      button {
+        svg {
+          color: $purple !important;
+        }
+      }
+    }
+
+    .quick-access-panel {
+      ul {
+        li {
+          a,
+          button {
+            color: $purple !important;
+
+            svg {
+              color: $purple !important;
+            }
+          }
+        }
+      }
+    }
+
+    .panel-body-bottom {
+      a,
+      button {
+        color: $purple;
+        background-color: $pink200 !important;
+        svg {
+          color: $purple !important;
+        }
+      }
+    }
+  }
+}
+
+.empty-state {
+  color: $purple !important;
+  svg {
+    color: $purple !important;
+  }
+}
+
+// User avatar, title desc
+.about {
+  .controls {
+    ul {
+      li {
+        button {
+          @include a-btn-chip;
+        }
+      }
+    }
+  }
+}
+
+//user navigation
+.user-primary-navigation {
+  ul {
+    li {
+      a {
+        @include a-btn-chip;
+
+        &.active {
+          svg {
+            color: $white !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+//user 2nd navigation (sidebar)
+.user-secondary-navigation {
+  a {
+    color: $purple !important;
+  }
+}
+
+// user page content
+
+.user-content {
+  .user-stat {
+    .number {
+      color: $purple;
+    }
+  }
+}
+
+.top-section {
+  color: $purple !important;
+
+  .label {
+    color: $purple !important;
+  }
+
+  h3 {
+    @include xl;
+  }
+
+  .top-sub-section li {
+    border-left: 2px solid $pink200;
+  }
+
+  .relative-date {
+    color: $purple;
+  }
+
+  a {
+    color: $purple;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.user-stream {
+  .user-stream-item {
+    border-bottom: 1px solid $pink200;
+  }
+
+  .user-stream-item__details {
+    a {
+      color: $purple !important;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .category {
+    .badge-category {
+      color: $purple !important;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .excerpt {
+    color: $purple !important;
+  }
+}
+
+.user-additional-controls {
+  button {
+    @include a-btn-chip;
+  }
+}
+
+.notification-history {
+  .filter-text {
+    color: $purple !important;
+  }
+  .menuitemradio {
+    .texts {
+      span {
+        color: $purple !important;
+      }
+    }
+  }
+  .header-text,
+  svg {
+    color: $pink !important;
+  }
+}
+
+.select-kit.single-select.dropdown-select-box.is-expanded .select-kit-collection {
+  li {
+    &.is-selected {
+      background-color: $pink200 !important;
+    }
+
+    &.is-highlighted {
+      background-color: $pink200 !important;
+    }
+    .name {
+      color: $purple !important;
+    }
+  }
+}
+
+.notification {
+  color: $purple;
+  svg,
+  a {
+    color: $purple !important;
+  }
+
+  &.unread {
+    background-color: $pink200 !important;
+  }
+}

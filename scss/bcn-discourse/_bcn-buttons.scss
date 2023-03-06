@@ -1,0 +1,224 @@
+//////////////--------------//////////////--------------//////////////--------------
+/// //////////////--------------//////////////--------------//////////////--------------
+/// //////////////--------------//////////////--------------//////////////--------------
+/// //////////////--------------//////////////--------------//////////////--------------
+
+@mixin a-btn {
+  height: unset;
+  background: unset;
+
+  display: flex;
+  align-items: center;
+
+  // border: 1px solid white;
+  border: transparent;
+  cursor: pointer;
+  transition: 0.4s;
+
+  font-weight: bold;
+  // min-width: 100px;
+  outline: none;
+
+  padding: $four $ten !important;
+
+  position: relative;
+  border-radius: 20px;
+  @include lg;
+
+  z-index: 1;
+
+  // after:transition-all
+  // before:transition-all;
+
+  &:hover {
+    outline: none !important;
+    background: unset !important;
+  }
+}
+
+@mixin a-btn-background-mask {
+  // background: none;
+  color: $yellow;
+  &:before {
+    content: '';
+    background-color: $purple;
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+
+    mask-size: 100% 100%;
+    mask-position: 0 100%;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-position: 0 100%;
+    -webkit-mask-repeat: no-repeat;
+
+    &:hover {
+      &:before {
+        transform: scale(0.95, 0.9);
+      }
+    }
+  }
+}
+
+@mixin a-btn-primary {
+  @include a-btn;
+  @include a-btn-background-mask;
+  &::before {
+    -webkit-mask-image: url($hand-drawn-button--solid);
+    mask-image: url($hand-drawn-button--solid);
+  }
+}
+
+@mixin a-btn-primary__yellow {
+  @include a-btn;
+  @include a-btn-background-mask;
+  color: $purple;
+  &:after {
+    background-color: $purple;
+  }
+
+  &:before {
+    background-color: $yellow;
+  }
+  &:hover {
+    &:before {
+      background-color: $yellow600;
+      border-color: $yellow600;
+    }
+  }
+
+  &::before {
+    -webkit-mask-image: url($hand-drawn-button--solid);
+    mask-image: url($hand-drawn-button--solid);
+  }
+}
+
+@mixin a-btn-menu {
+  @include a-btn;
+  // @include a-btn-background-mask;
+  &:after {
+    // -webkit-mask-image: url($hand-drawn-button--solid);
+    // mask-image: url($hand-drawn-button--solid);
+
+    content: '';
+    position: absolute;
+    z-index: -1;
+
+    height: 16px;
+    width: 16px;
+    margin-left: 12px;
+    margin-top: 6px;
+    background-image: url($hand-drawn-chevron-right);
+    background-size: 100% 100%;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+@mixin a-btn-chip {
+  height: 44px;
+  min-width: 44px;
+  padding: $three $six;
+  border-radius: 20px;
+  border: 1px solid $purple;
+  color: purple;
+  @include md;
+  line-height: 1;
+  cursor: pointer;
+  background-color: $white;
+  margin-bottom: 16px;
+  svg {
+    color: $purple !important;
+  }
+
+  &:hover {
+    background-color: $purple100 !important;
+    color: $purple !important;
+
+    svg {
+      color: $purple !important;
+    }
+  }
+
+  &.active {
+    background-color: $purple;
+    color: $white;
+
+    &:hover {
+      background-color: $purple;
+      color: $white;
+    }
+  }
+
+  .d-button-label {
+    color: $purple;
+  }
+}
+
+.header-buttons {
+  button {
+    // @include a-btn-chip;
+    @include a-btn-primary;
+    margin-right: 5px;
+
+    svg {
+      display: none;
+    }
+  }
+}
+
+#topic-footer-buttons {
+  .btn {
+    height: 44px;
+    min-width: 44px;
+    padding: $three $six;
+    border-radius: 20px;
+    border: 1px solid $purple;
+    color: purple;
+    @include md;
+    cursor: pointer;
+    background-color: $white;
+
+    svg {
+      color: $purple !important;
+    }
+
+    &:hover {
+      background-color: $purple100 !important;
+      color: $purple !important;
+
+      svg {
+        color: $purple !important;
+      }
+    }
+  }
+}
+
+// .nav-pills {
+//   li {
+//     a {
+//       height: 44px;
+//       padding: $three $six;
+//       border-radius: 20px;
+//       border: 1px solid $purple;
+//       color: purple;
+//       @include md;
+//       cursor: pointer;
+//       background-color: $white;
+//       margin-bottom: 10px;
+//       &:hover {
+//         background-color: $purple100;
+//         color: purple;
+//       }
+
+//       &.active {
+//         background-color: $purple;
+//         color: $white;
+//       }
+//     }
+//   }
+// }

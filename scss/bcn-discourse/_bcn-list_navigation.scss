@@ -1,0 +1,148 @@
+.navigation-container {
+  padding: 0px 0;
+  margin-bottom: 0;
+
+  //  1sr Navigation -  Category drop downs
+  .category-breadcrumb {
+    width: 100%;
+    padding: 0 !important;
+    margin-bottom: 30px;
+
+    li {
+      width: 100%;
+      display: block;
+      @media (min-width: $break-lg) {
+        width: auto;
+      }
+      details {
+        width: 100%;
+      }
+    }
+
+    .category-drop-header,
+    .tag-drop-header {
+      border-radius: 20px;
+      padding: 20px;
+
+      font-weight: 400;
+      @include md;
+
+      svg {
+        display: none;
+      }
+
+      &:after {
+        transition: 0.4s;
+        content: '';
+        height: auto;
+        width: 20px;
+        margin-left: 8px;
+        background-image: url($hand-drawn-chevron--pink);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+
+    .is-expanded {
+      .category-drop-header,
+      .tag-drop-header {
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    // the drop dowmn
+    .select-kit-body {
+      top: 6px !important;
+
+      border-radius: 20px;
+
+      .select-kit-filter {
+        @include md;
+        padding: $five;
+      }
+
+      .select-kit-row {
+        @include md;
+        padding: 20px;
+
+        &[data-value='all-categories'] {
+          color: $purple;
+        }
+
+        &.is-selected,
+        &.is-highlighted {
+          background-color: $purple100;
+
+          &:hover {
+            background-color: $purple100;
+          }
+        }
+
+        &:last-of-type {
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+        }
+      }
+    }
+
+    // The badge - ie the text
+    .badge-wrapper {
+      white-space: normal;
+
+      .badge-category-bg {
+        display: none;
+      }
+
+      .category-name {
+        text-overflow: unset;
+        overflow: visible;
+      }
+    }
+  }
+
+  // 2nd Navigation - SortBy buttons -
+  #navigation-bar {
+    padding: 0;
+    margin: 0;
+
+    li {
+      a {
+        @include a-btn-chip;
+      }
+    }
+  }
+
+  // 3rd  Navigation Controls - edit tools
+
+  .navigation-controls {
+    .categories-admin-dropdown {
+      @include a-btn-chip;
+      summary {
+        background-color: $white !important;
+      }
+
+      &:hover {
+        summary {
+          background-color: $pink200 !important;
+        }
+      }
+    }
+
+    .edit-category {
+      @include a-btn-chip;
+    }
+
+    .notifications-button {
+      summary {
+        @include a-btn-chip;
+      }
+    }
+
+    #create-topic {
+      @include a-btn-chip;
+    }
+  }
+}

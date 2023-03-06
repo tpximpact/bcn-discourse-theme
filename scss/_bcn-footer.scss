@@ -1,0 +1,237 @@
+.container {
+  display: block;
+  margin: auto;
+  width: 95%;
+  max-width: 1320px;
+  padding: 0;
+}
+
+.o-footer {
+  padding-top: 30px;
+  background-color: $pink;
+  color: $white;
+
+  a:focus,
+  a:focus-visible {
+    outline: 1px dashed $white;
+    outline-offset: 8px;
+  }
+
+  h3 {
+    margin-bottom: 16px;
+  }
+
+  hr {
+    margin: 16px 0;
+  }
+
+  &__section-menu {
+    nav {
+      margin-bottom: 16px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+    }
+
+    .o-footer__menu-link {
+      color: $white;
+      @include base;
+
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+        padding: 4px;
+        margin-left: -4px;
+      }
+
+      &:focus-visible,
+      &:focus {
+        outline: 1px dashed $white;
+        outline-offset: 8px;
+      }
+    }
+  }
+
+  &__sign-up-copy {
+    @include base;
+    margin-bottom: 32px;
+  }
+
+  &__inner-wrapper {
+    @apply py-4 md:py-8;
+
+    padding: 16px 0;
+
+    @media (min-width: $break-md) {
+      padding: 32px 0;
+    }
+  }
+
+  &__menu-item {
+    padding: 8px 0;
+  }
+
+  &__sign-up-cta {
+    @include a-btn-primary__yellow;
+    width: 100%;
+    outline: none;
+    margin-bottom: 32px;
+    padding: 0 56px;
+    display: inline;
+    display: inline-block;
+    max-width: 130px;
+    text-align: center;
+  }
+
+  &__social-links {
+    display: flex;
+    width: 100%;
+
+    list-style: none;
+    margin: 0;
+  }
+
+  &__social {
+    &:not(&:first-of-type) {
+      margin-left: 24px;
+    }
+  }
+
+  &__section-social {
+    margin-bottom: 24px;
+  }
+
+  &__social-link {
+    display: block;
+    width: 36px;
+    height: 36px;
+    &:hover {
+      svg path {
+        fill: #ffdb30;
+      }
+    }
+  }
+
+  &__section-logos {
+    margin-bottom: 32px;
+    ul {
+      list-style: none;
+      margin: 0;
+    }
+  }
+
+  &__logos-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__regulator-logo {
+    &:focus-within,
+    &:focus {
+      outline: 1px dashed $white;
+      outline-offset: 8px;
+    }
+    &:not(&:first-of-type) {
+      margin-left: 32px;
+    }
+  }
+
+  &__logo-header {
+    @include sm;
+    margin-bottom: 16px;
+  }
+
+  &__section-registration p {
+    @include xs;
+    &:not(&:last-of-type) {
+      margin-bottom: 16px;
+    }
+  }
+  &__one-trust-settings {
+    button#ot-sdk-btn {
+      background-color: $pink;
+      white-space: nowrap;
+      outline: none;
+      border: none;
+      color: $white;
+      font-size: 14px !important;
+
+      @include xs;
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:before {
+        margin-top: -6px;
+      }
+    }
+
+    button#ot-sdk-btn.ot-sdk-show-settings:hover {
+      background-color: unset;
+    }
+  }
+}
+
+@media (min-width: $break-md) {
+  .o-footer {
+    &__top-part,
+    &__bottom-part {
+      padding-bottom: 4rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-gap: 4.5rem;
+      gap: 4.5rem;
+    }
+
+    &__top-part {
+      position: relative;
+    }
+
+    &__one-trust-settings {
+      button#ot-sdk-btn {
+        position: absolute;
+        bottom: 8px;
+        right: 0;
+        @include xs;
+      }
+    }
+
+    &__section-logos {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $break-lg) {
+    .o-footer {
+      &__top-part {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding-bottom: 4rem;
+        padding-bottom: 64px;
+      }
+
+      &__section-menu {
+        grid-column: span 2 / span 2;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 4.5rem;
+        gap: 4.5rem;
+      }
+
+      &__section-social {
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+      }
+    }
+  }
+}
+
+// If section with bottom curve precedes footer, add extra top padding
+
+// article:has(div):has(section:last-child[data-curve-bottom='true']) + footer {
+//   .o-footer__inner-wrapper {
+//     @apply pt-8 pb-4 md:pt-16 pb-8;
+//   }
+// }

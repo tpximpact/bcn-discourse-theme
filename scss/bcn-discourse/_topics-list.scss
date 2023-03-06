@@ -83,3 +83,12 @@
 .category-list.with-topics .category-list-item .category-description {
   display: table-row;
 }
+
+// below the table, alerts mesages etc
+.topic-list-bottom {
+  margin: 40px 0;
+  h3 {
+    @include xl;
+    font-weight: 400;
+  }
+}

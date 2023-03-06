@@ -1,0 +1,149 @@
+@keyframes background-fade-highlight--bcn {
+  0% {
+    background-color: $pink400;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.topic-body {
+  &.highlighted {
+    animation: background-fade-highlight--bcn 2.5s ease-out;
+  }
+}
+
+#topic-title {
+  // #edit-title,
+  // .category-chooser,
+  // .edit-controls {
+  //   width: 500px;
+  // }
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  h1 {
+    margin-bottom: 15px;
+    a {
+      color: $purple;
+      @include five-xl;
+      font-weight: bold;
+      @media (min-width: $break-lg) {
+        @include ten-xl;
+      }
+    }
+  }
+
+  .badge-wrapper {
+    margin-bottom: 10px;
+    .badge-category-bg {
+      display: none;
+    }
+
+    &:nth-child(2) {
+      margin-left: 24px;
+      &:before {
+        position: absolute;
+        left: -18px;
+        color: $purple;
+        content: '';
+
+        width: 18px;
+        height: 18px;
+        background-image: url($hand-drawn-chevron-right);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: contain;
+      }
+    }
+
+    .badge-category {
+      color: $purple;
+    }
+
+    &:hover {
+      .badge-category {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media (min-width: $break-lg) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+// .topic-avatar {}
+
+.topic-body {
+  padding-top: 40px;
+  color: $purple !important;
+
+  p {
+    @include lg;
+  }
+}
+
+.topic-meta-data {
+  .names {
+    a {
+      color: $purple;
+    }
+  }
+
+  .post-info {
+    .heatmap-high {
+      color: $pink !important;
+      svg,
+      .d-button-label {
+        color: $pink !important;
+      }
+    }
+  }
+}
+
+.post-menu-area {
+  .post-controls {
+    .actions {
+      button {
+        @include a-btn-chip;
+      }
+    }
+  }
+}
+
+// // Timeline scroll bar
+.timeline-container {
+  .topic-timeline {
+    .timeline-controls {
+      button {
+        @include a-btn-chip;
+      }
+    }
+
+    .timeline-handle {
+      background-color: $pink;
+    }
+    .timeline-scrollarea {
+      border-left: 1px solid $pink;
+    }
+  }
+
+  .timeline-footer-controls {
+    button {
+      @include a-btn-chip;
+    }
+
+    .widget-component-connector summary {
+      @include a-btn-chip;
+    }
+  }
+}
+
+.topic-notifications-button {
+  span {
+    color: $purple !important;
+  }
+}

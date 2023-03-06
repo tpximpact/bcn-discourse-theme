@@ -5,19 +5,21 @@
 @import 'base/fonts';
 @import 'base/typography';
 
-@import 'discourse-templates/categories';
-@import 'discourse-templates/bcn-buttons';
-@import 'discourse-templates/header';
-@import 'discourse-templates/list_navigation';
-@import 'discourse-templates/bcn-menu-panel';
-@import 'discourse-templates/topic';
-@import 'discourse-templates/topics-list';
+@import 'bcn-discourse/bcn-alerts';
+@import 'bcn-discourse/bcn-buttons';
+@import 'bcn-discourse/bcn-categories';
+@import 'bcn-discourse/bcn-header';
+@import 'bcn-discourse/bcn-list_navigation';
+@import 'bcn-discourse/bcn-menu-panel';
+@import 'bcn-discourse/bcn-topic';
+@import 'bcn-discourse/bcn-user';
+@import 'bcn-discourse/topics-list';
 
 @import 'plugins/algolia';
-@import 'plugins/category_banners';
+// @import 'plugins/category_banners';
 
-@import 'hero';
-@import 'footer';
+// @import 'hero';
+@import 'bcn-footer';
 
 @import 'sidebar-section-link.scss';
 
@@ -26,52 +28,18 @@
 }
 
 body {
-  color: $purple;
+  color: $purple !important;
 }
-
-// html {
-//   width: 100% !important;
-//   height: 100% !important;
-//   margin: 0 0 1px !important;
-//   padding: 0 !important;
-//   box-sizing: border-box !important;
-//   font-synthesis: none !important;
-//   -moz-osx-font-smoothing: grayscale !important;
-//   -webkit-font-smoothing: antialiased !important;
-//   font-smoothing: antialiased !important;
-//   text-size-adjust: 100% !important;
-//   -webkit-tap-highlight-color: transparent !important;
-// }
-
-// body {
-//   @include font-size(16);
-//   display: flex;
-//   flex-direction: column;
-//   width: 100% !important;
-//   height: auto !important;
-//   min-height: 100vh !important;
-//   margin: 0 !important;
-//   // color: $teal;
-//   // font-family: $font-headers;
-//   font-weight: 400;
-//   text-align: left;
-//   overflow-x: hidden !important;
-//   position: relative !important;
-// }
+.badge-category-parent-bg,
+.badge-category-bg {
+  display: none !important;
+}
 
 // //Date drop down header
 // .select-kit .select-kit-header {
 //   h2 {
 //     font-size: 26px !important;
 //   }
-// }
-
-// // Timeline scroll bar
-// .timeline-container .topic-timeline .timeline-handle {
-//   background-color: $pink;
-// }
-// .timeline-container .topic-timeline .timeline-scrollarea {
-//   border-left: 1px solid $pink;
 // }
 
 // #main-outlet {

@@ -20,7 +20,9 @@
     "search": "assets/search.png",
     "cross": "assets/cross.svg",
     "arrow-button": "assets/arrow-button.svg",
-    "curve": "assets/curve.svg"
+    "curve": "assets/curve.svg",
+    "footer-logo--fundraising-regulator": "assets/footer-logo--fundraising-regulator.svg",
+    "footer-logo--pif": "assets/footer-logo--pif.svg"
   },
   "theme_version": "0.0.1"
 }
