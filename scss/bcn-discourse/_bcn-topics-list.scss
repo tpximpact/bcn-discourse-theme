@@ -33,17 +33,35 @@
     &:nth-child(even) {
       background-color: $pink200;
     }
+
     td {
       @include lg;
       color: $purple;
+
+      padding: 20px 0;
+      // these classes are only on mobile
+      .pull-left {
+        padding: 0 10px 0 20px;
+      }
+      .pull-right {
+        padding-right: 20px;
+      }
+
+      .activity {
+        padding-right: 10px;
+      }
+      //////////////////////////
     }
 
     .main-link {
-      .title {
+      .title,
+      .link-top-line a {
         @include lg;
         color: $purple !important;
-
-        margin-bottom: 10px;
+        font-weight: bold;
+        padding: 0 !important;
+        display: block;
+        margin-bottom: 6px;
       }
 
       .badge-wrapper {
@@ -58,11 +76,21 @@
       }
 
       .badge-category {
+        padding: 0 !important;
         .category-name {
           @include md;
           color: #6e2b5f;
           font-weight: 400;
         }
+      }
+    }
+
+    .link-bottom-line {
+      margin: 0 !important;
+
+      a {
+        padding: 0 !important;
+        margin: 0 !important;
       }
     }
 
@@ -80,9 +108,9 @@
   }
 }
 
-.category-list.with-topics .category-list-item .category-description {
-  display: table-row;
-}
+// .category-list.with-topics .category-list-item .category-description {
+//   display: table-row;
+// }
 
 // below the table, alerts mesages etc
 .topic-list-bottom {

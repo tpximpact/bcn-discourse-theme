@@ -109,6 +109,7 @@
     margin: 0;
 
     li {
+      border: none;
       a {
         @include a-btn-chip;
       }
@@ -118,6 +119,8 @@
   // 3rd  Navigation Controls - edit tools
 
   .navigation-controls {
+    gap: 0 !important;
+
     .categories-admin-dropdown {
       @include a-btn-chip;
       summary {
@@ -142,6 +145,10 @@
     }
 
     #create-topic {
+      @include a-btn-chip;
+    }
+
+    .bulk-select {
       @include a-btn-chip;
     }
   }

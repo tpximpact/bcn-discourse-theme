@@ -1,0 +1,59 @@
+// BACKGROUND CONTAINER
+// #main-outlet {
+//   margin-top: 300px !important;
+// }
+
+.background-container {
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 600px;
+  width: 100vw;
+  // background: linear-gradient(90deg, var(--tertiary-hover) 0%, var(--tertiary) 100%);
+  // clip-path: ellipse(148% 70% at 91% -14%);
+
+  background-color: $pink !important;
+  -webkit-mask-image: url(bottom-curve--mobile);
+  -webkit-mask-image: url($bottom-curve--desktop);
+  -webkit-mask-position: 0 100%;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+
+  @media (min-width: $break-xl) {
+    -webkit-mask-image: url($bottom-curve--desktop);
+  }
+}
+
+.bcn-hero-with-icon {
+  background-color: $pink;
+  height: 160px;
+  display: flex;
+  padding: 100px 0 60px;
+  &__inner {
+    display: flex;
+    width: calc(90% - 60px);
+    max-width: calc(1320px - 60px);
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    width: 700px;
+
+    h4 {
+      font-weight: 400;
+    }
+  }
+
+  &__image {
+    width: 220px;
+    height: 220px;
+    background-image: url($hand-drawn-squarrow);
+    background-repeat: no-repeat;
+
+    background-size: contain;
+    background-position: 0 0;
+  }
+}

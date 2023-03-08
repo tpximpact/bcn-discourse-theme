@@ -1,3 +1,27 @@
+api.onPageChange((url, title) => {
+
+var allTitles = title.split("-");
+console.log('allTitles[0]:', allTitles[0]);
+topicTitle = allTitles[0];
+});
+
+
+<!-- How to use query strings in  a plugin -->
+
+return h(`p.blah-class__${name}`, { innerHTML : nameCategorySub });
+
+
+
+<script type="text/discourse-plugin" version="0.8">
+
+  const hamb = document.querySelector("#toggle-hamburger-menu");
+  console.log('hamb:', hamb);
+</script>
+
+
+
+
+
 <script type="text/x-handlebars" data-template-name="/connectors/below-site-header/bcn-hero">
 
   <header class="bcn-hero-with-icon" data-theme="@model.theme">

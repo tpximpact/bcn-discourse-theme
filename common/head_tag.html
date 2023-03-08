@@ -6,29 +6,31 @@ api.modifyClass("component:category-drop", {
 </script>
 
 
+<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/bcn-hero">
+  <header class="bcn-hero-with-icon" data-theme="@model.theme">
+    <div class="bcn-hero-with-icon__inner">
 
-<script type="text/discourse-plugin" version="0.8">
 
-  console.log('👻 ');
-  const hamb = document.querySelector("#toggle-hamburger-menu");
-  console.log('hamb:', hamb);
+      <div class="bcn-hero-with-icon__content">
+       {{mount-widget widget="hero-title"}}
+        {{mount-widget widget="hero-subtitle"}}
+     </div>
+
+      <div class="bcn-hero-with-icon__image">
+      </div>
+  
+    </div>
+  </header>
 </script>
 
 
-
-
-
-<!-- 
-<script type="text/x-handlebars" data-template-name="/connectors/above-site-header/bcn-hero">
+<!-- <script type="text/x-handlebars" data-template-name="/connectors/above-site-header/bcn-hero">
     <header class="bcn-hero">
-      
         <div class="bcn-hero__title">
             {{mount-widget widget="hero-title" args=(hash categories=this.site.categories)}}
           </div>
     </header>
-  
-  
-  </script> -->
+</script> -->
 
 <script type="text/discourse-plugin" version="0.8">
 
@@ -37,53 +39,92 @@ api.modifyClass("component:category-drop", {
 
     api.createWidget("hero-title", {
       
-      tagName: "div.my-widget",
+      tagName: "div.bcn-title",
  
       html() {
         const controllerCategory = container.lookup('controller:navigation/category');
+      
+        const nameCategory = controllerCategory.get("category.name");
+        const categorySubtitle = controllerCategory.get("category.description");
+
+        
+        
         const controllerTopic = container.lookup('controller:topic');
 
-        const nameCategory = controllerCategory.get("category.name");
-        const nameTopic = controllerTopic.get("category");
+  
+        const nameTopic = controllerTopic.get("topic.name");
+        
+        const tags = controllerTopic.get("target.currentPath");
+const id = controllerTopic.get("currentPostId")
+      
+        
         document.body.classList.add("bcn-hero-on-page");
 
-        console.log('nameTopic:',  nameTopic);
 
         let heroTitle = ""
 
         if(nameCategory){
           heroTitle = nameCategory
         } else {
-          heroTitle = "BCN Forum"
+          heroTitle = "Title text to be deciced"
         }
 
-        api.onPageChange(() => {
+      
+        api.onPageChange((url, title) => { 
+          var allTitles = title.split("-");
+          const topicTitle = allTitles[0];
+          console.log('topicTitle:',  topicTitle);
           this.scheduleRerender();
-      });
-
-        return h(`div.blah-class__${name}`,  { innerHTML :  heroTitle });
+        });
+  
+        return h( 
+          'h1.bcn-hero-with-icon__content-heading',  { innerHTML : heroTitle },
+           
+        )
+ 
       }
+
     });
  
   </script>
 
 
 
+<script type="text/discourse-plugin" version="0.8">
+
+    const h = require("virtual-dom").h;
+      const container = Discourse.__container__;
+      api.createWidget("hero-subtitle", {
+        tagName: "div.bcn-subtitle",
+   
+        html() {
+          const controllerCategory = container.lookup('controller:navigation/category');
+          const controllerTopic = container.lookup('controller:topic');
+          const categorySubtitle = controllerCategory.get("category.description");
+    
 
 
+          let heroSubtitle = ""
 
+          if(categorySubtitle){
+            heroSubtitle = categorySubtitle
+          } else {
+            heroSubtitle = "A subtitle to be decided, some text here if you want"
+          }
+  
+          api.onPageChange(() => {
+            this.scheduleRerender();
+          });
+  
 
-
-
-
-
-
-<script type="text/x-handlebars" data-template-name="/connectors/below-footer/fancy-footer">
-  <div class="footer">
-    <div class="wrap">
-       
-        {{!-- {{mount-widget widget="home-logo"}} --}}
-        {{!-- {{mount-widget widget="hamburger-categories" args=(hash categories=this.site.categories)}} --}}
-    </div>
-  </div>
-  </script>
+    
+          return h( 
+             'h4.bcn-hero-with-icon__content-subtitle',  { innerHTML : heroSubtitle }
+        
+          )
+   
+        }
+  
+      });
+   
+    </script>
