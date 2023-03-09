@@ -19,17 +19,18 @@
   -webkit-mask-position: 0 100%;
   -webkit-mask-size: 100% 100%;
   -webkit-mask-repeat: no-repeat;
-
-  @media (min-width: $break-xl) {
-    -webkit-mask-image: url($bottom-curve--desktop);
-  }
 }
 
 .bcn-hero-with-icon {
   background-color: $pink;
+  color: $white !important;
   height: 160px;
   display: flex;
-  padding: 100px 0 60px;
+  padding: 60px 0 20px;
+  @media (min-width: $break-lg) {
+    padding: 100px 0 60px;
+  }
+
   &__inner {
     display: flex;
     width: calc(90% - 60px);
@@ -55,5 +56,6 @@
 
     background-size: contain;
     background-position: 0 0;
+    display: none;
   }
 }

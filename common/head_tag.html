@@ -39,49 +39,28 @@ api.modifyClass("component:category-drop", {
 
     api.createWidget("hero-title", {
       
-      tagName: "div.bcn-title",
+      tagName: "div.bcn-hero-with-icon__content-heading",
  
       html() {
         const controllerCategory = container.lookup('controller:navigation/category');
-      
         const nameCategory = controllerCategory.get("category.name");
         const categorySubtitle = controllerCategory.get("category.description");
-
-        
-        
-        const controllerTopic = container.lookup('controller:topic');
-
-  
-        const nameTopic = controllerTopic.get("topic.name");
-        
-        const tags = controllerTopic.get("target.currentPath");
-const id = controllerTopic.get("currentPostId")
-      
-        
-        document.body.classList.add("bcn-hero-on-page");
-
 
         let heroTitle = ""
 
         if(nameCategory){
           heroTitle = nameCategory
         } else {
-          heroTitle = "Title text to be deciced"
+          heroTitle = "Page without a category, text to be decided"
         }
 
-      
         api.onPageChange((url, title) => { 
-          var allTitles = title.split("-");
-          const topicTitle = allTitles[0];
-          console.log('topicTitle:',  topicTitle);
           this.scheduleRerender();
         });
   
         return h( 
-          'h1.bcn-hero-with-icon__content-heading',  { innerHTML : heroTitle },
-           
+          'h1',  { innerHTML : heroTitle },
         )
- 
       }
 
     });
@@ -95,14 +74,13 @@ const id = controllerTopic.get("currentPostId")
     const h = require("virtual-dom").h;
       const container = Discourse.__container__;
       api.createWidget("hero-subtitle", {
-        tagName: "div.bcn-subtitle",
+        tagName: "div.bcn-hero-with-icon__content-subtitle",
    
         html() {
           const controllerCategory = container.lookup('controller:navigation/category');
           const controllerTopic = container.lookup('controller:topic');
           const categorySubtitle = controllerCategory.get("category.description");
-    
-
+  
 
           let heroSubtitle = ""
 
@@ -119,7 +97,7 @@ const id = controllerTopic.get("currentPostId")
 
     
           return h( 
-             'h4.bcn-hero-with-icon__content-subtitle',  { innerHTML : heroSubtitle }
+             'h4',  { innerHTML : heroSubtitle }
         
           )
    

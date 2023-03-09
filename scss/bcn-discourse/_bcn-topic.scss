@@ -147,3 +147,22 @@
     color: $purple !important;
   }
 }
+
+#topic-footer-buttons,
+.suggested-topics {
+  padding: 0 10px;
+  color: $purple;
+
+  h3 {
+    color: $purple;
+    text-align: center;
+    @include lg;
+    @media (min-width: $break-lg) {
+      @include xl;
+    }
+  }
+
+  @media (min-width: $break-lg) {
+    padding: 0 40px;
+  }
+}
