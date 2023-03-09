@@ -39,11 +39,8 @@ body {
 
 .panel-body-contents {
   padding: 30px 0;
-
   max-width: 1300px;
-
   @media (min-width: $break-xl) {
-    // display: flex;
     flex-direction: row !important;
     flex-wrap: wrap !important;
     align-items: flex-start;

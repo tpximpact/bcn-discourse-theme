@@ -1,13 +1,14 @@
-// @import "/scss/_base/typography
 @import 'base/mixins';
 @import 'base/variables_sass';
 @import 'base/variables_discourse';
 @import 'base/fonts';
 @import 'base/typography';
+@import 'base/global_layout';
 
 @import 'bcn-discourse/bcn-alerts';
 @import 'bcn-discourse/bcn-buttons';
 @import 'bcn-discourse/bcn-categories';
+@import 'bcn-discourse/bcn-footer';
 @import 'bcn-discourse/bcn-header';
 @import 'bcn-discourse/bcn-list_navigation';
 @import 'bcn-discourse/bcn-menu-panel';
@@ -18,78 +19,8 @@
 @import 'plugins/algolia';
 @import 'plugins/bcn-hero-banner';
 
-// @import 'hero';
-@import 'bcn-footer';
-
-@import 'sidebar-section-link.scss';
-
-.alert-bootstrap-mode {
-  display: none;
-}
-
-body {
-  color: $pink200 !important;
-}
-.badge-category-parent-bg,
-.badge-category-bg {
-  display: none !important;
-}
-
-.wrap {
-  // width: 90% !important;
-  max-width: 1320px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 10px;
-}
-
-// //Date drop down header
-// .select-kit .select-kit-header {
-//   h2 {
-//     font-size: 26px !important;
-//   }
-// }
-
-// #main-outlet {
-//   padding-top: 0;
-// }
-
-// Body-Pink-Body-Pink-Body-Pink-Body-Pink-
-body {
-  color: $purple !important;
-  background-color: $pink200;
-}
-
-#main-outlet {
-  margin-top: 30px;
-  margin-bottom: 50px;
-  background: var(--secondary);
-  border-radius: 20px;
-  padding: 10px 0;
-  // max-width: 1150px;
-  padding-bottom: 5% !important;
-  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.07), 0 10.8529px 24.1177px rgba(0, 0, 0, 0.0456112),
-    0 4.50776px 10.0172px rgba(0, 0, 0, 0.035), 0 1.63037px 3.62304px rgba(0, 0, 0, 0.0243888);
-
-  @media (min-width: $break-lg) {
-    padding: 30px 0;
+@media (max-width: 768px) {
+  .algolia-holder .aa-input {
+    display: block !important;
   }
 }
-
-// // body.about-page,
-// // body.archetype-regular,
-// // body.admin-interface {
-// //   color: $purple;
-// //   background-color: #fff;
-// //   .bcn-hero {
-// //     display: none;
-// //   }
-// // }
-
-// .suggested-topics-message {
-//   text-align: center;
-//   @include lg;
-//   @media (min-width: $break-lg) {
-//     @include xl;
-//   }
-// }
