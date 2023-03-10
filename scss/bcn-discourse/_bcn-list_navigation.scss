@@ -2,7 +2,7 @@
   padding: 0px 0;
   margin-bottom: 0;
 
-  //  1sr Navigation -  Category drop downs
+  //  1st Navigation -  Category drop downs
   .category-breadcrumb {
     width: 100%;
     padding: 0 !important;
@@ -61,7 +61,7 @@
 
       .select-kit-filter {
         @include md;
-        padding: $five;
+        padding: 20px;
       }
 
       .select-kit-row {

@@ -1,36 +1,17 @@
-<!-- Stop category descritpion disap pearing when user level is trust level is hiogher than 0 -->
-<script type="text/discourse-plugin" version="0.8">
-api.modifyClass("component:category-drop", {
-    displayCategoryDescription: true
-});
-</script>
-
-
 <script type="text/x-handlebars" data-template-name="/connectors/below-site-header/bcn-hero">
   <header class="bcn-hero-with-icon" data-theme="@model.theme">
     <div class="bcn-hero-with-icon__inner">
-
-
       <div class="bcn-hero-with-icon__content">
-       {{mount-widget widget="hero-title"}}
+        {{mount-widget widget="hero-title"}}
         {{mount-widget widget="hero-subtitle"}}
      </div>
-
       <div class="bcn-hero-with-icon__image">
-      </div>
-  
+      </div>  
     </div>
   </header>
 </script>
 
 
-<!-- <script type="text/x-handlebars" data-template-name="/connectors/above-site-header/bcn-hero">
-    <header class="bcn-hero">
-        <div class="bcn-hero__title">
-            {{mount-widget widget="hero-title" args=(hash categories=this.site.categories)}}
-          </div>
-    </header>
-</script> -->
 
 <script type="text/discourse-plugin" version="0.8">
 

@@ -5,6 +5,8 @@
 @import 'base/fonts';
 @import 'base/typography';
 
+@import 'plugins-style/algolia--mobile';
+
 .header-cloak {
   display: none !important;
 }
@@ -105,8 +107,6 @@
   }
 
   .topic-list {
-    // display: none;
-
     .main-link {
       .category-name {
         display: block;

@@ -1,19 +1,3 @@
-body {
-  // position: relative;
-}
-
-#main {
-  // position: static;
-}
-
-// .wrap .contents {
-//   position: static;
-// }
-
-// .d-header .panel {
-//   position: static;
-// }
-
 .menu-panel.drop-down {
   position: fixed !important;
   top: 100px !important;
@@ -21,6 +5,8 @@ body {
   right: 0 !important;
   width: unset !important;
   background-color: $pink200;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 
   hr {
     display: none !important;
@@ -54,7 +40,6 @@ body {
 }
 
 // Topic type links
-
 .menu-container-general-links {
   padding: 0 10px;
   li {
@@ -90,7 +75,6 @@ body {
 }
 
 //Ccategories
-
 .category-links {
   padding: 0 10px !important;
 
@@ -105,7 +89,6 @@ body {
     justify-content: flex-end;
 
     padding: 0 !important;
-    // margin-bottom: 50px !important;
   }
 
   @media (min-width: $break-xl) {
@@ -191,7 +174,6 @@ body {
 .menu-container-faq-link,
 .menu-container-admin-links,
 .menu-container-footer-links {
-  // order: 1;
   width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -224,9 +206,6 @@ body {
   }
 
   @media (min-width: $break-xl) {
-    // order: -1;
-    // width: unset !important;
-
     ul {
       display: flex;
       padding-bottom: 10px;
@@ -252,23 +231,5 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    // padding-bottom: 50px !important;
-    // width: 65% !important;
   }
 }
-
-// .menu-container-faq-link {
-//   @media (min-width: $break-xl) {
-//     width: 45% !important;
-//     margin-left: auto !important;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: flex-end;
-//     padding-bottom: 50px !important;
-//   }
-
-//   @media (min-width: $break-xl) {
-//     width: 65% !important;
-//     // border: 1px solid blue;
-//   }
-// }

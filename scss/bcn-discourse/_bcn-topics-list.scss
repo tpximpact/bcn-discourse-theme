@@ -1,16 +1,5 @@
 //<table>
-.topic-list {
-  // border-collapse: separate;
-  // border-spacing: 0 15px;
-}
-
-.topic-list .topic-list-data:first-of-type {
-  // padding-left: 50px;
-}
-
-.topic-list .topic-list-data:last-of-type {
-  // padding-right: 50px;
-}
+// .topic-list {}
 
 //<thead>
 .topic-list-header {
@@ -50,7 +39,6 @@
       .activity {
         padding-right: 10px;
       }
-      //////////////////////////
     }
 
     .main-link {
@@ -107,10 +95,6 @@
     }
   }
 }
-
-// .category-list.with-topics .category-list-item .category-description {
-//   display: table-row;
-// }
 
 // below the table, alerts mesages etc
 .topic-list-bottom {

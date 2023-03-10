@@ -227,11 +227,3 @@
     }
   }
 }
-
-// If section with bottom curve precedes footer, add extra top padding
-
-// article:has(div):has(section:last-child[data-curve-bottom='true']) + footer {
-//   .o-footer__inner-wrapper {
-//     @apply pt-8 pb-4 md:pt-16 pb-8;
-//   }
-// }

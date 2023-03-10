@@ -33,11 +33,17 @@
 
   &__inner {
     display: flex;
-    width: calc(90% - 60px);
-    max-width: calc(1320px - 60px);
+    width: calc(95% - 20px);
+
+    max-width: calc(1320px);
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: $break-lg) {
+      width: calc(90% - 60px);
+      max-width: calc(1320px - 60px);
+    }
   }
 
   &__content {
@@ -53,9 +59,12 @@
     height: 220px;
     background-image: url($hand-drawn-squarrow);
     background-repeat: no-repeat;
-
     background-size: contain;
     background-position: 0 0;
+
     display: none;
+    @media (min-width: $break-lg) {
+      display: block;
+    }
   }
 }

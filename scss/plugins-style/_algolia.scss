@@ -1,0 +1,89 @@
+.algolia-holder {
+  .aa-Input {
+    font-family: WorkSans, sans-serif !important;
+    font-weight: bold;
+    font-size: 18px !important;
+    line-height: 1;
+    border: 1px solid $purple !important;
+    color: $purple !important;
+    &::placeholder {
+      color: $purple;
+      opacity: 1; /* Firefox */
+    }
+
+    background-image: url($search) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    background-position: 10px !important;
+  }
+
+  // The dropdown
+  .aa-Panel {
+  }
+
+  .aa-dropdown-menu {
+    margin-top: 5px !important;
+    background-color: $pink200 !important;
+
+    .left-container {
+      background-color: $pink200 !important;
+      color: $purple !important;
+      .hit-post-content {
+        color: $purple !important;
+      }
+    }
+
+    .right-container {
+    }
+  }
+
+  .aa-footer {
+    .left-container {
+      .advanced-search {
+        font-size: 16px !important;
+        float: left !important;
+        padding: 0 0 10px 10px;
+      }
+    }
+
+    .right-container {
+      .algolia-logo {
+        display: none !important;
+      }
+    }
+  }
+}
+
+// Advanced search pop up
+
+.search-header {
+  background-color: $white !important;
+  color: $purple !important;
+  .search-filters,
+  .search-advanced-filters,
+  .search-bar,
+  summary,
+  .date-picker {
+    background-color: $white !important;
+    color: $purple !important;
+    &::before {
+      color: $purple !important;
+    }
+    &::after {
+      color: $purple !important;
+    }
+  }
+
+  input {
+    &::placeholder {
+      color: $purple;
+      opacity: 1; /* Firefox */
+    }
+
+    border: 1px solid $purple;
+  }
+
+  button {
+    @include a-btn-chip;
+  }
+}

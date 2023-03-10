@@ -1,4 +1,0 @@
-simple_setting: true
-whitelisted_fruits:
-  default: apples|oranges
-  type: list
