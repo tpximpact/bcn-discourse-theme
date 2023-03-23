@@ -123,11 +123,17 @@
 
     .categories-admin-dropdown {
       @include a-btn-chip;
+
       summary {
         background-color: $white !important;
+        margin-top: -8px;
+        .select-kit-header-wrapper {
+        }
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
+        border: none !important;
         summary {
           background-color: $pink200 !important;
         }

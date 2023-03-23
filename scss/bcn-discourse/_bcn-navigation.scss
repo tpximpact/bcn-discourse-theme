@@ -159,6 +159,9 @@
       margin-right: 10px;
     }
   }
+  .badge-notification {
+    display: none !important;
+  }
 
   @media (min-width: $break-xl) {
     width: 40% !important;
