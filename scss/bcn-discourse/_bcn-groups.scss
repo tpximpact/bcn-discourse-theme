@@ -1,0 +1,52 @@
+.groups-header {
+  padding: 0 30px;
+}
+
+.group-boxes {
+  margin: 32px 0 40px;
+}
+
+.group-box {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  background: $pink200;
+  box-shadow: 0px 15px 22px rgba(85, 18, 70, 0.35);
+  border-radius: 30px;
+
+  &:hover {
+    border: none;
+  }
+}
+.group-box-inner {
+  border: none;
+  .group-info {
+    color: $purple !important;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+
+    @media (min-width: $break-lg) {
+      font-size: 18px;
+      line-height: 1.2;
+    }
+  }
+  .group-user-count,
+  .group-user-count svg,
+  .groups-info-name,
+  .group-description,
+  .group-membership {
+    color: $purple !important;
+
+    .is-group-member {
+      color: $pink !important;
+    }
+  }
+}
+
+.discourse-no-touch .groups-boxes .group-box:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}

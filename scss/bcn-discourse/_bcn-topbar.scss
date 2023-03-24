@@ -1,9 +1,14 @@
 .bcn-topbar {
   background-color: $pink;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  left: 0;
+  right: 0;
 }
 
 .bcn-topbar__items {
-  height: 37px;
+  height: 40px;
   width: 95%;
   max-width: 1360px;
   margin: 0 auto;

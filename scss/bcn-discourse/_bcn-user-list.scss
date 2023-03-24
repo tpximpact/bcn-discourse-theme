@@ -1,0 +1,84 @@
+.period-chooser {
+  summary {
+    h2 {
+      @include three-xl;
+      span {
+        color: $purple !important;
+      }
+    }
+    svg {
+      color: $purple !important;
+    }
+  }
+}
+
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row {
+  span {
+    color: $purple !important;
+  }
+}
+
+.directory-table-container {
+}
+.directory-table {
+  thead {
+    th {
+      padding: 20px 0px 20px 0px;
+      color: $purple;
+      font-weight: bold;
+      text-align: center;
+      &:first-child {
+        text-align: left;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  tbody {
+    padding: 0;
+
+    // <tr>
+    tr {
+      &:nth-child(even) {
+        background-color: $pink200;
+      }
+
+      td {
+        @include sm;
+        text-align: center;
+
+        .user-info {
+          display: flex;
+          align-items: center;
+          padding-left: 20px;
+          .user-detail {
+            .title,
+            .name-line,
+            a {
+              color: $purple;
+              text-align: left;
+            }
+          }
+        }
+
+        .number {
+          color: $purple;
+          padding-left: 20px;
+        }
+
+        padding: 20px 0;
+        // these classes are only on mobile
+        .pull-left {
+          padding: 0 10px 0 20px;
+        }
+        .pull-right {
+          padding-right: 20px;
+        }
+
+        .activity {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}
