@@ -2,9 +2,9 @@
   background-color: $pink;
   position: fixed;
   top: 0;
-  z-index: 1000;
   left: 0;
   right: 0;
+  z-index: 1000;
 }
 
 .bcn-topbar__items {
@@ -28,7 +28,7 @@
     text-decoration: underline;
   }
 
-  @media (min-width: $break-desktop) {
+  @media (min-width: $break-xl) {
     font-size: 18px;
   }
 }

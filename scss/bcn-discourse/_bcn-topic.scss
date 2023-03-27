@@ -21,10 +21,10 @@
     margin-bottom: 15px;
     a {
       color: $purple;
-      @include five-xl;
+      @include text-five-xl;
       font-weight: bold;
       @media (min-width: $break-lg) {
-        @include ten-xl;
+        @include text-ten-xl;
       }
     }
   }
@@ -75,7 +75,7 @@
   color: $purple !important;
 
   p {
-    @include lg;
+    @include text-lg;
   }
 }
 
@@ -149,9 +149,9 @@
   h3 {
     color: $purple;
     text-align: center;
-    @include lg;
+    @include text-lg;
     @media (min-width: $break-lg) {
-      @include xl;
+      @include text-xl;
     }
   }
 

@@ -37,7 +37,7 @@
 
     .o-footer__menu-link {
       color: $white;
-      @include base;
+      @include text-base;
 
       &:focus,
       &:hover {
@@ -55,7 +55,7 @@
   }
 
   &__sign-up-copy {
-    @include base;
+    @include text-base;
     margin-bottom: 32px;
   }
 
@@ -139,12 +139,12 @@
   }
 
   &__logo-header {
-    @include sm;
+    @include text-sm;
     margin-bottom: 16px;
   }
 
   &__section-registration p {
-    @include xs;
+    @include text-xs;
     &:not(&:last-of-type) {
       margin-bottom: 16px;
     }
@@ -158,7 +158,7 @@
       color: $white;
       font-size: 14px !important;
 
-      @include xs;
+      @include text-xs;
       &:hover {
         text-decoration: underline;
       }
@@ -194,7 +194,7 @@
         position: absolute;
         bottom: 8px;
         right: 0;
-        @include xs;
+        @include text-xs;
       }
     }
 

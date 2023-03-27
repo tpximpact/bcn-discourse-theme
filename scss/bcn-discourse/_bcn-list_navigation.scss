@@ -25,7 +25,7 @@
       padding: 20px;
 
       font-weight: 400;
-      @include md;
+      @include text-md;
 
       svg {
         display: none;
@@ -60,12 +60,12 @@
       border-radius: 20px;
 
       .select-kit-filter {
-        @include md;
+        @include text-md;
         padding: 20px;
       }
 
       .select-kit-row {
-        @include md;
+        @include text-md;
         padding: 20px;
 
         &[data-value='all-categories'] {

@@ -1,7 +1,7 @@
 .period-chooser {
   summary {
     h2 {
-      @include three-xl;
+      @include text-three-xl;
       span {
         color: $purple !important;
       }
@@ -44,7 +44,7 @@
       }
 
       td {
-        @include sm;
+        @include text-sm;
         text-align: center;
 
         .user-info {

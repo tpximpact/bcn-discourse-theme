@@ -18,9 +18,6 @@
   hr {
     display: none !important;
   }
-
-  @media (min-width: $break-desktop) {
-  }
 }
 
 .panel-body {
@@ -81,7 +78,7 @@
   }
 }
 
-//Ccategories
+//Categories
 .category-links {
   padding: 0 10px !important;
 
@@ -117,7 +114,7 @@
     color: $purple !important;
     padding: 24px 75px 24px 24px !important;
 
-    @include base;
+    @include text-base;
     position: relative;
 
     &:after {
@@ -142,7 +139,7 @@
     }
 
     @media (min-width: $break-xl) {
-      @include lg;
+      @include text-lg;
     }
   }
 
@@ -191,7 +188,7 @@
   li {
     width: 100% !important;
     a {
-      @include base;
+      @include text-base;
       color: $purple !important;
       margin-bottom: 10px;
       svg {

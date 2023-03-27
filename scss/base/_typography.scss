@@ -5,56 +5,56 @@ body {
 }
 
 h1 {
-  @include six-xl;
+  @include text-six-xl;
   font-weight: bold;
   @media (min-width: $break-lg) {
-    @include ten-xl;
+    @include text-ten-xl;
   }
 
   &.font-erika {
-    @include four-xl;
+    @include text-four-xl;
     @media (min-width: $break-lg) {
-      @include eight-xl;
+      @include text-eight-xl;
     }
   }
 }
 
 h2,
 .text-h2 {
-  @include five-xl;
+  @include text-five-xl;
   @media (min-width: $break-lg) {
-    @include nine-xl;
+    @include text-nine-xl;
   }
 }
 
 h3,
 .text-h3 {
-  @include three-xl;
+  @include text-three-xl;
   @media (min-width: $break-lg) {
-    @include six-xl;
+    @include text-six-xl;
   }
 }
 
 h4,
 .text-h4 {
-  @include xl;
+  @include text-xl;
   @media (min-width: $break-lg) {
-    @include two-xl;
+    @include text-two-xl;
   }
 }
 
 h5,
 .text-h5 {
-  @include lg;
+  @include text-lg;
   @media (min-width: $break-lg) {
-    @include xl;
+    @include text-xl;
   }
 }
 
 h6,
 .text-h6 {
-  @include base;
+  @include text-base;
   @media (min-width: $break-lg) {
-    @include md;
+    @include text-md;
   }
 }

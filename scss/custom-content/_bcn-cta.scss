@@ -1,0 +1,124 @@
+.o-article-cta {
+  // Copied from Storybook using Tailwind
+
+  &__copy {
+    // @apply content-container text-xl lg:text-2xl mb-8 text-center;
+    @include text-xl;
+    @media (min-width: $break-lg) {
+      @include text-two-xl;
+      margin-bottom: $eight;
+      text-align: center;
+    }
+  }
+
+  &__inner {
+    // @apply z-0 relative overflow-hidden flex flex-col justify-center items-center px-6 pt-10 pb-12 rounded-5 lg:px-12 lg:pt-12 lg:pb-16;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: $six;
+    padding-right: $six;
+    padding-top: $ten;
+    padding-bottom: $twelve;
+    border-radius: 5px;
+
+    @media (min-width: $break-xl) {
+      padding-left: $twelve;
+      padding-right: $twelve;
+      padding-top: $twelve;
+      padding-bottom: $sixteen;
+    }
+
+    &::before {
+      // @apply absolute inset-0 w-11/12 max-w-72 sm:max-w-80 lg:max-w-96 mb-16 -z-10;
+      z-index: -10;
+      position: absolute;
+      width: 100%;
+      max-width: $eighty;
+      margin-bottom: sixteen;
+      mask-image: url('../../../assets/svg/background-curve.svg');
+      mask-repeat: no-repeat;
+      mask-size: 100% 100%;
+    }
+
+    h3 {
+      margin-bottom: $eight;
+      text-align: center;
+    }
+  }
+}
+
+.o-article-cta {
+  &__inner {
+    color: $purple;
+    background-color: $yellow;
+
+    &:before {
+      background-color: $yellow300;
+    }
+  }
+
+  &__link {
+    // TODO:  import this button
+    // @apply a-btn-primary__purple-with-arrow;
+  }
+}
+
+// // Color variants
+// .o-article-cta[data-color='yellow'] {
+//   .o-article-cta {
+//     &__inner {
+//       @apply text-purple bg-yellow;
+//       @apply before:bg-yellow-300;
+//     }
+
+//     &__link {
+//       @apply a-btn-primary__purple-with-arrow;
+//     }
+//   }
+// }
+
+// .o-article-cta[data-color='orange'] {
+//   .o-article-cta {
+//     &__inner {
+//       @apply bg-orange text-purple;
+//       @apply before:bg-orange-300;
+//     }
+
+//     &__link {
+//       @apply a-btn-primary__purple-with-arrow;
+//     }
+//   }
+// }
+
+// .o-article-cta[data-color='purple'] {
+//   h3 {
+//     @apply text-white;
+//   }
+//   .o-article-cta {
+//     &__inner {
+//       @apply text-white bg-purple;
+//       @apply before:bg-purple-300;
+//     }
+
+//     &__link {
+//       @apply a-btn-primary__yellow-with-arrow;
+//     }
+//   }
+// }
+
+// .o-article-cta[data-color='white'] {
+//   .o-article-cta {
+//     &__inner {
+//       @apply bg-white text-purple border-primary border-[1px] border-solid;
+//     }
+
+//     &__link {
+//       @apply a-btn-primary__purple-with-arrow;
+//     }
+//   }
+// }

@@ -1,16 +1,21 @@
-<script type="text/x-handlebars" data-template-name="/connectors/above-site-header/bcn-hero">
+<script
+  type="text/x-handlebars"
+  data-template-name="/connectors/above-site-header/bcn-hero"
+>
   <div class="bcn-topbar">
     <div class="bcn-topbar__items">
-      <a class="bcn-topbar__item" href="">About</a>
-      <a class="bcn-topbar__item" href="">Nav Item</a>
-      <a class="bcn-topbar__item" href="">Nav Item</a>
-      <a class="bcn-topbar__item" href="">Nav Item</a>
+      <a class="bcn-topbar__item" href="https://breastcancernow.org/">breastcancernow.org</a>
+      <a class="bcn-topbar__item" href="/about">About</a>
+      <a class="bcn-topbar__item" href="/faq">FAQs</a>
+      <a class="bcn-topbar__item" href="/categories">Categories</a>
     </div>
   </div>
 </script>
 
-
-<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/bcn-hero">
+<script
+  type="text/x-handlebars"
+  data-template-name="/connectors/below-site-header/bcn-hero"
+>
   <header class="bcn-hero-with-icon" data-theme="@model.theme">
     <div class="bcn-hero-with-icon__inner">
       <div class="bcn-hero-with-icon__content">
@@ -18,11 +23,47 @@
         {{mount-widget widget="hero-subtitle"}}
      </div>
       <div class="bcn-hero-with-icon__image">
-      </div>  
+      </div>
     </div>
   </header>
 </script>
 
+<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/custom-homepage">
+    {{#if displayCustomHomepage}}
+        <h1>custom homepage not logged in</h1>
+    {{/if}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/custom-homepage-logged-in">
+  {{#if displayCustomHomepageLoggedIn }}
+  <div class="content-container">
+
+  <section class="o-article-cta" data-section="" data-color="yellow" data-theme="">
+    <div class="o-article-cta__theme-wrapper">
+      <div class="container-large">
+        <div class="container">
+          <div class="container-inner">
+            <div class="o-article-cta__inner">
+              <h3>Stay in touch</h3>
+  
+              <div class="o-article-cta__copy">We'd love to keep in touch about how you can get involved through our email newletter.</div>
+  
+              <a class="o-article-cta__link" href="https://www.google.com" title="Sign up">Sign up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  {{/if}}
+</script>
+
+
+
+
+
+<!-- Dynamic Hero Ttile --- Dynamic Hero Ttile --- Dynamic Hero Ttile --- Dynamic Hero Ttile ---  -->
 
 <script type="text/discourse-plugin" version="0.8">
 
@@ -30,9 +71,9 @@
     const container = Discourse.__container__;
 
     api.createWidget("hero-title", {
-      
+
       tagName: "div.bcn-hero-with-icon__content-heading",
- 
+
       html() {
         const controllerCategory = container.lookup('controller:navigation/category');
         const nameCategory = controllerCategory.get("category.name");
@@ -46,55 +87,99 @@
           heroTitle = "Page without a category, text to be decided"
         }
 
-        api.onPageChange((url, title) => { 
+        api.onPageChange((url, title) => {
           this.scheduleRerender();
         });
-  
-        return h( 
+
+        return h(
           'h1',  { innerHTML : heroTitle },
         )
       }
 
     });
- 
+</script>
+
+<!-- Dynamic Hero SubTitle --- Dynamic Hero SubTitle --- Dynamic Hero SubTitle ---  -->
+
+<script type="text/discourse-plugin" version="0.8">
+
+  const h = require("virtual-dom").h;
+    const container = Discourse.__container__;
+    api.createWidget("hero-subtitle", {
+      tagName: "div.bcn-hero-with-icon__content-subtitle",
+
+      html() {
+        const controllerCategory = container.lookup('controller:navigation/category');
+        const controllerTopic = container.lookup('controller:topic');
+        const categorySubtitle = controllerCategory.get("category.description");
+
+
+        let heroSubtitle = ""
+
+        if(categorySubtitle){
+          heroSubtitle = categorySubtitle
+        } else {
+          heroSubtitle = "A subtitle to be decided, some text here if you want"
+        }
+
+        api.onPageChange(() => {
+          this.scheduleRerender();
+        });
+
+        return h(
+           'h4',  { innerHTML : heroSubtitle }
+
+        )
+      }
+
+    });
+</script>
+
+<script  type="text/discourse-plugin" version="0.8">
+
+  api.registerConnectorClass("below-site-header", "custom-homepage", {
+
+    setupComponent(args, component) {
+
+     api.onPageChange((url) => {
+
+      const user = api.getCurrentUser();
+
+        if (url === "/" && !user){
+          document.querySelector("html").classList.add("custom-homepage");
+          component.set("displayCustomHomepage", true);
+        } else {
+          document.querySelector("html").classList.remove("custom-homepage");
+          component.set("displayCustomHomepage", false)
+        }
+      });
+    }
+
+  });
 </script>
 
 
 
 <script type="text/discourse-plugin" version="0.8">
 
-    const h = require("virtual-dom").h;
-      const container = Discourse.__container__;
-      api.createWidget("hero-subtitle", {
-        tagName: "div.bcn-hero-with-icon__content-subtitle",
-   
-        html() {
-          const controllerCategory = container.lookup('controller:navigation/category');
-          const controllerTopic = container.lookup('controller:topic');
-          const categorySubtitle = controllerCategory.get("category.description");
-  
+  api.registerConnectorClass("below-site-header", "custom-homepage-logged-in", {
+    setupComponent(args, component) {
 
-          let heroSubtitle = ""
+     api.onPageChange((url) => {
 
-          if(categorySubtitle){
-            heroSubtitle = categorySubtitle
-          } else {
-            heroSubtitle = "A subtitle to be decided, some text here if you want"
-          }
-  
-          api.onPageChange(() => {
-            this.scheduleRerender();
-          });
-  
+      const user = api.getCurrentUser();
 
-    
-          return h( 
-             'h4',  { innerHTML : heroSubtitle }
-        
-          )
-   
+        if (url === "/" && user ){
+          console.log('👻  yep');
+
+
+          document.querySelector("html").classList.add("custom-homepage-logged-in");
+          component.set("displayCustomHomepageLoggedIn", true);
+        } else  {
+          document.querySelector("html").classList.remove("custom-homepage-logged-in");
+          component.set("displayCustomHomepageLoggedIn", false);
         }
-  
       });
-   
-    </script>
+    }
+  });
+</script>

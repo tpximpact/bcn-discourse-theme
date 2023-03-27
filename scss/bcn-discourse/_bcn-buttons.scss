@@ -1,5 +1,5 @@
 @mixin a-btn {
-  @include lg;
+  @include text-lg;
   height: unset;
   background: unset;
   display: flex;
@@ -105,7 +105,7 @@
   border-radius: 20px;
   border: 1px solid $purple;
   color: purple;
-  @include md;
+  @include text-md;
   line-height: 1;
   cursor: pointer;
   background-color: $white;
@@ -160,7 +160,7 @@
     border-radius: 20px;
     border: 1px solid $purple;
     color: $purple;
-    @include md;
+    @include text-md;
     cursor: pointer;
     background-color: $white;
 

@@ -7,7 +7,7 @@
     padding: 0;
     th {
       padding: 20px;
-      @include md;
+      @include text-md;
       color: $purple;
     }
   }
@@ -24,7 +24,7 @@
     }
 
     td {
-      @include lg;
+      @include text-lg;
       color: $purple;
 
       padding: 20px 0;
@@ -44,7 +44,7 @@
     .main-link {
       .title,
       .link-top-line a {
-        @include lg;
+        @include text-lg;
         color: $purple !important;
         font-weight: bold;
         padding: 0 !important;
@@ -66,7 +66,7 @@
       .badge-category {
         padding: 0 !important;
         .category-name {
-          @include md;
+          @include text-md;
           color: #6e2b5f;
           font-weight: 400;
         }
@@ -100,7 +100,7 @@
 .topic-list-bottom {
   margin: 40px 0;
   h3 {
-    @include xl;
+    @include text-xl;
     font-weight: 400;
   }
 }
@@ -109,9 +109,9 @@
   h3 {
     color: $purple;
     text-align: center;
-    @include lg;
+    @include text-lg;
     @media (min-width: $break-lg) {
-      @include xl;
+      @include text-xl;
     }
   }
 }
