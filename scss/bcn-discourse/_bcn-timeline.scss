@@ -1,0 +1,38 @@
+// // Timeline scroll bar
+.timeline-container {
+  .topic-timeline {
+    .timeline-controls {
+      button {
+        @include a-btn-chip;
+      }
+    }
+
+    .timeline-handle {
+      background-color: $lightpink;
+    }
+    .timeline-scrollarea {
+      border-left: 1px solid $pink;
+    }
+    @media (min-width: $break-lg) {
+      padding-top: 0px;
+    }
+  }
+
+  .timeline-footer-controls {
+    button {
+      @include a-btn-chip;
+    }
+
+    .widget-component-connector summary {
+      @include a-btn-chip;
+    }
+  }
+}
+
+.timeline-container .topic-timeline .timeline-handle {
+  background-color: $lightpink;
+}
+
+#topic-progress-wrapper.with-transitions #topic-progress .bg {
+  background-color: $lightpink;
+}

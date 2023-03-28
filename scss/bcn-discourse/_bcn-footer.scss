@@ -1,15 +1,15 @@
-.container {
-  display: block;
-  margin: auto;
-  width: 95%;
-  max-width: 1320px;
-  padding: 0;
-}
-
 .o-footer {
   padding-top: 30px;
   background-color: $pink;
   color: $white;
+
+  &__container {
+    display: block;
+    margin: auto;
+    width: 95%;
+    max-width: 1320px;
+    padding: 0;
+  }
 
   a:focus,
   a:focus-visible {

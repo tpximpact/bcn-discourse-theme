@@ -64,14 +64,17 @@
   }
 
   @media (min-width: $break-lg) {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    // margin-bottom: 30px;
   }
 }
 
-// .topic-avatar {}
+.topic-avatar {
+  @media (min-width: $break-lg) {
+    padding-top: 30px;
+  }
+}
 .topic-body {
-  padding-top: 40px;
+  padding-top: 30px;
   color: $purple !important;
 
   p {
@@ -103,34 +106,10 @@
       button {
         @include a-btn-chip;
       }
-    }
-  }
-}
 
-// // Timeline scroll bar
-.timeline-container {
-  .topic-timeline {
-    .timeline-controls {
-      button {
+      .double-button {
         @include a-btn-chip;
       }
-    }
-
-    .timeline-handle {
-      background-color: $pink;
-    }
-    .timeline-scrollarea {
-      border-left: 1px solid $pink;
-    }
-  }
-
-  .timeline-footer-controls {
-    button {
-      @include a-btn-chip;
-    }
-
-    .widget-component-connector summary {
-      @include a-btn-chip;
     }
   }
 }
@@ -153,9 +132,5 @@
     @media (min-width: $break-lg) {
       @include text-xl;
     }
-  }
-
-  @media (min-width: $break-lg) {
-    padding: 0 40px;
   }
 }

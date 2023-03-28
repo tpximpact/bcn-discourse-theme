@@ -17,6 +17,16 @@
   }
   .category-box-inner {
     border: none;
+
+    .category-box-heading {
+      a {
+        color: $purple !important;
+
+        h3 {
+          color: $purple !important;
+        }
+      }
+    }
     .advanced-search h3 {
       color: $purple;
       font-weight: 700;
@@ -31,5 +41,15 @@
   }
   .featured-topics {
     display: none;
+  }
+}
+
+.header-list-area {
+  .category-box-heading {
+    a {
+      h3 {
+        color: $purple !important;
+      }
+    }
   }
 }

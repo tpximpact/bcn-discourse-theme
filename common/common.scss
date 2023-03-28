@@ -3,16 +3,18 @@
 @import 'base/variables_discourse';
 @import 'base/fonts';
 @import 'base/typography';
-@import 'base/global_layout';
 
 @import 'bcn-discourse/bcn-alerts';
 @import 'bcn-discourse/bcn-buttons';
 @import 'bcn-discourse/bcn-categories';
 @import 'bcn-discourse/bcn-footer';
+@import 'bcn-discourse/bcn-global-layout';
 @import 'bcn-discourse/bcn-groups';
 @import 'bcn-discourse/bcn-header';
 @import 'bcn-discourse/bcn-list_navigation';
 @import 'bcn-discourse/bcn-navigation';
+@import 'bcn-discourse/bcn-reviewable';
+@import 'bcn-discourse/bcn-timeline';
 @import 'bcn-discourse/bcn-topbar';
 @import 'bcn-discourse/bcn-topic';
 @import 'bcn-discourse/bcn-topics-list';
@@ -22,3 +24,16 @@
 
 @import 'custom-content/bcn-hero-banner';
 @import 'custom-content/bcn-cta';
+
+.bcn-custom-content {
+  background-color: $white;
+  padding: 150px 0;
+
+  &__container {
+    display: block;
+    margin: auto;
+    width: 95%;
+    max-width: 1320px;
+    padding: 0;
+  }
+}
