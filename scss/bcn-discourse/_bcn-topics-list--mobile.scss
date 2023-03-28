@@ -1,0 +1,21 @@
+.topic-list-data {
+  .topic-post-badges {
+    display: none;
+  }
+
+  .pull-left {
+    display: none;
+  }
+  .right {
+    margin-left: 0;
+    padding-left: 10px;
+    a {
+      font-weight: 400 !important;
+    }
+
+    .topic-item-stats {
+      margin-top: 0;
+      margin-left: -5px;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+// for when the  <html> element has classes .mobile-view .not-mobile-device
+.header-cloak {
+  display: none !important;
+}
+
+.menu-panel.slide-in {
+  position: fixed !important;
+  top: 140px !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: unset !important;
+  max-width: unset !important;
+  background-color: $pink200;
+  height: auto !important;
+}
+
+// navigation
+// navigation
+#navigation-bar {
+  width: auto;
+
+  .navigation-toggle {
+    .toggle-link {
+      svg {
+        display: none;
+      }
+
+      &:after {
+        transition: 0.4s;
+        content: '';
+        height: 20px;
+        width: 20px;
+        margin-left: 8px;
+        background-image: url($hand-drawn-chevron--pink);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+  }
+
+  .drop {
+    display: block;
+
+    width: unset;
+    border-radius: 20px;
+    box-shadow: 0px 15px 22px rgba(85, 18, 70, 0.35);
+    li {
+      a {
+        width: auto;
+        height: unset;
+      }
+    }
+  }
+}
+.menu-container-faq-link,
+.menu-container-admin-links {
+  width: 100% !important;
+}

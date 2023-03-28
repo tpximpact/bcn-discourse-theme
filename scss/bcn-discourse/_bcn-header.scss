@@ -8,11 +8,16 @@
     max-width: 1380px;
   }
 
+  .title {
+    min-width: 125px !important;
+  }
+
+  //desktop
   #site-logo {
     min-height: 56px;
-    min-width: 100px;
+    min-width: 100px !important;
     padding-right: 10px;
-
+    flex: 1;
     @media (min-width: $break-lg) {
       min-height: 76px;
     }
@@ -20,6 +25,35 @@
 
   .d-header-icons .d-icon {
     color: $purple;
+  }
+
+  .header-buttons {
+    .sign-up-button {
+      display: none;
+      @media (min-width: $break-lg) {
+        display: block;
+      }
+    }
+
+    button {
+      @include a-btn-primary;
+
+      padding: 10px !important;
+      font-size: 0.875rem !important;
+      margin-top: -5px;
+      margin-right: 0;
+      margin-right: 5px;
+
+      @media (min-width: $break-lg) {
+        @include a-btn-primary;
+        margin-top: 0px;
+        font-size: 1.2rem !important;
+      }
+
+      svg {
+        display: none;
+      }
+    }
   }
 }
 
@@ -29,8 +63,9 @@
   }
 }
 
+//this appears when user scrolls down page
 .extra-info-wrapper {
-  position: relative;
+  // position: relative;
   .header-title {
     margin-bottom: 10px;
     a {
@@ -77,42 +112,44 @@
   }
 }
 
-.search-dropdown {
-  cursor: pointer;
-  a {
-    border: none !important;
-  }
-  svg {
-    color: $pink !important;
-    display: none !important;
-  }
+// For Disourse search NOT Algolia
+// .search-dropdown {
+//   cursor: pointer;
+//   a {
+//     border: none !important;
+//   }
+//   svg {
+//     color: $pink !important;
+//     display: none !important;
+//   }
 
-  position: relative;
-  z-index: 1;
+//   position: relative;
+//   z-index: 1;
 
-  background-image: url($search) !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-size: 60% !important;
-  width: 45px;
+//   background-image: url($search) !important;
+//   background-repeat: no-repeat !important;
+//   background-position: center !important;
+//   background-size: 60% !important;
+//   width: 45px;
 
-  &.active {
-    width: 0;
-    height: 0;
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      height: 45px;
-      width: 45px;
-      background-image: url($cross) !important;
-      background-repeat: no-repeat !important;
-      background-position: center !important;
-      background-size: 85% !important;
-    }
-  }
-}
+//   &.active {
+//     width: 0;
+//     height: 0;
+//     &:after {
+//       content: '';
+//       position: absolute;
+//       top: 0;
+//       height: 45px;
+//       width: 45px;
+//       background-image: url($cross) !important;
+//       background-repeat: no-repeat !important;
+//       background-position: center !important;
+//       background-size: 85% !important;
+//     }
+//   }
+// }
 
+// The hamburger
 .header-dropdown-toggle {
   #toggle-hamburger-menu {
     cursor: pointer;

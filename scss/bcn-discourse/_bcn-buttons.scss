@@ -141,17 +141,6 @@
   }
 }
 
-.header-buttons {
-  button {
-    @include a-btn-primary;
-    margin-right: 5px;
-
-    svg {
-      display: none;
-    }
-  }
-}
-
 #topic-footer-buttons {
   .btn {
     height: 44px;
