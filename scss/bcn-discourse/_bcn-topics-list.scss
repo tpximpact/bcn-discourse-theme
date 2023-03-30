@@ -73,6 +73,13 @@
       }
     }
 
+    .link-top-line {
+      display: flex;
+      .topic-post-badges {
+        align-self: flex-start;
+      }
+    }
+
     .link-bottom-line {
       margin: 0 !important;
 

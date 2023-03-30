@@ -13,6 +13,26 @@
   max-width: unset !important;
   background-color: $pink200;
   height: auto !important;
+
+  .category-links {
+    padding: 0 !important;
+  }
+
+  .menu-container-faq-link,
+  .menu-container-admin-links,
+  .menu-container-footer-links {
+    ul {
+      display: flex;
+      padding-bottom: 10px;
+    }
+    li {
+      width: unset !important;
+
+      a {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 // navigation

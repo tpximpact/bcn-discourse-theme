@@ -1,20 +1,14 @@
-// html,
-// body {
-//   margin: 0;
-//   height: 100%;
-//   overflow: hidden;
-// }
-
 .menu-panel.drop-down {
   position: fixed !important;
   top: 140px !important;
   left: 0 !important;
   right: 0 !important;
+  bottom: 0 !important;
   width: unset !important;
   background-color: $pink200;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-
+  // border-bottom-left-radius: 20px;
+  // border-bottom-right-radius: 20px;
+  // max-height: unset !important;
   hr {
     display: none !important;
   }
@@ -25,27 +19,31 @@
   display: block !important;
   height: unset !important;
   max-height: unset !important;
+  width: 100% !important;
+  @media (min-width: $break-lg) {
+    overflow-y: inherit !important;
+  }
 }
 
 .panel-body-contents {
-  padding: 30px 0;
-  max-width: 1300px;
-  @media (min-width: $break-xl) {
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 100% !important;
-    &::before {
-      content: '';
-      display: none;
-    }
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100% !important;
+  &::before {
+    content: '';
+    display: none;
   }
+
+  @extend .wrap;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
 }
 
 // Topic type links
 .menu-container-general-links {
-  padding: 0 10px;
+  // padding: 0 10px;
   li {
     width: 100% !important;
 
@@ -64,7 +62,7 @@
     }
   }
 
-  @media (min-width: $break-xl) {
+  @media (min-width: $break-lg) {
     width: 20% !important;
     li {
       a {
@@ -73,7 +71,7 @@
     }
   }
 
-  @media (min-width: $break-xl) {
+  @media (min-width: $break-lg) {
     width: 24%;
   }
 }
@@ -86,7 +84,7 @@
     display: none;
   }
 
-  @media (min-width: $break-xl) {
+  @media (min-width: $break-lg) {
     width: 77%;
     display: flex;
     flex-wrap: wrap;
@@ -95,7 +93,7 @@
     padding: 0 !important;
   }
 
-  @media (min-width: $break-xl) {
+  @media (min-width: $break-lg) {
     width: 74%;
   }
 }
@@ -138,7 +136,7 @@
       color: $purple !important;
     }
 
-    @media (min-width: $break-xl) {
+    @media (min-width: $break-lg) {
       @include text-lg;
     }
   }
@@ -167,7 +165,7 @@
     display: none !important;
   }
 
-  @media (min-width: $break-xl) {
+  @media (min-width: $break-lg) {
     width: 40% !important;
     max-width: 420px !important;
 
@@ -191,6 +189,7 @@
       @include text-base;
       color: $purple !important;
       margin-bottom: 10px;
+      padding-left: 0 !important;
       svg {
         color: $pink !important;
       }
@@ -212,7 +211,7 @@
     }
   }
 
-  @media (min-width: $break-xl) {
+  @media (min-width: $break-lg) {
     ul {
       display: flex;
       padding-bottom: 10px;
@@ -234,9 +233,73 @@
 .menu-container-footer-links {
   width: 100% !important;
 
-  @media (min-width: $break-xl) {
+  @media (min-width: $break-lg) {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+  }
+}
+
+// FOR TABLET SIZE DEVICES THAT are NOT small enough for discourse to use /mobile/mobile.sass
+
+.header-cloak {
+  display: none !important;
+}
+@media (min-width: $break-ls) {
+  .menu-panel.slide-in {
+    border: 2px solid #ff0000;
+    position: fixed !important;
+    top: 140px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: unset !important;
+    max-width: unset !important;
+    background-color: $pink200;
+    height: auto !important;
+
+    .panel-body-contents {
+      display: flex !important;
+
+      .menu-container-general-links {
+        width: 25%;
+      }
+      .category-links {
+        width: 70%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+      .category-link {
+        margin-left: 0px !important;
+      }
+    }
+    .menu-container-faq-link,
+    .menu-container-admin-links,
+    .menu-container-footer-links {
+      ul {
+        display: flex;
+        padding-bottom: 10px;
+      }
+      li {
+        width: unset !important;
+
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $break-md) {
+  .menu-panel.slide-in {
+    .panel-body-contents {
+      .category-link {
+        width: 45% !important;
+        margin-left: 8px !important;
+      }
+    }
   }
 }

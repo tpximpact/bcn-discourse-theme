@@ -3,15 +3,20 @@ body {
 }
 
 .wrap {
-  max-width: 1320px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 10px;
+  max-width: $content-max-width !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding: 0 10px !important;
+  box-sizing: border-box;
+  // border: 1px solid green;
 }
 
 body {
   color: $purple !important;
   background-color: $pink200;
+  @media (min-width: $break-lg) {
+    // border: 2px solid green;
+  }
 }
 
 #main-outlet {
@@ -19,11 +24,11 @@ body {
   margin-bottom: 50px;
   background: var(--secondary);
   border-radius: 20px;
-  padding: 10px 0;
-  padding-bottom: 5% !important;
+  padding: 18px 14px;
+
   box-shadow: 0 24px 40px rgba(0, 0, 0, 0.07), 0 10.8529px 24.1177px rgba(0, 0, 0, 0.0456112),
     0 4.50776px 10.0172px rgba(0, 0, 0, 0.035), 0 1.63037px 3.62304px rgba(0, 0, 0, 0.0243888);
-  padding: 10px;
+
   @media (min-width: $break-lg) {
     padding: 30px;
   }

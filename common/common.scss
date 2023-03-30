@@ -40,3 +40,8 @@
     padding: 0;
   }
 }
+
+.small-action.topic-post-visited .topic-post-visited-line {
+  border-bottom: $lightpink !important;
+  color: $lightpink !important;
+}

@@ -41,7 +41,8 @@ $break-xs: 375px;
 $break-ls: 480px;
 $break-sm: 640px;
 $break-md: 768px;
-$break-lg: 1025px;
+// $break-lg: 1025px; changed to copry Discourse breakpoint
+$break-lg: 1020px;
 $break-xl: 1200px;
 $break-2xl: 1440px;
 $break-3xl: 1600px;
@@ -146,3 +147,5 @@ $full: '100%';
 @mixin text-eleven-xl() {
   @include font-size(80, 85);
 }
+
+$content-max-width: 1340px;

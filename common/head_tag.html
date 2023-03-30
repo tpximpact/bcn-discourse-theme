@@ -1,16 +1,21 @@
+
+<!-- HOOKS CONNECTORS --- HOOKS CONNECTORS --- HOOKS CONNECTORS --- HOOKS CONNECTORS --- HOOKS CONNECTORS ---  -->
+<!-- HOOKS CONNECTORS --- HOOKS CONNECTORS --- HOOKS CONNECTORS --- HOOKS CONNECTORS --- HOOKS CONNECTORS ---  -->
+
+
 <script
   type="text/x-handlebars"
   data-template-name="/connectors/above-site-header/bcn-hero"
 >
   <div class="bcn-topbar">
-    <div class="bcn-topbar__items">
-      <a class="bcn-topbar__item" href="https://breastcancernow.org/">back to breastcancernow.org</a>
+    <div class="bcn-topbar__items wrap ">
+      <a class="bcn-topbar__item" href="https://breastcancernow.org/">Back to breastcancernow.org</a>
 
     </div>
   </div>
 </script>
 
-<script
+<!-- <script
   type="text/x-handlebars"
   data-template-name="/connectors/below-site-header/bcn-hero"
 >
@@ -26,12 +31,119 @@
   </header>
 </script>
 
-<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/custom-homepage">
-    {{#if displayCustomHomepage}}
+ -->
 
+
+ <!-- Dynamic hero banner for NOT home page  -->
+<script  type="text/discourse-plugin" version="0.8">
+  api.registerConnectorClass("below-site-header", "hero", {
+    setupComponent(args, component) {
+    api.onPageChange((url) => {
+        if (url !== "/") {
+
+          component.set("displayHero", true);
+        } else{
+          component.set("displayHero", false);
+      }});
+    }
+});
+</script>
+
+<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/hero">
+    {{#if displayHero}}
+
+    <header class="bcn-hero-with-icon" data-theme="@model.theme">
+    <div class="bcn-hero-with-icon__inner">
+      <div class="bcn-hero-with-icon__content">
+  
+        {{mount-widget widget="hero-title"}}
+     
+     </div>
+      <div class="bcn-hero-with-icon__image">
+      </div>
+    </div>
+  </header>
+     
+    {{/if}}
+</script>
+
+
+
+
+<!-- Custom hero banner for home page  -->
+<script  type="text/discourse-plugin" version="0.8">
+  api.registerConnectorClass("below-site-header", "hero--homepage", {
+  setupComponent(args, component) {
+    api.onPageChange((url) => {
+      if (url === "/") {
+        component.set("displayHeroHomepage", true);
+      } else {
+        component.set("displayHeroHomepage", false);
+
+      }
+    });
+  }
+});
+</script>
+
+
+<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/hero--homepage">
+    {{#if displayHeroHomepage}}
+
+    <header class="bcn-hero-with-icon" data-theme="@model.theme">
+      <div class="bcn-hero-with-icon__inner">
+        <div class="bcn-hero-with-icon__content">
+         <h1>Breast Cancer Now Forum</h1>
+         <h2>With you every step of the way</h2>
+       </div>
+        <div class="bcn-hero-with-icon__image">
+        </div>
+      </div>
+    </header>
+     
+    {{/if}}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script  type="text/discourse-plugin" version="0.8">
+
+  api.registerConnectorClass("below-site-header", "content", {
+
+    setupComponent(args, component) {
+
+     api.onPageChange((url) => {
+
+      const user = api.getCurrentUser();
+
+        if (url === "/" && !user){
+          document.querySelector("html").classList.add("bcn-content");
+          component.set("displayContent ", true);
+        } else {
+          document.querySelector("html").classList.remove("bcn-content");
+          component.set("displayContent", false)
+        }
+      });
+    }
+
+  });
+</script>
+
+<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/content">
+    {{#if displayContent }}
     <div class="bcn-custom-content">
         <div class="bcn-custom-content__container">
-          <h1>custom homepage not logged in</h1>
+          <h2>custom content not logged in</h2>
           <h3>modules to be decide</h3>
         </div>  
     </div>
@@ -39,11 +151,32 @@
     {{/if}}
 </script>
 
-<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/custom-homepage-logged-in">
-  {{#if displayCustomHomepageLoggedIn }}
+
+
+
+<script type="text/discourse-plugin" version="0.8">
+  api.registerConnectorClass("below-site-header", "content-logged-in", {
+
+    setupComponent(args, component) {
+     api.onPageChange((url) => {
+      const user = api.getCurrentUser();
+        if (url === "/" && user ){
+          document.querySelector("html").classList.add("custom-homepage-content-logged-in");
+          component.set("contentLoggedIn", true);
+        } else  {
+          document.querySelector("html").classList.remove("custom-homepage-content-logged-in");
+          component.set("contentLoggedIn", false);
+        }
+      });
+    }
+  });
+</script>
+
+<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/content-logged-in">
+  {{#if contentLoggedIn }}
   <div class="bcn-custom-content">
     <div class="bcn-custom-content__container">
-      <h1>custom homepage</h1>
+      <h2>custom homepage</h2>
       <h3>modules to be decide</h3>
     </div>
   </div>
@@ -53,6 +186,13 @@
 
 
 
+
+
+
+
+
+<!-- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS ---  -->
+<!-- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS ---  -->
 
 <!-- Dynamic Hero Ttile --- Dynamic Hero Ttile --- Dynamic Hero Ttile --- Dynamic Hero Ttile ---  -->
 
@@ -71,19 +211,25 @@
         const categorySubtitle = controllerCategory.get("category.description");
 
         let heroTitle = ""
-
+        let heroSubtitle = ""
         if(nameCategory){
           heroTitle = nameCategory
+          heroSubtitle = categorySubtitle
         } else {
-          heroTitle = "Page without a category, text to be decided"
+          heroTitle = "Breast Cancer Now Forum"
+          heroSubtitle = "With you every step of the way"
         }
+
 
         api.onPageChange((url, title) => {
           this.scheduleRerender();
         });
 
         return h(
-          'h1',  { innerHTML : heroTitle },
+          'h1',  
+          { innerHTML : heroTitle },
+          h('h2', {innerHTML : heroSubtitle})
+          
         )
       }
 
@@ -104,18 +250,20 @@
         const controllerTopic = container.lookup('controller:topic');
         const categorySubtitle = controllerCategory.get("category.description");
 
-
         let heroSubtitle = ""
+
+        api.onPageChange((url) => {
+          
+          if (url === "/"){
+            heroSubtitle = "With you every step of the way"
+          }
+            this.scheduleRerender();
+          });
 
         if(categorySubtitle){
           heroSubtitle = categorySubtitle
-        } else {
-          heroSubtitle = "A subtitle to be decided, some text here if you want"
-        }
-
-        api.onPageChange(() => {
-          this.scheduleRerender();
-        });
+        } 
+    
 
         return h(
            'h4',  { innerHTML : heroSubtitle }
@@ -126,45 +274,5 @@
     });
 </script>
 
-<script  type="text/discourse-plugin" version="0.8">
-
-  api.registerConnectorClass("below-site-header", "custom-homepage", {
-
-    setupComponent(args, component) {
-
-     api.onPageChange((url) => {
-
-      const user = api.getCurrentUser();
-
-        if (url === "/" && !user){
-          document.querySelector("html").classList.add("custom-homepage");
-          component.set("displayCustomHomepage", true);
-        } else {
-          document.querySelector("html").classList.remove("custom-homepage");
-          component.set("displayCustomHomepage", false)
-        }
-      });
-    }
-
-  });
-</script>
 
 
-
-<script type="text/discourse-plugin" version="0.8">
-
-  api.registerConnectorClass("below-site-header", "custom-homepage-logged-in", {
-    setupComponent(args, component) {
-     api.onPageChange((url) => {
-      const user = api.getCurrentUser();
-        if (url === "/" && user ){
-          document.querySelector("html").classList.add("custom-homepage-logged-in");
-          component.set("displayCustomHomepageLoggedIn", true);
-        } else  {
-          document.querySelector("html").classList.remove("custom-homepage-logged-in");
-          component.set("displayCustomHomepageLoggedIn", false);
-        }
-      });
-    }
-  });
-</script>
