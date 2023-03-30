@@ -6,18 +6,23 @@
   height: 100px;
 
   .title {
-    min-width: 125px !important;
+    min-width: 100px !important;
+    padding: 0 !important;
   }
 
   //desktop
   #site-logo {
     min-height: 56px;
     min-width: 100px !important;
-    padding-right: 10px;
+    padding-right: 0px;
     flex: 1;
     @media (min-width: $break-lg) {
       min-height: 76px;
     }
+  }
+
+  .panel {
+    // border: 1px solid #ff0000;
   }
 
   .d-header-icons .d-icon {
