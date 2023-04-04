@@ -122,10 +122,12 @@
             color: $purple;
           }
           &:first-child {
+            height: 44px;
             margin-right: 6px;
           }
           &:nth-child(2) {
-            padding-left: 0;
+            height: 44px;
+            padding-left: 0 !important;
           }
         }
       }
