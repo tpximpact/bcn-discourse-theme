@@ -108,7 +108,28 @@
       }
 
       .double-button {
-        // @include a-btn-chip;
+        display: flex;
+        align-items: center;
+
+        button {
+          min-width: 50px;
+          height: 44px;
+          color: $purple;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          svg {
+            color: $purple;
+          }
+          &:first-child {
+            // padding: 0 5px;
+            height: 44px;
+            margin-right: 6px;
+          }
+          &:nth-child(2) {
+            height: 44px;
+          }
+        }
       }
     }
   }
