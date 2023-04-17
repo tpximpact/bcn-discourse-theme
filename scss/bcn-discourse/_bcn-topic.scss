@@ -143,7 +143,7 @@
 
 #topic-footer-buttons,
 .suggested-topics {
-  padding: 0 10px;
+  // padding: 0 10px;
   color: $purple;
 
   h3 {
@@ -152,6 +152,14 @@
     @include text-lg;
     @media (min-width: $break-lg) {
       @include text-xl;
+    }
+    a{
+      color: $pink !important;
+      text-align: center;
+      @include text-lg;
+      @media (min-width: $break-lg) {
+        @include text-xl;
+      }
     }
   }
 }

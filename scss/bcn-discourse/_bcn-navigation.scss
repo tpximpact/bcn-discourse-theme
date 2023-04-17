@@ -12,33 +12,33 @@
   hr {
     display: none !important;
   }
-}
 
-.panel-body {
-  margin: 0 auto;
-  display: block !important;
-  height: unset !important;
-  max-height: unset !important;
-  width: 100% !important;
-  @media (min-width: $break-lg) {
-    overflow-y: inherit !important;
-  }
-}
-
-.panel-body-contents {
-  flex-direction: row !important;
-  flex-wrap: wrap !important;
-  align-items: flex-start;
-  justify-content: space-between;
-  height: 100% !important;
-  &::before {
-    content: '';
-    display: none;
+  .panel-body {
+    margin: 0 auto;
+    display: block !important;
+    height: unset !important;
+    max-height: unset !important;
+    width: 100% !important;
+    @media (min-width: $break-lg) {
+      overflow-y: inherit !important;
+    }
   }
 
-  @extend .wrap;
-  padding-top: 30px !important;
-  padding-bottom: 30px !important;
+  .panel-body-contents {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100% !important;
+    &::before {
+      content: '';
+      display: none;
+    }
+
+    @extend .wrap;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
 }
 
 // Topic type links

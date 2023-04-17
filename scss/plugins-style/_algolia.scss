@@ -3,9 +3,10 @@
     font-family: WorkSans, sans-serif !important;
     font-weight: bold;
     font-size: 18px !important;
-    line-height: 1;
-    border: 1px solid $purple !important;
     color: $purple !important;
+    line-height: 1;
+    border: none !important;
+    background-color: $pink200;
     &::placeholder {
       color: $purple;
       opacity: 1; /* Firefox */
@@ -13,7 +14,7 @@
 
     background-image: url($search) !important;
     background-repeat: no-repeat !important;
-    background-size: cover;
+    background-size: 18px 18px !important;
     background-position: 10px !important;
   }
 

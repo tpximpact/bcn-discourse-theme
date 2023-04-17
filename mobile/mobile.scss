@@ -8,3 +8,17 @@
 @import 'bcn-discourse/bcn-navigation--mobile';
 @import 'bcn-discourse/bcn-topics-list--mobile';
 @import 'plugins-style/algolia--mobile';
+
+// visual token to show you are in mobile
+
+// body {
+//   &::after {
+//     content: '';
+//     position: fixed;
+//     top: 0px;
+//     height: 9px;
+//     width: 9px;
+//     background-color: yellow;
+//     z-index: 99999;
+//   }
+// }
