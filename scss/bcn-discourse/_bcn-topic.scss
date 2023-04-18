@@ -105,6 +105,7 @@
     .actions {
       button {
         @include a-btn-chip;
+        margin-right: 5px;
       }
 
       .double-button {
@@ -118,8 +119,10 @@
           padding: 0;
           display: flex;
           justify-content: center;
+
           svg {
             color: $purple;
+            margin: 0;
           }
           &:first-child {
             height: 44px;
@@ -128,6 +131,14 @@
           &:nth-child(2) {
             height: 44px;
             padding-left: 0 !important;
+          }
+        }
+
+        .has-like {
+          // background-color: red;
+          svg {
+            margin: 0;
+            padding-left: 15px;
           }
         }
       }
@@ -153,7 +164,7 @@
     @media (min-width: $break-lg) {
       @include text-xl;
     }
-    a{
+    a {
       color: $pink !important;
       text-align: center;
       @include text-lg;
