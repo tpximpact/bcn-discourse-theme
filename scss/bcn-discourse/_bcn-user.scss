@@ -92,6 +92,11 @@
 // user page content
 
 .user-content {
+  // HIDE THE COLOR SCHEM CHOICES
+  .color-scheme {
+    display: none !important;
+  }
+
   .user-stat {
     .number {
       color: $purple;
