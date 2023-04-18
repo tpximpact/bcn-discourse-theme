@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 600px;
+  height: 500px;
   width: 100vw;
   background-color: $pink !important;
   -webkit-mask-image: url(bottom-curve--mobile);
@@ -11,10 +11,14 @@
   -webkit-mask-position: 0 100%;
   -webkit-mask-size: 100% 100%;
   -webkit-mask-repeat: no-repeat;
+
+  @media (min-width: $break-md) {
+    height: 600px;
+  }
 }
 
 .bcn-hero-with-icon {
-  background-color: $pink;
+  // background-color: $pink;
   color: $white !important;
   height: 160px;
   display: flex;
@@ -34,8 +38,8 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   &__content {
@@ -56,6 +60,19 @@
     display: none;
     @media (min-width: $break-lg) {
       display: block;
+    }
+  }
+}
+
+.bcn-hero-with-icon--homepage {
+  border: 1px solid green;
+}
+
+html.bcn-homepage {
+  .bcn-hero-with-icon {
+    padding-top: 120px;
+    @media (min-width: $break-md) {
+      padding-top: 160px;
     }
   }
 }

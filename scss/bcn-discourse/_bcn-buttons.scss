@@ -56,6 +56,38 @@
   }
 }
 
+@mixin a-btn-tertiary__purple {
+  @include a-btn;
+  @include a-btn-background-mask;
+  color: $purple;
+  padding: $two !important;
+  display: inline-block;
+  &:before {
+    height: $one-half;
+    bottom: $one-half;
+    left: $two;
+    right: $two;
+    top: unset;
+    width: auto;
+    background-color: $pink;
+    -webkit-mask-image: url($hand-drawn-line--medium);
+    mask-image: url($hand-drawn-line--medium);
+    transition: 0.4s;
+  }
+
+  &:hover {
+    &:before {
+      transform: scaleY(2);
+    }
+  }
+}
+
+// .a-btn-tertiary__yellow {
+//   @apply text-white
+//     before:bg-yellow
+//     focus-visible:border-yellow;
+// }
+
 @mixin a-btn-primary__yellow {
   @include a-btn;
   @include a-btn-background-mask;

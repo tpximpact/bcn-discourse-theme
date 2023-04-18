@@ -37,6 +37,11 @@ $lightpink: #f2a9c2;
 $lightpink200: #ffa1c1;
 $lightpink400: #f2a9c2;
 
+$orange: #ff9900;
+$orange100: #ffebcc;
+$orange300: #ffab2e;
+$orange400: #ff9900;
+
 $break-xs: 375px;
 $break-ls: 480px;
 $break-sm: 640px;
@@ -148,4 +153,15 @@ $full: '100%';
   @include font-size(80, 85);
 }
 
+// @mixin container {
+//   display: block;
+//   margin: auto;
+//   max-width: 40em;
+//   padding: 48px;
+
+//   @media (max-width: 620px) {
+//     padding: 0;
+//     max-width: unset;
+//   }
+// }
 $content-max-width: 1340px;

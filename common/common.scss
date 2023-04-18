@@ -25,21 +25,9 @@
 @import 'bcn-discourse/bcn-user-list';
 @import 'plugins-style/algolia';
 
-@import 'custom-content/bcn-hero-banner';
 @import 'custom-content/bcn-cta';
-
-.bcn-custom-content {
-  background-color: $white;
-  padding: 150px 0;
-
-  &__container {
-    display: block;
-    margin: auto;
-    width: 95%;
-    max-width: 1320px;
-    padding: 0;
-  }
-}
+@import 'custom-content/bcn-hero-banner';
+@import 'custom-content/bcn-homepage-content';
 
 .small-action.topic-post-visited .topic-post-visited-line {
   border-bottom: $lightpink !important;

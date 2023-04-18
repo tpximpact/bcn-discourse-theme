@@ -16,13 +16,17 @@
     "mag-glass": "assets/mag-glass.svg",
     "hand-drawn-squarrow": "assets/hand-drawn-squarrow.svg",
     "hand-drawn-button--solid": "assets/hand-drawn-button--solid.svg",
+    "hand-drawn-line--medium": "assets/hand-drawn-line--medium.svg",
     "hamburger": "assets/hamburger.svg",
     "search": "assets/search.png",
     "cross": "assets/cross.svg",
     "arrow-button": "assets/arrow-button.svg",
     "curve": "assets/curve.svg",
     "footer-logo--fundraising-regulator": "assets/footer-logo--fundraising-regulator.svg",
-    "footer-logo--pif": "assets/footer-logo--pif.svg"
+    "footer-logo--pif": "assets/footer-logo--pif.svg",
+    "card-icon-speech-bubble": "assets/card-icon-speech-bubble.svg",
+    "curve-three": "assets/curve-three.svg",
+    "curve-five": "assets/curve-five.svg"
   },
   "theme_version": "0.0.1"
 }
