@@ -97,6 +97,19 @@
       color: $purple;
     }
   }
+
+  .category-link {
+    .badge-category {
+      width: unset !important;
+    }
+
+    a {
+      &:after {
+        content: none;
+        display: none !important;
+      }
+    }
+  }
 }
 
 .top-section {
