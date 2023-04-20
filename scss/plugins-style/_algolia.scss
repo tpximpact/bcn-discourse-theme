@@ -19,13 +19,19 @@
   }
 
   // The dropdown
-  .aa-Panel {
+
+  .algolia-autocomplete {
+    top: calc(100% + 24px) !important;
   }
+
+  // .aa-Panel {}
 
   .aa-dropdown-menu {
     margin-top: 5px !important;
     background-color: $pink200 !important;
 
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
     .left-container {
       background-color: $pink200 !important;
       color: $purple !important;
