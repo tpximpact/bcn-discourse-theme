@@ -1,35 +1,36 @@
-.background-container {
-  z-index: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 500px;
+.bcn-hero-with-icon-wrapper {
+  height: auto;
   width: 100vw;
   background-color: $pink !important;
-  -webkit-mask-image: url(bottom-curve--mobile);
+
   -webkit-mask-image: url($bottom-curve--desktop);
   -webkit-mask-position: 0 100%;
   -webkit-mask-size: 100% 100%;
   -webkit-mask-repeat: no-repeat;
+  margin-bottom: 0px;
 
   @media (min-width: $break-md) {
-    height: 600px;
+    margin-bottom: 40px;
+  }
+
+  &--homepage {
+    // -webkit-mask-image: none;
+    position: relative;
+    z-index: 99;
+    margin-bottom: 0;
   }
 }
 
 .bcn-hero-with-icon {
-  // background-color: $pink;
   color: $white !important;
-  height: 160px;
-  display: flex;
+  // min-height: 80px;
   margin: 0 auto;
   max-width: $content-max-width;
-  padding-top: 90px;
-  padding-bottom: 20px;
+  padding: 80px 0 60px;
 
-  @media (min-width: $break-lg) {
-    padding-top: 100px;
-    padding-bottom: 60px;
+  @media (min-width: $break-md) {
+    padding: 80px 0 20px;
+    min-height: 300px;
   }
 
   &__inner {
@@ -37,7 +38,7 @@
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    // width: 100%;
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
@@ -45,8 +46,20 @@
   &__content {
     max-width: 700px;
 
-    h4 {
-      font-weight: 400;
+    h1 {
+      @include text-seven-xl;
+      font-weight: bold;
+      @media (min-width: $break-md) {
+        @include text-ten-xl;
+      }
+    }
+
+    h2 {
+      margin-top: 10px;
+      @include text-three-xl;
+      @media (min-width: $break-lg) {
+        @include text-six-xl;
+      }
     }
   }
 
@@ -58,21 +71,14 @@
     background-size: contain;
     background-position: 0 0;
     display: none;
-    @media (min-width: $break-lg) {
+    @media (min-width: $break-md) {
       display: block;
     }
   }
-}
 
-.bcn-hero-with-icon--homepage {
-  border: 1px solid green;
-}
-
-html.bcn-homepage {
-  .bcn-hero-with-icon {
-    padding-top: 120px;
+  &--homepage {
     @media (min-width: $break-md) {
-      padding-top: 160px;
+      padding: 130px 0 50px;
     }
   }
 }

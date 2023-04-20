@@ -1,57 +1,40 @@
-.bcn-homepage-content {
-  border: 1px solid #ff0000;
-}
-
 .o-steps {
-  // background-color: $pink;
-  margin-top: 30vw;
   position: relative;
-  margin-bottom: 80px;
-
-  @media (min-width: $break-sm) {
-    margin-top: 100px;
-  }
+  margin-bottom: 40px;
 
   @media (min-width: $break-md) {
-    margin-top: 200px;
+    margin-bottom: 80px;
   }
 
   &__inner-wrapper {
-    // max-width: $content-max-width;
-    // margin-right: auto;
-    // margin-left: auto;
-    // padding: $eight 10px;
-    // box-sizing: border-box;
+    margin-top: -100px;
+    padding-top: 100px;
+    background-color: $orange100;
+    // &:before {
+    //   background-color: $orange100;
+    //   -webkit-mask-image: url($curve-five);
+    //   mask-image: url($curve-five);
+    //   position: absolute;
+    //   left: 0px;
+    //   right: 0px;
+    //   top: -2rem;
+    //   height: 1rem;
+    //   z-index: 2;
 
-    // margin: 0 auto;
-    // position: relative;
-    // padding: $eight 0;
+    //   content: '';
+    //   -webkit-mask-position: center top;
+    //   mask-position: center top;
+    //   -webkit-mask-repeat: no-repeat;
+    //   mask-repeat: no-repeat;
+    //   -webkit-mask-size: 100% 102%;
+    //   mask-size: 100% 102%;
+    //   height: 2rem;
 
-    &:before {
-      background-color: $orange100;
-      -webkit-mask-image: url($curve-five);
-      mask-image: url($curve-five);
-      position: absolute;
-      left: 0px;
-      right: 0px;
-      top: -2rem;
-      height: 1rem;
-      z-index: 2;
-
-      content: '';
-      -webkit-mask-position: center top;
-      mask-position: center top;
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      -webkit-mask-size: 100% 102%;
-      mask-size: 100% 102%;
-      height: 2rem;
-
-      @media (min-width: $break-md) {
-        top: -3rem;
-        height: 3rem;
-      }
-    }
+    //   @media (min-width: $break-md) {
+    //     top: -3rem;
+    //     height: 3rem;
+    //   }
+    // }
     &:after {
       background-color: $orange100;
       -webkit-mask-image: url($curve-three);
@@ -80,35 +63,16 @@
   &__inner {
     background-color: $orange100;
     position: relative;
-    padding-top: $four;
 
     padding-left: 10px;
     padding-right: 10px;
     margin: 0 auto;
-
+    padding-top: $eight;
     @media (min-width: $break-md) {
       padding-top: $eight;
     }
 
-    &::before {
-      background-color: $pink200;
-      position: absolute;
-
-      width: $eighteen;
-
-      @apply bg-pink-200 absolute content -top-12 -right-4 w-18 lg:w-32 aspect-[103/100] overflow-hidden;
-
-      transform: matrix(0.23, -0.97, -0.97, -0.23, 0, 0) rotate(90deg);
-
-      -webkit-mask-image: url($hand-drawn-squarrow);
-      mask-image: url($hand-drawn-squarrow);
-      mask-size: 100% 100%;
-      mask-position: 0 100%;
-      mask-repeat: no-repeat;
-    }
-
     h2 {
-      // @include container;
       text-align: center;
       margin-bottom: $six;
       @media (min-width: $break-md) {
@@ -118,7 +82,8 @@
   }
 
   &__card-container {
-    // @include container;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,6 +100,10 @@
     padding: 0 $two;
     margin-bottom: $ten;
 
+    &:last-child {
+      margin-bottom: $four;
+    }
+
     @media (min-width: $break-md) {
       width: 33%;
     }
@@ -148,7 +117,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin-bottom: 30px;
     h3 {
       text-align: center;
       margin-bottom: $two;
@@ -177,14 +146,16 @@
   &__icon-wrapper {
     width: 100%;
     max-width: $fortyfour;
-    height: 200px;
+    height: 100px;
 
-    background-image: url($card-icon-speech-bubble);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 
+    margin-bottom: $four;
+
     @media (min-width: $break-md) {
+      height: 140px;
       max-width: $sixty;
       margin-bottom: $four;
     }
@@ -192,6 +163,16 @@
     img {
       width: 100%;
       object-fit: cover;
+    }
+
+    &--info {
+      background-image: url($icon-info);
+    }
+    &--guidelines {
+      background-image: url($icon-guidelines);
+    }
+    &--noticeboard {
+      background-image: url($icon-noticeboard);
     }
   }
 }

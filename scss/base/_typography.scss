@@ -7,13 +7,13 @@ body {
 h1 {
   @include text-six-xl;
   font-weight: bold;
-  @media (min-width: $break-lg) {
+  @media (min-width: $break-md) {
     @include text-ten-xl;
   }
 
   &.font-erika {
     @include text-four-xl;
-    @media (min-width: $break-lg) {
+    @media (min-width: $break-md) {
       @include text-eight-xl;
     }
   }

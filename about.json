@@ -26,7 +26,10 @@
     "footer-logo--pif": "assets/footer-logo--pif.svg",
     "card-icon-speech-bubble": "assets/card-icon-speech-bubble.svg",
     "curve-three": "assets/curve-three.svg",
-    "curve-five": "assets/curve-five.svg"
+    "curve-five": "assets/curve-five.svg",
+    "icon-guidelines": "assets/icon-guidelines.png",
+    "icon-info": "assets/icon-info.png",
+    "icon-noticeboard": "assets/icon-noticeboard.png"
   },
   "theme_version": "0.0.1"
 }

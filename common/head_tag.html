@@ -30,7 +30,8 @@
 <script type="text/x-handlebars" data-template-name="/connectors/below-site-header/hero">
     {{#if displayHero}}
 
-    <header class="bcn-hero-with-icon" data-theme="@model.theme">
+    <div class="bcn-hero-with-icon-wrapper">
+      <div class="bcn-hero-with-icon">
     <div class="bcn-hero-with-icon__inner">
       <div class="bcn-hero-with-icon__content">
   
@@ -40,12 +41,12 @@
       <div class="bcn-hero-with-icon__image">
       </div>
     </div>
-  </header>
+    </div>
+    </div>
+  
      
     {{/if}}
 </script>
-
-
 
 
 <!-- Custom hero banner for home page  -->
@@ -68,7 +69,8 @@
 <script type="text/x-handlebars" data-template-name="/connectors/below-site-header/hero--homepage">
     {{#if displayHeroHomepage}}
 
-    <header class="bcn-hero-with-icon" data-theme="@model.theme">
+    <div class="bcn-hero-with-icon-wrapper bcn-hero-with-icon-wrapper--homepage">
+      <div class="bcn-hero-with-icon bcn-hero-with-icon--homepage">
       <div class="bcn-hero-with-icon__inner">
         <div class="bcn-hero-with-icon__content">
          <h1>Breast Cancer Now Forum</h1>
@@ -77,7 +79,8 @@
         <div class="bcn-hero-with-icon__image">
         </div>
       </div>
-    </header>
+    </div>
+    </div>
      
     {{/if}}
 </script>
@@ -118,8 +121,8 @@
 
                 <div class="o-steps__card">
 
-                  <div class="o-steps__icon-wrapper">
-                    <img src="../../assets/svg/card-icon-speech-bubble.svg" alt="">
+                  <div class="o-steps__icon-wrapper o-steps__icon-wrapper--info">
+                    
                   </div>
 
                   <div class="o-steps__card-text-wrapper">
@@ -133,8 +136,8 @@
 
               <div class="o-steps__card-container-item">
                 <div class="o-steps__card">
-                  <div class="o-steps__icon-wrapper">
-                    <img src="./assets/card-icon-speech-bubble.svg" alt="">
+                  <div class="o-steps__icon-wrapper o-steps__icon-wrapper--guidelines">
+                    
                   </div>
 
                   <div class="o-steps__card-text-wrapper">
@@ -149,8 +152,8 @@
 
               <div class="o-steps__card-container-item">
                 <div class="o-steps__card">
-                  <div class="o-steps__icon-wrapper">
-                    <img src="../../assets/svg/card-icon-speech-bubble.svg" alt="">
+                  <div class="o-steps__icon-wrapper o-steps__icon-wrapper--noticeboard">
+                    
                   </div>
                   <div class="o-steps__card-text-wrapper">
                     <h3>Noticeboard</h3>
