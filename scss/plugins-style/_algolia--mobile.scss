@@ -42,14 +42,19 @@
 
     .algolia-autocomplete {
       top: 100% !important;
+      width: 40vw !important;
+      right: 0 !important;
+
+      position: relative;
     }
 
     .aa-Panel {
       position: fixed !important;
       top: 75px !important;
-      left: -75% !important;
+      // left: -75% !important;
+      left: -100px !important;
       right: 0px !important;
-      min-height: calc(100vh - 160px);
+      min-height: calc(100vh - 220px);
       // height: calc(100vh - 100px);
       height: 100px !important;
       overflow-y: auto !important;
@@ -60,6 +65,7 @@
 
     .aa-dropdown-menu {
       width: unset !important;
+
       margin-top: 5px !important;
       box-shadow: 0px 15px 22px rgba(85, 18, 70, 0.35);
 
