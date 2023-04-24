@@ -14,6 +14,14 @@
     width: 100%;
     // border: 1px solid #ff0000;
     max-width: 130px;
+
+    .aa-Autocomplete{
+      &:not(:first-child){
+        display: none;
+      }
+    }
+
+
     .aa-InputWrapper {
       max-width: 150px !important;
       width: 100% !important;
