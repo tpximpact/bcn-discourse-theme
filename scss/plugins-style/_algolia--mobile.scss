@@ -1,23 +1,22 @@
-.mobile-view .aa-Autocomplete {
-  display: block !important;
-}
 
-@media (max-width: 768px) {
-  .algolia-holder .aa-input {
-    display: block !important;
-  }
-}
+// @media (max-width: 768px) {
+//   .algolia-holder .aa-input {
+//     display: block !important;
+//   }
+// }
 
 .mobile-view {
+
   .algolia-holder {
     margin-right: 5px !important;
     width: 100%;
-    // border: 1px solid #ff0000;
+    
     max-width: 130px;
 
     .aa-Autocomplete{
+      display: block !important;
       &:not(:first-child){
-        display: none;
+        display: none !important;
       }
     }
 
