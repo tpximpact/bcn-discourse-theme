@@ -68,6 +68,10 @@
   .controls .btn {
     @include a-btn-chip;
   }
+
+  .details{
+    border-bottom: none !important;
+  }
 }
 
 .empty-state {
