@@ -15,37 +15,31 @@
 <!-- Dynamic hero banner for NOT home page  -->
 <script type="text/discourse-plugin" version="0.8">
   api.registerConnectorClass("below-site-header", "hero", {
-    setupComponent(args, component) {
-    api.onPageChange((url) => {
-        if (url !== "/") {
-
-          component.set("displayHero", true);
-        } else{
-          component.set("displayHero", false);
-      }});
-    }
-});
+      setupComponent(args, component) {
+      api.onPageChange((url) => {
+          if (url !== "/") {
+  
+            component.set("displayHero", true);
+          } else{
+            component.set("displayHero", false);
+        }});
+      }
+  });
 </script>
 
 <script type="text/x-handlebars" data-template-name="/connectors/below-site-header/hero">
-    {{#if displayHero}}
-
+  {{#if displayHero}}
     <div class="bcn-hero-with-icon-wrapper">
       <div class="bcn-hero-with-icon">
-    <div class="bcn-hero-with-icon__inner">
-      <div class="bcn-hero-with-icon__content">
-  
-        {{mount-widget widget="hero-title"}}
-     
-     </div>
-      <div class="bcn-hero-with-icon__image">
+        <div class="bcn-hero-with-icon__inner">
+          <div class="bcn-hero-with-icon__content">
+            {{mount-widget widget="hero-title"}}
+          </div>
+          <div class="bcn-hero-with-icon__image"></div>
+        </div>
       </div>
     </div>
-    </div>
-    </div>
-  
-     
-    {{/if}}
+  {{/if}}
 </script>
 
 
@@ -175,12 +169,7 @@
 
 
 
-
-
-
-
-<!-- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS ---  -->
-<!-- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS --- PLUGINS ---  -->
+<!-- WIDGETS --- WIDGETS --- WIDGETS --- WIDGETS --- WIDGETS --- WIDGETS --- WIDGETS --- WIDGETS ---  -->
 
 <!-- Dynamic Hero Ttile --- Dynamic Hero Ttile --- Dynamic Hero Ttile --- Dynamic Hero Ttile ---  -->
 
@@ -251,8 +240,7 @@
         if(categorySubtitle){
           heroSubtitle = categorySubtitle
         } 
-    
-
+  
         return h(
            'h4',  { innerHTML : heroSubtitle }
 

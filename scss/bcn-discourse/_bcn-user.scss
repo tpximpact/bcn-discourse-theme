@@ -1,4 +1,12 @@
 .user-menu {
+  .menu-panel.drop-down {
+    .panel-body {
+      margin-top: 30px;
+      max-width: 500px !important;
+      background-color: $white;
+    }
+  }
+
   .menu-panel.slide-in {
     .panel-body {
       // height: calc(100vh - 240px) !important;
@@ -14,8 +22,6 @@
         padding: 10px !important;
         width: 90% !important;
         margin: 0 auto !important;
-        max-width: 500px !important;
-        background-color: #fff;
       }
 
       .menu-links-row {
@@ -52,6 +58,15 @@
         }
       }
     }
+  }
+}
+
+.user-main .about {
+  .collapsed-info .details .primary .user-profile-names__primary {
+    padding-top: 10px !important;
+  }
+  .controls .btn {
+    @include a-btn-chip;
   }
 }
 

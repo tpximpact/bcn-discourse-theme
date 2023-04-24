@@ -1,4 +1,7 @@
 .alert {
   background-color: $pink200 !important;
   border-radius: 20px !important;
+  @media (min-width: $break-md) {
+    margin-bottom: 26px;
+  }
 }
