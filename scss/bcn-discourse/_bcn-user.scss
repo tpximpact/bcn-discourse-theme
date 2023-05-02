@@ -69,7 +69,7 @@
     @include a-btn-chip;
   }
 
-  .details{
+  .details {
     border-bottom: none !important;
   }
 }
@@ -252,6 +252,31 @@
 
   &.unread {
     background-color: $pink200 !important;
+  }
+}
+
+// Wrting a post
+
+.select-kit.combo-box.category-chooser .select-kit-row {
+  .category-status {
+    color: $purple !important;
+    margin-bottom: 8px;
+  }
+  .category-desc {
+    color: $purple !important;
+  }
+
+  .badge-wrapper {
+    color: $purple !important;
+    &:first-child {
+      padding: 1px 6px;
+      background-color: $lightgrey;
+      border-radius: 5px;
+    }
+
+    &:nth-child(2) {
+      font-weight: bold;
+    }
   }
 }
 

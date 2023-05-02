@@ -6,6 +6,11 @@
   }
 }
 
-.alert-emails-disabled{
+.alert-emails-disabled {
   display: none;
+}
+
+.composer-popup {
+  background-color: $lightgrey;
+  border-radius: 6px;
 }
