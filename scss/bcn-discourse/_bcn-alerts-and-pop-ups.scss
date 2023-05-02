@@ -10,7 +10,25 @@
   display: none;
 }
 
+// user writing a new post
 .composer-popup {
   background-color: $lightgrey;
   border-radius: 6px;
+}
+
+// notifications on topic list
+.topic-list .badge-notification.new-topic {
+  top: -22px;
+  &:before {
+    background-color: $pink;
+    margin-top: -10px;
+    margin-left: 10px;
+  }
+}
+
+.topic-list-body .topic-list-item .main-link .link-top-line a {
+  top: -7px;
+  left: 11px;
+  padding: 1px 8px;
+  background-color: pink;
 }
