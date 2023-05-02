@@ -18,7 +18,7 @@
 
 // notifications on topic list
 .topic-list .badge-notification.new-topic {
-  top: -22px;
+  top: -23px;
   &:before {
     background-color: $pink;
     margin-top: -10px;
@@ -26,8 +26,8 @@
   }
 }
 
-.topic-list-body .topic-list-item .main-link .link-top-line .badge-notification {
-  top: -7px;
+.topic-list-body .topic-list-item .main-link .link-top-line .badge-notification.unread-posts {
+  top: -22px;
   left: 11px;
   padding: 1px 8px !important;
   background-color: pink;
