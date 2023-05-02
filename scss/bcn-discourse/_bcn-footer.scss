@@ -150,13 +150,16 @@
     }
   }
   &__one-trust-settings {
+    svg {
+      margin-bottom: -5px;
+    }
     button#ot-sdk-btn {
       background-color: $pink;
       white-space: nowrap;
       outline: none;
       border: none;
       color: $white;
-      font-size: 14px !important;
+      font-size: 13px !important;
 
       @include text-xs;
       &:hover {
@@ -164,7 +167,7 @@
       }
 
       &:before {
-        margin-top: -6px;
+        margin-top: -4px;
       }
     }
 
