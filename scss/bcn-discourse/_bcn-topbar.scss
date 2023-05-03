@@ -19,21 +19,22 @@
   color: $white !important;
   margin-bottom: 0;
   line-height: 1;
-  margin-right: 30px;
+
   font-size: 16px;
   font-weight: 400;
-  padding-left: 36px;
+  padding-left: 24px;
   position: relative;
   transition: 0.4;
 
   &:before {
     position: absolute;
     left: 0;
+    bottom: 1px;
     transition: 0.4s;
     content: '';
     height: 19px;
     width: 19px;
-    margin-left: 8px;
+    margin-left: -2px;
     background-image: url($hand-drawn-chevron--white);
     background-repeat: no-repeat;
     background-position: center;
