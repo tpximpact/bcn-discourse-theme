@@ -12,6 +12,7 @@
   display: flex;
   align-items: center;
 }
+
 .bcn-topbar__item {
   display: block;
   white-space: nowrap;
@@ -21,11 +22,34 @@
   margin-right: 30px;
   font-size: 16px;
   font-weight: 400;
-  &:hover {
-    text-decoration: underline;
+  padding-left: 36px;
+  position: relative;
+  transition: 0.4;
+
+  &:before {
+    position: absolute;
+    left: 0;
+    transition: 0.4s;
+    content: '';
+    height: 19px;
+    width: 19px;
+    margin-left: 8px;
+    background-image: url($hand-drawn-chevron--white);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: scaleY(-1) rotate(90deg);
   }
 
   @media (min-width: $break-xl) {
     font-size: 18px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+
+    &:before {
+      left: 2px;
+    }
   }
 }
