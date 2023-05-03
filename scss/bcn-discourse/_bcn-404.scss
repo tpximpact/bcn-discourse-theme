@@ -1,0 +1,61 @@
+body.no-ember {
+  // padding: 0 10px !important;
+  header {
+    .header-buttons {
+      a {
+        @include a-btn-primary;
+
+        padding: 10px !important;
+        font-size: 0.875rem !important;
+        margin-top: -5px;
+        margin-right: 0;
+        margin-right: 5px;
+
+        @media (min-width: $break-lg) {
+          @include a-btn-primary;
+          margin-top: 0px;
+          font-size: 1.2rem !important;
+        }
+
+        svg {
+          display: none;
+        }
+
+        &:hover {
+          color: $white !important;
+        }
+      }
+    }
+  }
+
+  #main-outlet {
+    // margin: 30px 10px !important;
+    // border: 1px solid green;
+    background-color: #f0eaef;
+    box-shadow: none !important;
+    .page-not-found {
+      background-color: white;
+
+      padding: 30px 30px 10px 30px !important;
+      margin-bottom: 0;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+    .page-not-found-topics {
+      background-color: white;
+
+      padding: 0px 30px 30px 30px !important;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+  }
+
+  .btn-default {
+    @include a-btn-chip;
+    max-width: 120px;
+  }
+
+  .page-not-found-search {
+    display: none;
+  }
+}
