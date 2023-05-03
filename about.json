@@ -29,7 +29,8 @@
     "curve-five": "assets/curve-five.svg",
     "icon-guidelines": "assets/icon-guidelines.png",
     "icon-info": "assets/icon-info.png",
-    "icon-noticeboard": "assets/icon-noticeboard.png"
+    "icon-noticeboard": "assets/icon-noticeboard.png",
+    "icon-cog": "assets/icon-cog.png"
   },
   "theme_version": "0.0.1"
 }
