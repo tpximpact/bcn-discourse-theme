@@ -35,6 +35,20 @@
       display: none;
     }
 
+    &:first-child {
+      padding: 1px 6px;
+      background-color: $lightgrey;
+      border-radius: 5px;
+      transition: 0.4s;
+      &:hover {
+        background-color: $lightpink;
+        text-decoration: none;
+        .badge-category {
+          text-decoration: none;
+        }
+      }
+    }
+
     &:nth-child(2) {
       margin-left: 24px;
       &:before {
