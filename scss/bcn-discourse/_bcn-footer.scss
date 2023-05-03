@@ -167,7 +167,24 @@
       }
 
       &:before {
-        margin-top: -4px;
+        position: absolute;
+        // left: 0;
+        content: '';
+        left: -5px;
+        border: 1px solid blue;
+
+        bottom: 10px;
+        height: 22px;
+        width: 22px;
+        // background-color: black;
+        // border: 1px solid orange;
+        background-image: url(icon-cog);
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        z-index: 1;
       }
     }
 
