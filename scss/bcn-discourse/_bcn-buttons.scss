@@ -54,6 +54,10 @@
     -webkit-mask-image: url($hand-drawn-button--solid);
     mask-image: url($hand-drawn-button--solid);
   }
+
+  &:hover {
+    color: $white !important;
+  }
 }
 
 @mixin a-btn-tertiary__purple {
@@ -160,16 +164,39 @@
 
   &.active {
     background-color: $purple;
-    color: $white;
+    color: $yellow !important;
+    svg {
+      color: $yellow !important;
+    }
 
     &:hover {
       background-color: $purple;
-      color: $white;
+      color: $purple !important;
+      svg {
+        color: $purple !important;
+      }
     }
   }
 
   .d-button-label {
     color: $purple;
+  }
+}
+
+@mixin a-btn-chip--small {
+  @include a-btn-chip;
+  justify-content: center;
+  height: 30px;
+  min-width: 30px;
+  padding: 20px 10px;
+
+  svg {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  use {
+    padding: 0 !important;
+    margin: 0 !important;
   }
 }
 
@@ -197,5 +224,45 @@
         color: $purple !important;
       }
     }
+  }
+}
+
+@mixin a-btn-link {
+  @include a-btn;
+  @include a-btn-background-mask;
+
+  // focus-visible:border-primary
+
+  // px-2
+  // pb-1
+  // pt-0
+
+  // hocus:before:hidden;
+
+  padding: 0 $two $one !important;
+  font-weight: 400 !important;
+  @include text-base;
+  color: $purple !important;
+
+  &::before {
+    height: $one-half !important;
+    bottom: $one !important;
+    left: $two !important;
+    right: $two !important;
+    top: unset !important;
+    width: auto !important;
+
+    -webkit-mask-image: url($hand-drawn-line--light) !important;
+    mask-image: url($hand-drawn-line--light) !important;
+    background-color: $pink !important;
+  }
+
+  &:hover,
+  &:focus {
+    -webkit-mask-image: url($hand-drawn-line--link-heavy) !important;
+    mask-image: url($hand-drawn-line--link-heavy) !important;
+    background-size: theme('spacing.full') theme('spacing.full');
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
   }
 }

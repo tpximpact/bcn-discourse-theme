@@ -10,10 +10,31 @@
   display: none;
 }
 
-// user writing a new post
-.composer-popup {
-  background-color: $lightgrey;
-  border-radius: 6px;
+.consent_banner {
+  color: $purple !important;
+
+  button.btn-link {
+    display: flex;
+    @include a-btn-link;
+    margin-top: 10px;
+  }
+
+  button.close {
+    svg {
+      color: $purple !important;
+    }
+  }
+}
+
+.popup-tip {
+  background-color: $yellow !important;
+  color: $purple !important;
+  border-radius: 10px;
+
+  .d-icon {
+    opacity: 1;
+    color: $purple !important;
+  }
 }
 
 // notifications on topic list
