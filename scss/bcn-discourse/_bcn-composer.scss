@@ -60,7 +60,7 @@
     .composer-fields {
       .title-input {
         input {
-          color: $pink200 !important;
+          color: $purple !important;
           border-radius: 6px !important;
           border: 1px solid $purple;
           &::-webkit-input-placeholder {
@@ -183,4 +183,20 @@
 .composer-popup {
   background-color: $lightgrey !important;
   border-radius: 6px;
+  color: $purple !important;
+
+  .topics {
+    li {
+      margin-bottom: 15px;
+    }
+    color: $purple !important;
+
+    .topic .first-line {
+      font-weight: bold;
+    }
+    .topic,
+    .blurb {
+      color: $purple !important;
+    }
+  }
 }

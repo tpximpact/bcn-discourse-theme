@@ -73,6 +73,24 @@
       }
     }
 
+    // notifications on topic list
+    .badge-notification.new-topic {
+      &:before {
+        position: absolute;
+        background-color: $pink;
+        top: 22px;
+        margin-left: 10px;
+      }
+    }
+
+    .badge-notification.unread-posts {
+      background-color: $lightpink;
+      @include text-md;
+      color: #6e2b5f;
+      font-weight: bold;
+      padding: 0 4px !important;
+    }
+
     .link-top-line {
       display: flex;
       .topic-post-badges {

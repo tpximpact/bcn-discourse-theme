@@ -1,28 +1,43 @@
 .topic-list-data {
-  .topic-post-badges {
-    display: none;
-  }
-
   .pull-left {
     display: none;
   }
   .right {
     margin-left: 0;
     padding-left: 10px;
-    a {
-      font-weight: 400 !important;
+    .main-link {
+      a {
+        display: inline !important;
+      }
+
+      .badge-notification.new-topic {
+        &:before {
+          position: static;
+          background-color: $pink;
+        }
+      }
     }
 
     .topic-item-stats {
       margin-top: 0;
       margin-left: -5px;
     }
+
+    .topic-list-data {
+      color: $purple;
+      padding: 0px 5px;
+      border-radius: 6px;
+      @include text-base;
+
+      .unread-posts {
+        background-color: $lightpink !important;
+      }
+    }
   }
 }
 
 .topic-list .topic-item-stats .category {
-  
-  a{
+  a {
     white-space: normal !important;
     max-width: 265px;
     padding-left: 5px;
