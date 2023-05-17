@@ -6,6 +6,78 @@
 <script type="text/javascript">
   function OptanonWrapper() { }
 </script>
+
+
+<script type="text/discourse-plugin" version="0.8">
+    api.onPageChange(() =>{
+   
+      reloadOTBanner()
+      clearDup()
+   
+    });
+    // for testing onPageChange() 
+    function randBackground() {
+        $('body').css('background-color', '#'+(Math.random()*0xFFFFFF<<0).toString(16));
+    }
+
+    function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) {
+            return true;
+        }
+    }
+
+    function reloadOTBanner() {
+
+        var otConsentSdk = document.getElementById("onetrust-consent-sdk");
+        if (otConsentSdk) {
+            otConsentSdk.remove();
+        }
+
+        if (window.OneTrust != null) {
+            OneTrust.Init();
+
+            setTimeout(function() {
+                OneTrust.LoadBanner();
+
+                var toggleDisplay = document.getElementsByClassName(
+                    "ot-sdk-show-settings"
+                );
+
+                for (var i = 0; i < toggleDisplay.length; i++) {
+                    toggleDisplay[i].onclick = function(event) {
+                        event.stopImmediatePropagation();
+                        window.OneTrust.ToggleInfoDisplay();
+                    };
+                }
+            }, 1000); 
+        }
+    }
+
+    //SHOULD BE USED ONLY ON COOKIE POLICY. TRIGGER FUNCTION BELOW TO REMOVE DUPLICATE CATEGORIES
+    function clearDup() {
+        var sec = document.getElementById("ot-sdk-cookie-policy")
+        var tally = [];
+        if(sec){
+          for (var i = sec.length - 1; i >= 0; i--) {
+            if (tally[sec[i].firstChild.innerText] === undefined) {
+                tally[sec[i].firstChild.innerText] = 1;
+            } else {
+                //console.log(i,sec[i].firstChild.innerText);
+                sec[i].remove();
+                //return true;
+            }
+          }
+        }
+     
+        //return false;
+    }
+</script>
+
+
+
+
 <!-- OneTrust Cookies Consent Notice end for breastcancernow.org -->
 
 
