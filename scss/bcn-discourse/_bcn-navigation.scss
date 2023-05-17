@@ -18,7 +18,8 @@
     max-height: unset !important;
     width: 100% !important;
     @media (min-width: $break-lg) {
-      overflow-y: inherit !important;
+      // overflow-y: inherit !important;
+      overflow-y: auto !important;
     }
   }
 
