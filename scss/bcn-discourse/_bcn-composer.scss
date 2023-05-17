@@ -200,3 +200,16 @@
     }
   }
 }
+
+// on mobile he
+#reply-control.open {
+  height: var(--composer-height) !important;
+}
+
+#reply-control .wmd-controls:not(.toolbar-visible) .d-editor-button-bar {
+  display: none !important;
+}
+
+.reply-area .d-editor-textarea-wrapper textarea {
+  border-radius: 20px;
+}
