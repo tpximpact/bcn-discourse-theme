@@ -142,11 +142,17 @@
           &:first-child {
             height: 44px;
             margin-right: 6px;
-            padding-left: 5px !important;
           }
           &:nth-child(2) {
             height: 44px;
             padding-left: 0 !important;
+          }
+
+          &.regular-likes {
+            padding-left: 5px !important;
+            @media (min-width: $break-md) {
+              padding-left: 0px !important;
+            }
           }
         }
 
