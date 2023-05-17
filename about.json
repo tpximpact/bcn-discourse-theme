@@ -33,7 +33,8 @@
     "icon-guidelines": "assets/icon-guidelines.png",
     "icon-info": "assets/icon-info.png",
     "icon-noticeboard": "assets/icon-noticeboard.png",
-    "icon-cog": "assets/icon-cog.png"
+    "icon-cog": "assets/icon-cog.png",
+    "logo": "assets/logo.svg"
   },
   "theme_version": "0.0.1"
 }

@@ -43,3 +43,107 @@
   padding: 1px 8px !important;
   background-color: $lightpink;
 }
+
+#discourse-modal {
+  .modal-inner-container {
+    border-radius: 10px;
+
+    .modal-header {
+      border-bottom: 1px solid $purple;
+      button {
+        svg {
+          color: $purple;
+        }
+      }
+    }
+
+    .modal-body {
+      button,
+      .btn {
+        @include a-btn-chip;
+      }
+    }
+    .modal-footer {
+      button {
+        @include a-btn-chip;
+      }
+    }
+  }
+
+  &.create-account {
+    a,
+    h3,
+    span,
+    h1,
+    .disclaimer {
+      color: $purple !important;
+    }
+    a {
+      text-decoration: underline;
+    }
+
+    .modal-header {
+      button {
+        svg {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .create-account-form {
+      background-color: $purple100;
+      border-radius: 10px;
+    }
+
+    .login-welcome-header {
+      position: relative;
+      &:after {
+        position: absolute;
+        transition: 0.4s;
+        content: '';
+        height: auto;
+
+        right: 0;
+        top: 0px;
+        width: 140px;
+        height: 140px;
+        color: $purple;
+        margin-left: 8px;
+        background-image: url($logo);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+
+      img {
+        display: none;
+      }
+    }
+
+    .login-form {
+      background-color: $purple100;
+
+      form {
+        input {
+          border-radius: 10px;
+        }
+      }
+    }
+    .login-welcome-header {
+      border-radius: 10px;
+      background-color: $purple100;
+    }
+
+    .modal-footer {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      padding-bottom: 10px;
+      background-color: $purple100;
+      border-top: 1px solid $purple;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

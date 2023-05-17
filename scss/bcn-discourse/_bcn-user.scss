@@ -1,12 +1,110 @@
 .user-menu {
+  //desktop --- desktop --- desktop ---
   .menu-panel.drop-down {
     .panel-body {
       margin-top: 30px;
       max-width: 500px !important;
       background-color: $white;
+
+      .panel-body-contents {
+        background-color: $purple100;
+
+        .menu-link {
+          transition: 0.4s;
+          svg {
+            color: $purple;
+          }
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+          &:hover {
+            background-color: $lightpink;
+          }
+        }
+        .menu-link.active {
+          background-color: #fff;
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+        }
+
+        .quick-access-panel {
+          ul {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 12px 8px;
+
+            li {
+              a,
+              button {
+                color: $purple !important;
+
+                svg {
+                  color: $purple !important;
+                }
+
+                margin-bottom: 10px;
+                font-size: 16px;
+              }
+
+              a {
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+
+          &.quick-access-profile {
+            ul {
+              background-color: $purple100;
+              li {
+                cursor: pointer;
+                transition: 0.4s;
+                padding: 12px 8px;
+                margin: 5px 0;
+                border-radius: 10px;
+                border: 1px solid $white;
+                &:hover {
+                  background-color: #fff;
+                  border: 1px solid $purple;
+
+                  a {
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .panel-body-bottom {
+          border-radius: 10px;
+          margin-top: 16px;
+          a {
+            border-radius: 10px;
+            padding: 10px 0;
+            background-color: $white;
+
+            svg {
+              color: $purple;
+            }
+          }
+        }
+      }
     }
   }
 
+  .menu-links-header {
+    border-bottom: 3px solid white !important;
+  }
+  .menu-links-header .menu-links-row {
+    button.active:hover {
+      background-color: #fff;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+  }
+
+  // Mobile -- Mobile -- Mobile -- Mobile --
   .menu-panel.slide-in {
     .panel-body {
       // height: calc(100vh - 240px) !important;
@@ -34,6 +132,9 @@
 
       .quick-access-panel {
         ul {
+          background-color: #fff;
+          border-radius: 10px;
+          padding: 12px 8px;
           li {
             a,
             button {
@@ -42,6 +143,16 @@
               svg {
                 color: $purple !important;
               }
+            }
+          }
+        }
+
+        &.quick-access-profile {
+          ul {
+            background-color: $purple100;
+            li {
+              margin: 5px 0;
+              border-radius: 10px;
             }
           }
         }
