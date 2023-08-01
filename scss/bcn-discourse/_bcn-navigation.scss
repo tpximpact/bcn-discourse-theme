@@ -80,7 +80,18 @@
   padding: 0 10px !important;
 
   .heading {
-    display: none;
+    //display: none;
+
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-weight: 700;
+    margin-bottom: 1em;
+
+    a {
+      color: $purple;
+    }
+
   }
 
   @media (min-width: $break-lg) {
