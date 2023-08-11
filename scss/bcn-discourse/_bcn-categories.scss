@@ -10,13 +10,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 20px; 
 
     background: $pink200;
     box-shadow: 0px 6px 8px rgba(85, 18, 70, 0.35);
     border-radius: 30px;
-
-    @media (min-width: $break-sm) {
+    width: 100%;
+    
+    @media (min-width: $break-sm) { 
       width: 48%;
     }
 
