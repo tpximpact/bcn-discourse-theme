@@ -201,6 +201,10 @@
   }
 }
 
+body:not(.ios-safari-composer-hacks) #reply-control.open.composer-action-reply {
+  min-height: calc(60vh - 4em);
+}
+
 // on mobile
 #reply-control.open {
   height: var(--composer-height) !important;
