@@ -47,7 +47,7 @@
 #reply-control.open {
 
   .grippie {
-    background-color: $purple500;
+    background-color: $purple400;
   }
 
   .grippie::before {
@@ -62,6 +62,14 @@
   a.close {
     color: $purple500;
   }
+}
+
+.fullscreen-composer #reply-control.fullscreen .reply-to {
+  border-bottom-color: $purple500;
+}
+
+.fullscreen-composer #reply-control.fullscreen.show-preview .d-editor-textarea-wrapper {
+  border-right-color: $purple500;
 }
 
 
