@@ -1,3 +1,59 @@
+.reply-area {
+  .grippie {
+    background-color: $purple500;
+  }
+
+  .open .grippie::before {
+    border-top: #fff;
+  }
+
+  .select-kit.dropdown-select-box.composer-actions{
+    .select-kit-header {
+      border-color: $purple500;
+    }
+  }
+
+  .d-editor-textarea-wrapper {
+    border-color: $purple500;
+  }
+
+  .d-editor-button-bar .btn {
+    color: $purple500;
+
+    &:hover,
+    &:focus {
+      background-color: $purple500;
+      color: #fff;
+    }
+  }
+
+  .d-editor-button-bar {
+    border-bottom-color: $purple500;
+  }
+}
+
+#reply-control .toggle-preview .d-icon,
+#reply-control .reply-to .composer-controls .d-icon,
+#reply-control .reply-to .reply-details .d-icon {
+  color: $purple500;
+
+  &:hover,
+  &:focus {
+    color: $pink;
+  }
+}
+
+#reply-control .save-or-cancel .cancel {
+  color: $purple500;
+
+  &:hover,
+  &:focus {
+    color: $pink;
+  }
+}
+
+
+
 //.composer-action-reply {
 //}
 //
@@ -10,7 +66,7 @@
 //}
 //
 //// the form element
-//.reply-area {
+//.reply-area {git
 //  box-shadow: 0px 15px 22px rgba(85, 18, 70, 0.35);
 //  .reply-to {
 //    padding: 7px 0 15px;
