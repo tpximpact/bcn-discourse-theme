@@ -1,12 +1,8 @@
+.grippie {
+  background-color: $purple500;
+}
+
 .reply-area {
-  .grippie {
-    background-color: $purple500;
-  }
-
-  .open .grippie::before {
-    border-top: #fff;
-  }
-
   .select-kit.dropdown-select-box.composer-actions{
     .select-kit-header {
       border-color: $purple500;
@@ -48,6 +44,19 @@
 
   &:hover,
   &:focus {
+    color: $pink;
+  }
+}
+
+#reply-control.open .grippie::before {
+  border-top: #fff;
+}
+
+#reply-control .composer-popup {
+  background-color: $lightpink;
+  color: $purple500;
+
+  a.close {
     color: $pink;
   }
 }
