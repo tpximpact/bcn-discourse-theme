@@ -1,219 +1,219 @@
-.composer-action-reply {
-}
-
-// top coloured line
-.grippie {
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-  background-color: $pink !important;
-  padding: 4px 0;
-}
-
-// the form element
-.reply-area {
-  box-shadow: 0px 15px 22px rgba(85, 18, 70, 0.35);
-  .reply-to {
-    padding: 7px 0 15px;
-
-    .reply-details {
-      .composer-action-title {
-        .select-kit.single-select.dropdown-select-box {
-          .select-kit-header {
-            border: none;
-            &:hover {
-              background-color: #fff;
-            }
-          }
-
-          .select-kit-header-wrapper {
-            @include a-btn-chip;
-            margin-bottom: 0;
-          }
-        }
-        .action-title,
-        .action-title a {
-          @include text-xl;
-          font-weight: bold;
-          color: $purple !important;
-        }
-      }
-    }
-
-    .composer-controls {
-      button {
-        @include a-btn-chip;
-        margin-bottom: 0;
-      }
-
-      @media (min-width: $break-md) {
-        // margin-right: 70px;
-      }
-
-      .composer-fields {
-        background-color: yellow;
-      }
-    }
-  }
-
-  // for mobile
-  .wmd-controls {
-    .composer-fields {
-      .title-input {
-        input {
-          color: $purple !important;
-          border-radius: 6px !important;
-          border: 1px solid $purple;
-          &::-webkit-input-placeholder {
-            color: $purple;
-          }
-        }
-      }
-      .category-input {
-        summary {
-          color: $purple !important;
-          border-radius: 6px !important;
-          border: 1px solid $purple;
-        }
-      }
-    }
-  }
-
-  // the editor
-  .d-editor-textarea-wrapper {
-    margin-top: 10px;
-    border-radius: 20px;
-    border-color: $purple;
-    @media (min-width: $break-md) {
-      border-color: $lightgrey;
-      box-shadow: 0px 3px 5px rgba(85, 18, 70, 0.35);
-    }
-    .d-editor-button-bar {
-      display: flex !important;
-      flex-wrap: wrap;
-      padding: 5px;
-      // margin: 5px 0 0 0px;
-      // grid-template-columns: repeat(auto-fill, minmax(2.85em, 1fr)) !important;
-
-      @media (min-width: $break-md) {
-        padding: 5px 5px 0px 5px;
-      }
-      button,
-      summary {
-        // this media query is going backwards... below $break-md
-        @media (max-width: $break-md) {
-          @include a-btn-chip;
-          width: 10px;
-          min-width: unset;
-          margin-right: 4px;
-          padding: 8px 16px;
-          margin-bottom: 5px !important;
-          height: unset !important;
-          svg {
-            width: 18px;
-            height: 18px;
-          }
-        }
-
-        @include a-btn-chip;
-        width: 20px;
-        margin-right: 4px;
-        margin-bottom: 5px !important;
-      }
-    }
-
-    textarea {
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      color: $purple;
-      &::-webkit-input-placeholder {
-        color: $purple;
-      }
-    }
-  }
-
-  // submit buttons
-  .submit-panel {
-    .save-or-cancel {
-      .create {
-        svg {
-          display: none;
-        }
-
-        @include a-btn-chip;
-        @media (min-width: $break-md) {
-          @include a-btn-primary;
-
-          .d-button-label {
-            color: $yellow !important;
-          }
-
-          &:hover {
-            .d-button-label {
-              color: $white !important;
-            }
-          }
-        }
-      }
-
-      .cancel {
-        @include a-btn-chip--small;
-        @media (min-width: $break-md) {
-          @include a-btn-primary;
-          color: $yellow !important;
-          margin-left: 10px !important;
-        }
-      }
-    }
-
-    .mobile-file-upload,
-    .mobile-preview {
-      @include a-btn-chip--small;
-    }
-
-    .toggle-preview {
-      @include a-btn-chip;
-      margin-bottom: 0;
-    }
-  }
-}
-
-// space on the right for pop up messages
-.composer-popup-container {
-}
-.composer-popup {
-  background-color: $lightgrey !important;
-  border-radius: 6px;
-  color: $purple !important;
-
-  .topics {
-    li {
-      margin-bottom: 15px;
-    }
-    color: $purple !important;
-
-    .topic .first-line {
-      font-weight: bold;
-    }
-    .topic,
-    .blurb {
-      color: $purple !important;
-    }
-  }
-}
-
-body:not(.ios-safari-composer-hacks) #reply-control.open.composer-action-reply {
-  min-height: calc(60vh - 4em);
-}
-
-// on mobile
-#reply-control.open {
-  height: var(--composer-height) !important;
-}
-
-#reply-control .wmd-controls:not(.toolbar-visible) .d-editor-button-bar {
-  display: none !important;
-}
-
-.reply-area .d-editor-textarea-wrapper textarea {
-  border-radius: 20px;
-}
+//.composer-action-reply {
+//}
+//
+//// top coloured line
+//.grippie {
+//  border-top-right-radius: 3px;
+//  border-top-left-radius: 3px;
+//  background-color: $pink !important;
+//  padding: 4px 0;
+//}
+//
+//// the form element
+//.reply-area {
+//  box-shadow: 0px 15px 22px rgba(85, 18, 70, 0.35);
+//  .reply-to {
+//    padding: 7px 0 15px;
+//
+//    .reply-details {
+//      .composer-action-title {
+//        .select-kit.single-select.dropdown-select-box {
+//          .select-kit-header {
+//            border: none;
+//            &:hover {
+//              background-color: #fff;
+//            }
+//          }
+//
+//          .select-kit-header-wrapper {
+//            @include a-btn-chip;
+//            margin-bottom: 0;
+//          }
+//        }
+//        .action-title,
+//        .action-title a {
+//          @include text-xl;
+//          font-weight: bold;
+//          color: $purple !important;
+//        }
+//      }
+//    }
+//
+//    .composer-controls {
+//      button {
+//        @include a-btn-chip;
+//        margin-bottom: 0;
+//      }
+//
+//      @media (min-width: $break-md) {
+//        // margin-right: 70px;
+//      }
+//
+//      .composer-fields {
+//        background-color: yellow;
+//      }
+//    }
+//  }
+//
+//  // for mobile
+//  .wmd-controls {
+//    .composer-fields {
+//      .title-input {
+//        input {
+//          color: $purple !important;
+//          border-radius: 6px !important;
+//          border: 1px solid $purple;
+//          &::-webkit-input-placeholder {
+//            color: $purple;
+//          }
+//        }
+//      }
+//      .category-input {
+//        summary {
+//          color: $purple !important;
+//          border-radius: 6px !important;
+//          border: 1px solid $purple;
+//        }
+//      }
+//    }
+//  }
+//
+//  // the editor
+//  .d-editor-textarea-wrapper {
+//    margin-top: 10px;
+//    border-radius: 20px;
+//    border-color: $purple;
+//    @media (min-width: $break-md) {
+//      border-color: $lightgrey;
+//      box-shadow: 0px 3px 5px rgba(85, 18, 70, 0.35);
+//    }
+//    .d-editor-button-bar {
+//      display: flex !important;
+//      flex-wrap: wrap;
+//      padding: 5px;
+//      // margin: 5px 0 0 0px;
+//      // grid-template-columns: repeat(auto-fill, minmax(2.85em, 1fr)) !important;
+//
+//      @media (min-width: $break-md) {
+//        padding: 5px 5px 0px 5px;
+//      }
+//      button,
+//      summary {
+//        // this media query is going backwards... below $break-md
+//        @media (max-width: $break-md) {
+//          @include a-btn-chip;
+//          width: 10px;
+//          min-width: unset;
+//          margin-right: 4px;
+//          padding: 8px 16px;
+//          margin-bottom: 5px !important;
+//          height: unset !important;
+//          svg {
+//            width: 18px;
+//            height: 18px;
+//          }
+//        }
+//
+//        @include a-btn-chip;
+//        width: 20px;
+//        margin-right: 4px;
+//        margin-bottom: 5px !important;
+//      }
+//    }
+//
+//    textarea {
+//      border-bottom-left-radius: 20px;
+//      border-bottom-right-radius: 20px;
+//      color: $purple;
+//      &::-webkit-input-placeholder {
+//        color: $purple;
+//      }
+//    }
+//  }
+//
+//  // submit buttons
+//  .submit-panel {
+//    .save-or-cancel {
+//      .create {
+//        svg {
+//          display: none;
+//        }
+//
+//        @include a-btn-chip;
+//        @media (min-width: $break-md) {
+//          @include a-btn-primary;
+//
+//          .d-button-label {
+//            color: $yellow !important;
+//          }
+//
+//          &:hover {
+//            .d-button-label {
+//              color: $white !important;
+//            }
+//          }
+//        }
+//      }
+//
+//      .cancel {
+//        @include a-btn-chip--small;
+//        @media (min-width: $break-md) {
+//          @include a-btn-primary;
+//          color: $yellow !important;
+//          margin-left: 10px !important;
+//        }
+//      }
+//    }
+//
+//    .mobile-file-upload,
+//    .mobile-preview {
+//      @include a-btn-chip--small;
+//    }
+//
+//    .toggle-preview {
+//      @include a-btn-chip;
+//      margin-bottom: 0;
+//    }
+//  }
+//}
+//
+//// space on the right for pop up messages
+//.composer-popup-container {
+//}
+//.composer-popup {
+//  background-color: $lightgrey !important;
+//  border-radius: 6px;
+//  color: $purple !important;
+//
+//  .topics {
+//    li {
+//      margin-bottom: 15px;
+//    }
+//    color: $purple !important;
+//
+//    .topic .first-line {
+//      font-weight: bold;
+//    }
+//    .topic,
+//    .blurb {
+//      color: $purple !important;
+//    }
+//  }
+//}
+//
+//body:not(.ios-safari-composer-hacks) #reply-control.open.composer-action-reply {
+//  min-height: calc(60vh - 4em);
+//}
+//
+//// on mobile
+//#reply-control.open {
+//  height: var(--composer-height) !important;
+//}
+//
+//#reply-control .wmd-controls:not(.toolbar-visible) .d-editor-button-bar {
+//  display: none !important;
+//}
+//
+//.reply-area .d-editor-textarea-wrapper textarea {
+//  border-radius: 20px;
+//}
