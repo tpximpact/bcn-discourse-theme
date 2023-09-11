@@ -17,18 +17,6 @@
     border-radius: 30px;
     width: 100%;
     
-    @media (min-width: $break-sm) { 
-      width: 48%;
-    }
-
-    @media (min-width: $break-md) {
-      width: 31%;
-    }
-
-    @media (min-width: $break-lg) {
-      width: 23%;
-    }
-    
   }
   .category-box-inner {
     border: none;
