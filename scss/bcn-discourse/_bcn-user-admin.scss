@@ -1,0 +1,217 @@
+.user-main .about {
+  .collapsed-info .details .primary .user-profile-names__primary {
+    padding-top: 10px !important;
+  }
+  .controls .btn {
+    @include a-btn-chip;
+  }
+
+  .details {
+    border-bottom: none !important;
+  }
+}
+
+// // User avatar, title desc
+.about {
+  .controls {
+    ul {
+      li {
+        button {
+          @include a-btn-chip;
+        }
+      }
+    }
+  }
+}
+
+// //user navigation
+.user-primary-navigation {
+  ul {
+    li {
+      a {
+        @include a-btn-chip;
+
+        &.active {
+          svg {
+            color: $white !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// //user 2nd navigation (sidebar)
+.user-secondary-navigation {
+  a {
+    color: $purple !important;
+  }
+}
+
+// // user page content
+
+.user-content {
+  // HIDE THE COLOR SCHEM CHOICES
+  .color-scheme {
+    display: none !important;
+  }
+
+  .user-stat {
+    .number {
+      color: $purple;
+    }
+  }
+
+  .category-link {
+    width: unset !important;
+    .badge-category {
+      width: unset !important;
+    }
+
+    a {
+      padding: 10px !important;
+      margin: 0 !important;
+      &:after {
+        content: none;
+        display: none !important;
+      }
+    }
+  }
+}
+
+.top-section {
+  color: $purple !important;
+
+  .label {
+    color: $purple !important;
+  }
+
+  h3 {
+    @include text-xl;
+  }
+
+  .top-sub-section li {
+    border-left: 2px solid $pink200;
+  }
+
+  .relative-date {
+    color: $purple;
+  }
+
+  a {
+    color: $purple;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.user-stream {
+  .user-stream-item {
+    border-bottom: 1px solid $pink200;
+  }
+
+  .user-stream-item__details {
+    a {
+      color: $purple !important;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .category {
+    .badge-category {
+      color: $purple !important;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .excerpt {
+    color: $purple !important;
+  }
+}
+
+.user-additional-controls {
+  button {
+    @include a-btn-chip;
+  }
+}
+
+.notification-history {
+  .filter-text {
+    color: $purple !important;
+  }
+  .menuitemradio {
+    .texts {
+      span {
+        color: $purple !important;
+      }
+    }
+  }
+  .header-text,
+  svg {
+    color: $pink !important;
+  }
+}
+
+.select-kit.single-select.dropdown-select-box.is-expanded .select-kit-collection {
+  li {
+    &.is-selected {
+      background-color: $pink200 !important;
+    }
+
+    &.is-highlighted {
+      background-color: $pink200 !important;
+    }
+    .name {
+      color: $purple !important;
+    }
+  }
+}
+
+.notification {
+  color: $purple;
+  svg,
+  a {
+    color: $purple !important;
+  }
+
+  &.unread {
+    background-color: $pink200 !important;
+  }
+}
+
+// Wrting a post
+
+.select-kit.combo-box.category-chooser .select-kit-row {
+  .category-status {
+    color: $purple !important;
+    margin-bottom: 8px;
+  }
+  .category-desc {
+    color: $purple !important;
+  }
+
+  .badge-wrapper {
+    color: $purple !important;
+    &:first-child {
+      padding: 1px 6px;
+      background-color: $lightgrey;
+      border-radius: 5px;
+    }
+
+    &:nth-child(2) {
+      font-weight: bold;
+    }
+  }
+}
+
+// Admins ---  Admins --- Admins --- Admins --- Admins --- Admins --- Admins ---
+
+.edit-category-nav {
+  padding-left: 30px;
+}
