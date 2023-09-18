@@ -2,8 +2,6 @@
 
 // BOTH mobile and desktop
 .user-menu.menu-panel {
-  // background-color: orange;
-
   .panel-body-contents {
     margin-top: 30px;
     max-width: 500px !important;
@@ -71,12 +69,36 @@
 
 //mobile only
 .user-menu.menu-panel.slide-in {
+  padding: 0 !important;
+
+  .panel-body {
+    overflow: scroll;
+  }
   .panel-body-contents {
-    padding-top: 26px;
+    margin: 0;
+    // padding-bottom: 90px;
+  }
+
+  .quick-access-panel {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .tabs-list {
+    padding-right: 16px;
   }
 
   .tabs-list .btn {
     padding: 1.1rem;
+  }
+
+  .panel-body-bottom {
+    padding: 0 10px;
+
+    a,
+    button {
+      @include a-btn-chip;
+    }
   }
 }
 
@@ -99,7 +121,6 @@
       li {
         padding: 5px 0 2px;
         border-radius: 6px;
-        // font-size: 18px;
         line-height: 1.1;
         a {
           text-decoration: none;
@@ -119,7 +140,7 @@
     }
   }
 
-  // just for the user settings panel ??
+  // just for the user settings panel
   #quick-access-profile {
     ul {
       padding-top: 0;

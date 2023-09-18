@@ -1,6 +1,4 @@
 // navigation
-// navigation
-
 #navigation-bar {
   width: auto;
 
@@ -53,13 +51,14 @@
   left: 0 !important;
   right: 0 !important;
   width: unset !important;
+  max-width: 100vw;
   background-color: $pink200;
   overflow: scroll !important;
   z-index: 999 !important;
   // border: 1px solid #ff0000 !important;
 
   .panel-body {
-    // overflow: visible;
+    // overflow: visible; 
   }
 
   .panel-body-contents {
@@ -88,3 +87,5 @@
     }
   }
 }
+
+

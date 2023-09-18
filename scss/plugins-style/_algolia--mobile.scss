@@ -1,4 +1,3 @@
-
 // @media (max-width: 768px) {
 //   .algolia-holder .aa-input {
 //     display: block !important;
@@ -6,20 +5,18 @@
 // }
 
 .mobile-view {
-
   .algolia-holder {
     margin-right: 5px !important;
     width: 100%;
-    
-    max-width: 130px;
 
-    .aa-Autocomplete{
+    max-width: 130px !important;
+
+    .aa-Autocomplete {
       display: block !important;
-      &:not(:first-child){
+      &:not(:first-child) {
         display: none !important;
       }
     }
-
 
     .aa-InputWrapper {
       max-width: 150px !important;
@@ -35,6 +32,7 @@
       line-height: 1;
       border: none !important;
       background-color: $pink200;
+      // background-color: blue;
 
       &::placeholder {
         color: $purple;
