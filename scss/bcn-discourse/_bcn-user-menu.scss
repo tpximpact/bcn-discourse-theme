@@ -51,6 +51,7 @@
       padding: 0px 8px;
 
       li {
+        margin-bottom: 5px;
         a,
         button {
           color: $pink;
@@ -59,7 +60,6 @@
             color: $purple;
           }
 
-          margin-bottom: 10px;
           font-size: 16px;
         }
       }
@@ -124,6 +124,10 @@
         line-height: 1.1;
         a {
           text-decoration: none;
+        }
+
+        svg {
+          padding-top: 0;
         }
       }
     }
