@@ -4,7 +4,7 @@
 .user-menu.menu-panel {
   .panel-body-contents {
     margin-top: 30px;
-    max-width: 500px !important;
+    // max-width: 500px !important;
     background-color: $white;
     border-radius: 6px;
     color: $purple;
@@ -114,8 +114,10 @@
   }
 
   .quick-access-panel {
-    width: 100%;
-    max-width: 400px;
+    // width: 100%;
+    // max-width: 400px;
+
+    width: 500px;
 
     ul {
       li {
