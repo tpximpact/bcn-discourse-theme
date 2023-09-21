@@ -1,0 +1,161 @@
+//Style for the user drop-down menu
+
+// BOTH mobile and desktop
+.user-menu.menu-panel {
+  .panel-body-contents {
+    margin-top: 30px;
+    max-width: 500px !important;
+    background-color: $white;
+    border-radius: 6px;
+    color: $purple;
+  }
+
+  .menu-tabs-container {
+    padding: 0;
+    a,
+    button {
+      color: $purple !important;
+
+      svg {
+        color: $purple !important;
+      }
+      .badge-notification {
+        background-color: $pink !important;
+      }
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .quick-access-panel {
+    border: none;
+
+    padding-top: 0;
+
+    .item-label,
+    .empty-state {
+      color: $purple;
+      svg {
+        color: $purple;
+      }
+    }
+    ul {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 0px 8px;
+
+      li {
+        margin-bottom: 5px;
+        a,
+        button {
+          color: $pink;
+
+          svg {
+            color: $purple;
+          }
+
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+//mobile only
+.user-menu.menu-panel.slide-in {
+  padding: 0 !important;
+
+  .panel-body {
+    overflow: scroll;
+  }
+  .panel-body-contents {
+    margin: 0;
+    // padding-bottom: 90px;
+  }
+
+  .quick-access-panel {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .tabs-list {
+    padding-right: 16px;
+  }
+
+  .tabs-list .btn {
+    padding: 1.1rem;
+  }
+
+  .panel-body-bottom {
+    padding: 0 10px;
+
+    a,
+    button {
+      @include a-btn-chip;
+    }
+  }
+}
+
+// desktop only
+.user-menu.menu-panel.drop-down {
+  .menu-tabs-container {
+    border: none;
+    border-right: 1px solid $purple100;
+    .btn {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+  }
+
+  .quick-access-panel {
+    width: 100%;
+    max-width: 400px;
+
+    ul {
+      li {
+        padding: 5px 0 2px;
+        border-radius: 6px;
+        line-height: 1.1;
+        a {
+          text-decoration: none;
+        }
+
+        svg {
+          padding-top: 0;
+        }
+      }
+    }
+
+    &:hover {
+      li {
+        a,
+        button {
+          svg {
+            color: $purple;
+          }
+        }
+      }
+    }
+  }
+
+  // just for the user settings panel
+  #quick-access-profile {
+    ul {
+      padding-top: 0;
+      li {
+        padding: 10px 0 !important;
+        font-size: 18px;
+        line-height: 1.1;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

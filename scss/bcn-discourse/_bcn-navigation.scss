@@ -16,10 +16,9 @@
     display: block !important;
     height: unset !important;
     max-height: unset !important;
-    width: 100% !important;
+    // width: 100% !important;
     @media (min-width: $break-lg) {
-      // overflow-y: inherit !important;
-      overflow-y: auto !important;
+      // overflow-y: auto !important;
     }
   }
 
@@ -42,7 +41,6 @@
 
 // Topic type links
 .menu-container-general-links {
-  // padding: 0 10px;
   li {
     width: 100% !important;
 
@@ -80,8 +78,6 @@
   padding: 0 10px !important;
 
   .heading {
-    //display: none;
-
     display: block;
     width: 100%;
     text-align: right;
@@ -91,7 +87,6 @@
     a {
       color: $purple;
     }
-
   }
 
   @media (min-width: $break-lg) {

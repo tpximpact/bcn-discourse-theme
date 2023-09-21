@@ -1,12 +1,9 @@
 .algolia-holder {
-
-
-  .aa-Autocomplete{
-    &:not(:first-child){
+  .aa-Autocomplete {
+    &:not(:first-child) {
       display: none;
     }
   }
-
 
   .aa-Input {
     font-family: WorkSans, sans-serif !important;
