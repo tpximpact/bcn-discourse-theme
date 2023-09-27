@@ -58,13 +58,20 @@
   // border: 1px solid #ff0000 !important;
 
   .panel-body {
-    // overflow: visible; 
+    // overflow: visible;
   }
 
   .panel-body-contents {
     // height: 100%;
     padding-top: 20px;
     padding-bottom: 140px;
+  }
+
+  .widget-link:hover,
+  .widget-link:focus,
+  .categories-link:hover,
+  .categories-link:focus {
+    background-color: $purple100;
   }
 
   .category-links {
@@ -87,5 +94,3 @@
     }
   }
 }
-
-
