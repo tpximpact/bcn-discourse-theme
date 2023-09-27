@@ -8,6 +8,15 @@
   .title {
     min-width: 100px !important;
     padding: 0 !important;
+    overflow: visible;
+
+    a {
+      &:focus-visible {
+        @include focus-visible-user-agent;
+        // outline-offset: 1px;
+        // outline: -webkit-focus-  ring-color auto 3px;
+      }
+    }
   }
 
   //desktop
@@ -114,43 +123,6 @@
   }
 }
 
-// For Disourse search NOT Algolia
-// .search-dropdown {
-//   cursor: pointer;
-//   a {
-//     border: none !important;
-//   }
-//   svg {
-//     color: $pink !important;
-//     display: none !important;
-//   }
-
-//   position: relative;
-//   z-index: 1;
-
-//   background-image: url($search) !important;
-//   background-repeat: no-repeat !important;
-//   background-position: center !important;
-//   background-size: 60% !important;
-//   width: 45px;
-
-//   &.active {
-//     width: 0;
-//     height: 0;
-//     &:after {
-//       content: '';
-//       position: absolute;
-//       top: 0;
-//       height: 45px;
-//       width: 45px;
-//       background-image: url($cross) !important;
-//       background-repeat: no-repeat !important;
-//       background-position: center !important;
-//       background-size: 85% !important;
-//     }
-//   }
-// }
-
 // The hamburger
 .header-dropdown-toggle {
   #toggle-hamburger-menu {
@@ -170,12 +142,24 @@
     &:focus {
       background-color: $white;
     }
+    &:focus-visible {
+      @include focus-visible-user-agent;
+    }
   }
 
   &.active {
     #toggle-hamburger-menu {
       background-size: 100%;
       background-image: url($cross);
+    }
+  }
+}
+
+// User Icon
+.header-dropdown-toggle.current-user {
+  button {
+    &:focus-visible {
+      @include focus-visible-user-agent;
     }
   }
 }

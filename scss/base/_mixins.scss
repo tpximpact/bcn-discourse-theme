@@ -39,3 +39,8 @@
     max-width: 1536px;
   }
 }
+
+@mixin focus-visible-user-agent {
+  outline-offset: 1px !important;
+  outline: -webkit-focus-ring-color auto 1px !important;
+}

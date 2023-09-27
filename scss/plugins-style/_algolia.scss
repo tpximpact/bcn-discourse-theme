@@ -22,6 +22,10 @@
     background-repeat: no-repeat !important;
     background-size: 18px 18px !important;
     background-position: 10px !important;
+
+    &:focus-visible {
+      @include focus-visible-user-agent;
+    }
   }
 
   // The dropdown
