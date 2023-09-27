@@ -44,6 +44,10 @@
   background-color: $lightpink;
 }
 
+.badge-notification.new-topic::before {
+  background: $pink;
+}
+
 #discourse-modal {
   .modal-inner-container {
     border-radius: 10px;

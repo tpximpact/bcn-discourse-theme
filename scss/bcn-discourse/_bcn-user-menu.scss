@@ -34,7 +34,6 @@
 
   .quick-access-panel {
     border: none;
-
     padding-top: 0;
 
     .item-label,
@@ -103,6 +102,9 @@
 
 // desktop only
 .user-menu.menu-panel.drop-down {
+  .panel-body {
+    margin-bottom: 30px;
+  }
   .menu-tabs-container {
     border: none;
     border-right: 1px solid $purple100;
@@ -116,6 +118,8 @@
     width: 500px;
 
     ul {
+      flex-flow: column;
+      overflow: hidden;
       li {
         padding: 5px 0 2px;
         border-radius: 6px;

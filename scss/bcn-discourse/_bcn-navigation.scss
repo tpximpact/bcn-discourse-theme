@@ -16,10 +16,6 @@
     display: block !important;
     height: unset !important;
     max-height: unset !important;
-    // width: 100% !important;
-    @media (min-width: $break-lg) {
-      // overflow-y: auto !important;
-    }
   }
 
   .panel-body-contents {
