@@ -7,6 +7,8 @@
     background-color: $white;
     border-radius: 6px;
     color: $purple;
+    height: unset;
+    overflow: auto;
   }
 
   .menu-tabs-container {
