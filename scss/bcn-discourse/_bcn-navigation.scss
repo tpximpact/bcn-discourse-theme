@@ -33,6 +33,14 @@
     padding-top: 30px !important;
     padding-bottom: 30px !important;
   }
+
+
+  .widget-link:hover,
+  .widget-link:focus,
+  .categories-link:hover,
+  .categories-link:focus {
+    background-color: $purple100; 
+  }
 }
 
 // Topic type links
@@ -285,7 +293,7 @@
       li {
         width: unset !important;
 
-        a {
+        a { 
           font-size: 16px;
         }
       }
