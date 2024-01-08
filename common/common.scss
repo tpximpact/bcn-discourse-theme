@@ -37,3 +37,25 @@
   border-bottom: $lightpink !important;
   color: $lightpink !important;
 }
+
+// Removing "Views counmt from topic boards and "
+
+.user-content {
+  .topic-list-header {
+    th.views {
+      display: none;
+    }
+  }
+
+  .topic-list-body {
+    td.views {
+      display: none;
+    }
+  }
+}
+
+.topic-map {
+  .secondary.views {
+    display: none;
+  }
+}

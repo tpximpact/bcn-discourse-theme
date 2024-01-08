@@ -72,17 +72,13 @@
         }
       }
     }
-    
+
     // notifications on topic list
     .badge-notification.new-topic {
       align-self: flex-start;
-     
-
       &:before {
-        // position: absolute; 
         background-color: $pink;
         margin-right: 6px;
-        // top: 0;
         margin-left: 10px;
       }
     }
@@ -100,7 +96,6 @@
       .topic-post-badges {
         display: flex;
         align-self: flex-start;
-     
       }
     }
 
@@ -112,18 +107,10 @@
         margin: 0 !important;
       }
     }
-
-    .posters {
-    }
-
-    .posts {
-    }
-
-    .views {
-    }
-
-    .age {
-    }
+    // .posters {}
+    // .posts {}
+    // .views {}
+    // .age {}
   }
 }
 
