@@ -9,11 +9,14 @@
 
 <script type="text/discourse-plugin" version="0.8">
     api.onPageChange(() =>{
-
+      console.log("onPageChange running")
+      addIgnoreToPreloader()
       reloadOTBanner()
       clearDup()
-   
     });
+
+
+
     // for testing onPageChange() 
     function randBackground() {
         $('body').css('background-color', '#'+(Math.random()*0xFFFFFF<<0).toString(16));
@@ -27,6 +30,16 @@
         }
     }
 
+
+    function addIgnoreToPreloader () {
+      var preloaderImage =  document.querySelector(".preloader-image")
+      console.log('preloaderImage:',  preloaderImage);
+      if(preloaderimage){
+        preloaderimage.createAttribute("data-ot-ignore")
+      }
+
+    }
+
     function reloadOTBanner() {
 
         var otConsentSdk = document.getElementById("onetrust-consent-sdk");
@@ -34,6 +47,8 @@
             otConsentSdk.remove();
         }
 
+
+      
         if (window.OneTrust != null) {
             OneTrust.Init();
 
