@@ -32,16 +32,14 @@
 
 
     function addIgnoreToPreloader () {
-     
       const splashWrapper = document.querySelector("#d-splash");
       const splashImage = splashWrapper && splashWrapper.querySelector(".preloader-image");
-      
       if(splashImage){
-        console.log("splashImage)
-        splashImage.createAttribute("data-ot-ignore")
+        console.log(splashImage);
+        splashImage.createAttribute("data-ot-ignore");
       }
-
     }
+
 
     function reloadOTBanner() {
 
