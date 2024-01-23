@@ -2,8 +2,9 @@
 
 // BOTH mobile and desktop
 .user-menu.menu-panel {
+  border-radius: 6px;
   .panel-body-contents {
-    margin-top: 30px;
+    padding-top: 30px;
     background-color: $white;
     border-radius: 6px;
     color: $purple;
@@ -70,12 +71,14 @@
 //mobile only
 .user-menu.menu-panel.slide-in {
   padding: 0 !important;
-
+  border-radius: 0px;
   .panel-body {
+    border-radius: 0px;
     overflow: scroll;
   }
   .panel-body-contents {
     margin: 0;
+    border-radius: 0px;
     // padding-bottom: 90px;
   }
 
@@ -105,7 +108,7 @@
 // desktop only
 .user-menu.menu-panel.drop-down {
   .panel-body {
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
   }
   .menu-tabs-container {
     border: none;
