@@ -166,3 +166,10 @@
     }
   }
 }
+
+// Remove footer options "Add custom section"  for regular users only
+body:not(.staff) {
+  .sidebar-footer-wrapper {
+    display: none;
+  }
+}
