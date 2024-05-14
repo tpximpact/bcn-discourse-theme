@@ -39,7 +39,6 @@
 }
 
 // Removing "Views counmt from topic boards and "
-
 .user-content {
   .topic-list-header {
     th.views {
@@ -72,4 +71,9 @@
       display: none;
     }
   }
+}
+
+// Hide those badges everywhere
+.badge-category__wrapper .badge-category:before {
+  display: none !important;
 }

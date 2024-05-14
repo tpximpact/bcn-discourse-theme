@@ -21,8 +21,11 @@ body {
   background: var(--secondary);
   border-radius: 20px;
   padding: 18px 14px;
-  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.07), 0 10.8529px 24.1177px rgba(0, 0, 0, 0.0456112),
-    0 4.50776px 10.0172px rgba(0, 0, 0, 0.035), 0 1.63037px 3.62304px rgba(0, 0, 0, 0.0243888);
+  box-shadow:
+    0 24px 40px rgba(0, 0, 0, 0.07),
+    0 10.8529px 24.1177px rgba(0, 0, 0, 0.0456112),
+    0 4.50776px 10.0172px rgba(0, 0, 0, 0.035),
+    0 1.63037px 3.62304px rgba(0, 0, 0, 0.0243888);
 
   @media (min-width: $break-lg) {
     padding: 30px;
@@ -31,8 +34,4 @@ body {
 
 .alert-bootstrap-mode {
   display: none;
-}
-.badge-category-parent-bg,
-.badge-category-bg {
-  display: none !important;
 }
