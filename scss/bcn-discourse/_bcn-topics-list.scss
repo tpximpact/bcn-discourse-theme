@@ -1,5 +1,6 @@
 //<table>
-// .topic-list {}
+.topic-list {
+}
 
 //<thead>
 .topic-list-header {
@@ -15,8 +16,8 @@
 
 //<tbody>
 .topic-list-body {
+  width: 100px;
   padding: 0;
-
   // <tr>
   .topic-list-item {
     &:nth-child(even) {
@@ -29,16 +30,16 @@
 
       padding: 20px 0;
       // these classes are only on mobile
-      .pull-left {
-        padding: 0 10px 0 20px;
-      }
-      .pull-right {
-        padding-right: 20px;
-      }
+      // .pull-left {
+      //   padding: 0 10px 0 20px;
+      // }
+      // .pull-right {
+      //   padding-right: 20px;
+      // }
 
-      .activity {
-        padding-right: 10px;
-      }
+      // .activity {
+      //   padding-right: 10px;
+      // }
     }
 
     .main-link {

@@ -4,7 +4,7 @@
   }
   .right {
     margin-left: 0;
-    padding-left: 10px;
+    padding-left: 8px;
     .main-link {
       a {
         display: inline !important;
@@ -19,8 +19,16 @@
     }
 
     .topic-item-stats {
-      margin-top: 0;
+      padding-left: 8px;
+      margin-top: 10px;
       margin-left: -5px;
+      display: flex;
+      align-items: flex-start;
+
+      .badge-category__name {
+        display: block;
+        text-wrap: wrap;
+      }
     }
 
     .topic-list-data {
@@ -32,6 +40,10 @@
       .unread-posts {
         background-color: $lightpink !important;
       }
+
+      .activity {
+        padding-right: 0px;
+      }
     }
   }
 }
@@ -40,6 +52,22 @@
   a {
     white-space: normal !important;
     max-width: 265px;
-    padding-left: 5px;
+    padding-left: 8px;
   }
+}
+
+.topic-list-body .topic-list-item td .activity {
+  padding-right: 8px;
+}
+
+.topic-list-body .topic-list-item td .pull-right {
+  padding-right: 8px;
+}
+
+.topic-list-body .topic-list-item .main-link .title {
+  line-height: 1;
+}
+
+.topic-list-body .topic-list-item td {
+  padding: 12px 0;
 }
