@@ -1,6 +1,6 @@
 .bcn-hero-with-icon-wrapper {
   height: auto;
-  
+
   background-color: $pink !important;
 
   -webkit-mask-image: url($bottom-curve--desktop);
@@ -80,5 +80,13 @@
     @media (min-width: $break-md) {
       padding: 130px 0 50px;
     }
+  }
+}
+
+// empty hero
+.bcn-hero-empty {
+  height: 20px;
+  @media (min-width: $break-2xl) {
+    height: 60px;
   }
 }

@@ -1,0 +1,36 @@
+{{#if this.showHero.homepageHero }}
+<div class="bcn-hero-with-icon-wrapper bcn-hero-with-icon-wrapper--homepage">
+  <div class="bcn-hero-with-icon bcn-hero-with-icon--homepage">
+    <div class="bcn-hero-with-icon__inner">
+      <div class="bcn-hero-with-icon__content">
+        <h1>Breast Cancer Now forum</h1>
+        <h2>With you every step of the way</h2>
+      </div>
+      <div class="bcn-hero-with-icon__image">
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+
+
+{{#if this.showHero.dynamicHero }}
+<div class="bcn-hero-with-icon-wrapper">
+  <div class="bcn-hero-with-icon">
+    <div class="bcn-hero-with-icon__inner">
+      <div class="bcn-hero-with-icon__content">
+        <h1>{{this.showHero.title}}</h1>
+        <h2>{{this.showHero.subtitle}}</h2>
+      </div>
+      <div class="bcn-hero-with-icon__image"></div>
+    </div>
+  </div>
+</div>
+{{/if}}
+
+
+{{#if this.showHero.emptyHero }}
+<div class="bcn-hero-empty">
+
+</div>
+{{/if}}
