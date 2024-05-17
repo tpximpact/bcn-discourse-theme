@@ -31,6 +31,7 @@
       }
     }
 
+    .topic-post-badges .badge,
     .topic-list-data {
       color: $purple;
       padding: 0px 5px;
@@ -62,6 +63,10 @@
 
 .topic-list-body .topic-list-item td .pull-right {
   padding-right: 8px;
+}
+
+.topic-list-body .topic-list-item .main-link {
+  width: 90%;
 }
 
 .topic-list-body .topic-list-item .main-link .title {

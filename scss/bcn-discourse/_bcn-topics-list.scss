@@ -98,6 +98,10 @@
         display: flex;
         align-self: flex-start;
       }
+
+      @media (min-width: $break-md) {
+        padding-right: 50px;
+      }
     }
 
     .link-bottom-line {

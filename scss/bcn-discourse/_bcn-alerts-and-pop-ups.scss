@@ -1,6 +1,6 @@
 .alert {
   background-color: $pink200 !important;
-  border-radius: 20px !important;
+  border-radius: 10px !important;
   @media (min-width: $break-md) {
     margin-bottom: 26px;
   }
@@ -38,15 +38,10 @@
 }
 
 .topic-list-body .topic-list-item .main-link .link-top-line .badge-notification.unread-posts {
-  top: -22px;
-  left: 11px;
   padding: 1px 8px !important;
   background-color: $lightpink;
-
-  @media (min-width: 767px) {
-    top: 0px;
-    left: 0px;
-  }
+  top: 0px;
+  left: 0px;
 }
 
 .badge-notification.new-topic::before {
