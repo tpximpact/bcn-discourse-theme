@@ -6,10 +6,9 @@
 <script type="text/discourse-plugin" version="0.8">
 
     api.onPageChange(() =>{
+      loadOneTrustScripts()
       reloadOTBanner()
       clearDup()
-      loadOneTrustScripts()
-   
     });
 
     // for testing onPageChange() 
@@ -18,17 +17,25 @@
     }
 
     function loadOneTrustScripts(){
-      var script = document.createElement("script"); 
-      script.setAttribute("type","text/javascript"); 
-      script.setAttribute("src", "https://cdn-ukwest.onetrust.com/consent/eadcfc54-44a8-4b96-8e92-63f1ffe58243/OtAutoBlock.js") 
-      document.head.appendChild(script);
 
-      var script2 = document.createElement("script"); 
-      script2.setAttribute("type","text/javascript"); 
+    if (!document.querySelector('#onetrust-cdn')) {
+      var script = document.createElement("script")
+      script.setAttribute("type","text/javascript")
+      script.setAttribute("src", "https://cdn-ukwest.onetrust.com/consent/eadcfc54-44a8-4b96-8e92-63f1ffe58243/OtAutoBlock.js") 
+      script.setAttribute("id", "onetrust-cdn") 
+      document.head.appendChild(script)
+    }
+      
+    
+    if (!document.querySelector('#onetrust-template')) {
+      var script2 = document.createElement("script")
+      script2.setAttribute("type","text/javascript")
       script2.setAttribute("src", "https://cdn-ukwest.onetrust.com/scripttemplates/otSDKStub.js") 
       script2.setAttribute("data-domain-script", "eadcfc54-44a8-4b96-8e92-63f1ffe58243") 
-      script2.setAttribute("charset", "UTF-8") 
+      script2.setAttribute("id", "onetrust-template")
+      script2.setAttribute("charset", "UTF-8")
       document.head.appendChild(script2); 
+    }
     }
 
 
